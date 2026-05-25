@@ -1,0 +1,47 @@
+/* Global Silk background (React Bits) — loaded via main.css */
+
+#silk-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#silk-background canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+body.si.has-silk-background,
+body.si:has(#silk-background) {
+  background: transparent !important;
+}
+
+body.si > :not(#silk-background) {
+  position: relative;
+  z-index: 1;
+}
+
+.si-page {
+  background: transparent;
+}
+
+.si-hero,
+.si-menu-hero,
+.si-page--schedule,
+.si-page--schdb,
+.si-page--inner {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #silk-background {
+    display: none;
+  }
+
+  body.si {
+    background: var(--si-card-text);
+  }
+}

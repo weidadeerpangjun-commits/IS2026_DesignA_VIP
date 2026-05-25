@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UI Kit · Summer Institute</title>
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/ui-kit.css" />
+  </head>
+  <body class="si si-uikit" data-page="home">
+    <div class="container">
+      <h1 class="si-h2" style="margin-bottom: 0.5rem">UI Kit</h1>
+      <p class="si-uikit__intro">
+        设计变量集中在 <code>css/tokens.css</code>；组件与页面布局在 <code>css/main.css</code>。本页另含
+        <strong>Tables</strong> 区块，预览 <strong>Table style A</strong>（<code>.table-style-a</code>，与 <code>wifi-help.html</code> 同构）三则示例，与日程详情内表格（<code>.si-sch-table</code> /
+        <code>.si-sch-matrix-table</code>）。修改令牌或组件后打开本页即可预览（无需登录流程）。正式页面只引用
+        <code>main.css</code>（已 <code>@import</code> 令牌文件）。
+      </p>
+
+      <section class="si-uikit-block" aria-labelledby="uikit-tokens">
+        <h2 class="si-uikit__h" id="uikit-tokens">Color tokens</h2>
+        <div class="si-uikit__grid" role="list">
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: repeating-conic-gradient(#ccc 0% 25%, #fff 0% 50%) 50% / 12px 12px; border: 1px solid rgb(255 255 255 / 0.25)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-bg</strong><br />主背景（透明）</div>
+          </div>
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: var(--si-fg); border: 1px solid rgb(255 255 255 / 0.25)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-fg</strong><br />主前景（白）</div>
+          </div>
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: var(--si-accent)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-accent</strong><br />浅蓝强调 / 冰面卡片</div>
+          </div>
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: var(--si-card); border: 1px solid rgb(255 255 255 / 0.2)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-card</strong><br />白卡片底</div>
+          </div>
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: var(--si-card-text)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-card-text</strong><br />白底上的正文蓝</div>
+          </div>
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: var(--si-card-muted)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-card-muted</strong><br />半透明浅卡</div>
+          </div>
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: var(--si-menu-tile)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-menu-tile</strong><br />菜单块 / 日程主卡片</div>
+          </div>
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: var(--si-lavender)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-lavender</strong><br />薰衣草灰卡片 / 未选 Tab</div>
+          </div>
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: var(--si-emphasis)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-emphasis</strong><br />波浪下划线高亮</div>
+          </div>
+        </div>
+        <p class="si-uikit__note">排版：<code>--si-h1</code> <code>--si-h2</code>（响应式见 tokens）；圆角：<code>--si-radius-tab</code> <code>--si-radius-card</code> <code>--si-radius-tight</code>；页边距：<code>--page-gutter</code>。</p>
+      </section>
+
+      <section class="si-uikit-block" aria-labelledby="uikit-glass">
+        <h2 class="si-uikit__h" id="uikit-glass">Glass</h2>
+        <p class="si-uikit__note" style="margin-top: 0; margin-bottom: 1rem">
+          Figma Glass 效果参数映射至 <code>css/tokens.css</code> 与可复用类 <code>.si-glass</code>（<code>css/main.css</code>）。在 Silk 背景上叠加 Frost 模糊、-45° 高光、Refraction 边框与 Dispersion 色散边。
+        </p>
+        <div class="si-uikit__glass-params" role="list">
+          <div class="si-uikit__glass-param" role="listitem">
+            <span class="si-uikit__glass-param-label">Light</span>
+            <span>Angle <strong>-45°</strong> · Intensity <strong>100%</strong></span>
+          </div>
+          <div class="si-uikit__glass-param" role="listitem">
+            <span class="si-uikit__glass-param-label">Refraction</span>
+            <span><strong>40</strong></span>
+          </div>
+          <div class="si-uikit__glass-param" role="listitem">
+            <span class="si-uikit__glass-param-label">Depth</span>
+            <span><strong>60</strong></span>
+          </div>
+          <div class="si-uikit__glass-param" role="listitem">
+            <span class="si-uikit__glass-param-label">Dispersion</span>
+            <span><strong>100</strong></span>
+          </div>
+          <div class="si-uikit__glass-param" role="listitem">
+            <span class="si-uikit__glass-param-label">Frost</span>
+            <span><strong>16</strong></span>
+          </div>
+          <div class="si-uikit__glass-param" role="listitem">
+            <span class="si-uikit__glass-param-label">Splay</span>
+            <span><strong>0</strong></span>
+          </div>
+        </div>
+        <div class="si-uikit__glass-stage">
+          <div class="si-glass si-uikit__glass-panel">
+            <p class="si-h4" style="margin: 0 0 0.35rem">Glass panel</p>
+            <p class="si-body" style="margin: 0; font-size: 1rem; opacity: 0.92">Backdrop blur + layered highlight</p>
+          </div>
+          <div class="si-glass si-uikit__glass-panel si-uikit__glass-panel--compact">
+            <p style="margin: 0; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase">Compact</p>
+          </div>
+          <div class="si-card si-glass si-uikit__glass-panel">
+            <h3 class="si-card__title" style="margin: 0">Card + glass</h3>
+            <p style="margin: 0.5rem 0 0; font-size: 1rem; line-height: 1.45; opacity: 0.9">Combine <code>.si-card</code> with <code>.si-glass</code> for frosted surfaces.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="si-uikit-block" aria-labelledby="uikit-type">
+        <h2 class="si-uikit__h" id="uikit-type">Typography</h2>
+        <div class="si-uikit__stack">
+          <p class="si-h1">Heading 1</p>
+          <p class="si-h2">Heading 2</p>
+          <p class="si-h3">Heading 3 · 副标题</p>
+          <p class="si-h4">Heading 4 · 24px / font-weight 500 · 日程时间、菜单文案、卡片内标题</p>
+          <p class="si-h5">Heading 5 · 英文副标</p>
+          <p class="si-body">Body 正文示例：The quick brown fox jumps over the lazy dog. 敏捷的棕狐跳过懒狗。</p>
+          <p class="si-dates">8月3日–7日</p>
+        </div>
+      </section>
+
+      <section class="si-uikit-block" aria-labelledby="uikit-chrome">
+        <h2 class="si-uikit__h" id="uikit-chrome">Chrome</h2>
+        <div class="si-uikit__row">
+          <button type="button" class="si-lang"><span class="si-lang__label">EN</span></button>
+          <a class="si-schedule-menu-pill" href="#">Menu pill</a>
+        </div>
+      </section>
+
+      <section class="si-uikit-block" aria-labelledby="uikit-tabs">
+        <h2 class="si-uikit__h" id="uikit-tabs">Tabs</h2>
+        <div class="si-uikit__fake-tabrow" role="tablist">
+          <button type="button" class="si-tab is-active" role="tab">Teaching Role</button>
+          <button type="button" class="si-tab" role="tab">Admin Role</button>
+        </div>
+        <p class="si-uikit__note" style="margin-top: 1.25rem">Schedule date tabs</p>
+        <div class="si-date-tabs" role="tablist" style="max-width: 520px">
+          <button type="button" class="si-date-tab" role="tab">
+            <span class="si-date-tab__month">Aug</span>
+            <span class="si-date-tab__day">5</span>
+            <span class="si-date-tab__dow">W</span>
+          </button>
+          <button type="button" class="si-date-tab is-active" role="tab" aria-selected="true">
+            <span class="si-date-tab__month">Aug</span>
+            <span class="si-date-tab__day">6</span>
+            <span class="si-date-tab__dow">T</span>
+          </button>
+          <button type="button" class="si-date-tab" role="tab">
+            <span class="si-date-tab__month">Aug</span>
+            <span class="si-date-tab__day">7</span>
+            <span class="si-date-tab__dow">F</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="si-uikit-block" aria-labelledby="uikit-menu">
+        <h2 class="si-uikit__h" id="uikit-menu">Menu link</h2>
+        <ul class="si-menu-list" style="max-width: 400px">
+          <li>
+            <a class="si-menu-link" href="#">
+              <span class="si-menu-icon" aria-hidden="true"
+                ><svg
+                  width="48"
+                  height="48"
+                  viewBox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  focusable="false"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M163.091 52.8652C163.606 52.8652 164.036 53.2567 164.086 53.7695L173.894 156.039C173.95 156.626 173.489 157.134 172.899 157.134H42.908C42.3927 157.134 41.9621 156.742 41.9129 156.229L32.1043 53.9609C32.048 53.3738 32.5096 52.8655 33.0994 52.8652H163.091ZM65.1521 120C64.5437 120 64.0768 120.539 64.1629 121.142L65.8767 133.142C65.9472 133.634 66.3694 134 66.867 134H145.846C146.455 134 146.923 133.461 146.837 132.858L144.122 120.858C144.051 120.366 143.629 120 143.132 120H65.1521ZM61.1521 91C60.5437 91.0001 60.0768 91.5392 60.1629 92.1416L61.8767 104.142C61.9472 104.634 62.3694 105 62.867 105H140.846C141.455 105 141.923 104.461 141.837 103.858L140.122 91.8584C140.051 91.3658 139.629 91 139.132 91H61.1521Z"
+                    fill="currentColor"
+                  />
+                  <path d="M19 65H182" stroke="#3255A4" stroke-width="4" />
+                  <path d="M55.5 43L60 72.5" stroke="#3255A4" stroke-width="4" />
+                  <path d="M132 43L136.5 72.5" stroke="#3255A4" stroke-width="4" /></svg
+              ></span>
+              <span class="si-menu-link__text">Schedule</span>
+              <span class="si-card__arrow" aria-hidden="true"
+                ><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" /></svg
+              ></span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="si-uikit-block" aria-labelledby="uikit-cards">
+        <h2 class="si-uikit__h" id="uikit-cards">Home scope cards</h2>
+        <p class="si-uikit__note" style="margin-top: 0; margin-bottom: 1rem">
+          与首页一致：<code>body[data-page="home"]</code> + <code>.si-panels__panel</code> 下的 <code>.si-scope</code>（参训范围卡片；由 <code>js/i18n.js</code> 中 <code>renderScopeCards</code> 生成）。
+        </p>
+        <div
+          class="si-panels__panel is-active"
+          style="display: flex; flex-direction: column; gap: 0.75rem; max-width: 420px"
+        >
+          <button type="button" class="si-scope">
+            <div class="si-scope__body">
+              <h3 class="si-scope__title">August 3rd–7th</h3>
+              <ul class="si-scope__list">
+                <li>Role line A</li>
+                <li>Role line B</li>
+              </ul>
+            </div>
+            <span class="si-scope__arrow" aria-hidden="true"
+              ><svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" /></svg
+            ></span>
+          </button>
+          <button type="button" class="si-scope si-scope--muted">
+            <div class="si-scope__body">
+              <h3 class="si-scope__title">Muted card</h3>
+              <ul class="si-scope__list">
+                <li>Sample</li>
+              </ul>
+            </div>
+            <span class="si-scope__arrow" aria-hidden="true"
+              ><svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" /></svg
+            ></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="si-uikit-block" aria-labelledby="uikit-inner">
+        <h2 class="si-uikit__h" id="uikit-inner">Inner page cards</h2>
+        <div class="si-uikit__stack" style="max-width: 480px">
+          <div class="si-card si-card--white">
+            <h3 class="si-card__title si-card__title--blue">White card title</h3>
+            <ul class="si-card__list si-card__list--blue">
+              <li>Bullet on white</li>
+            </ul>
+          </div>
+          <div class="si-card si-card--tile">
+            <h3 class="si-card__title">Sky tile</h3>
+            <ul class="si-card__list">
+              <li>Bullet on sky</li>
+            </ul>
+          </div>
+          <div class="si-card si-card--ice">
+            <p class="si-card__title">Ice panel prose</p>
+          </div>
+          <div class="si-card si-card--lavender">
+            <p style="margin: 0">Lavender panel · <span class="si-em">emphasis wavy</span></p>
+          </div>
+          <a class="si-inner-doc-tile" href="#">PDF-style doc tile</a>
+        </div>
+      </section>
+
+      <section class="si-uikit-block" aria-labelledby="uikit-tables">
+        <h2 class="si-uikit__h" id="uikit-tables">Tables</h2>
+        <p class="si-uikit__note" style="margin-top: 0; margin-bottom: 0">
+          样式在 <code>css/main.css</code>：<code>wifi-help.html</code> 在 <code>body</code> 上加 <code>table-style-a</code>；表格外层为
+          <code>.si-card.table-style-a__wrap.si-card--tablewrap</code>，表格为
+          <code>.si-inner-table.table-style-a__table</code> 及修饰符 <code>--bisz-cols</code> / <code>--cells-center</code>。日程详情展开区为
+          <code>.si-sch-table</code>、<code>.si-sch-group-matrix</code>、
+          <code>.si-sch-matrix-table</code>（由 <code>js/schedule-page.js</code> 生成）。
+        </p>
+
+        <h3 class="si-uikit__subh">Table style A · 白底斑马表格</h3>
+        <p class="si-uikit__note" style="margin-top: 0">
+          与 <code>wifi-help.html</code> 三表一致：在预览容器上加 <code>table-style-a</code>（正式页挂在 <code>body</code>）；卡套用
+          <code>si-card table-style-a__wrap si-card--tablewrap</code>。
+        </p>
+        <div class="table-style-a si-uikit__table-preview-stack">
+          <div class="si-card table-style-a__wrap si-card--tablewrap">
+            <table class="si-inner-table table-style-a__table table-style-a__table--bisz-cols">
+              <tbody>
+                <tr>
+                  <th scope="col">Account</th>
+                  <th scope="col">Password</th>
+                </tr>
+                <tr>
+                  <td>BISZ Visitor</td>
+                  <td>skbss,123</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="si-card table-style-a__wrap si-card--tablewrap">
+            <table class="si-inner-table table-style-a__table table-style-a__table--cells-center">
+              <thead>
+                <tr>
+                  <th scope="col">Room No.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>536</td>
+                </tr>
+                <tr>
+                  <td>423</td>
+                </tr>
+                <tr>
+                  <td>424</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="si-card table-style-a__wrap si-card--tablewrap">
+            <table class="si-inner-table table-style-a__table table-style-a__table--cells-center">
+              <thead>
+                <tr>
+                  <th scope="col">Service</th>
+                  <th scope="col">Contact</th>
+                  <th scope="col">Tel</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IT Support</td>
+                  <td>Danny Huang</td>
+                  <td>17328731934</td>
+                </tr>
+                <tr>
+                  <td>General Consulting</td>
+                  <td>Joanne Liu</td>
+                  <td>15602283505</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h3 class="si-uikit__subh">Schedule · 详情内表格（展开态）</h3>
+        <p class="si-uikit__note" style="margin-top: 0">
+          与 <code>schedule.html</code> 中有详情的 session 卡片在 <code>.is-expanded</code> 下一致；下为静态展开预览（含
+          <code>tableHtml</code> 式 <code>.si-sch-table</code> 与 <code>groupMatrixHtml</code> 式矩阵 <code>table.si-sch-matrix-table</code>）。
+        </p>
+        <div class="si-uikit__sch-expanded-host">
+          <article class="si-sch-card si-sch-card--detail is-expanded">
+            <div class="si-sch-card__inner">
+              <div class="si-sch-card__lead si-sch-card__lead--expand">
+                <button type="button" class="si-sch-card__timebtn" aria-expanded="true" aria-controls="uikit-sch-table-extra" aria-label="Preview: expanded session">
+                  <span class="si-sch-card__time">10:00 – 11:30</span>
+                </button>
+                <div class="si-sch-card__topicswrap">
+                  <div class="si-sch-card__topics">
+                    <ul class="si-sch-bullets">
+                      <li><span class="si-sch-item-text">Sample session with detail tables (static expanded preview)</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="si-sch-audience">For All</p>
+                <div class="si-sch-card__locslot">
+                  <div class="si-sch-loc">
+                    <svg class="si-sch-pin" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <path d="M12 11H12.01V11.01H12V11Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                      <path
+                        d="M12 21.9999L17.5 16.4999C18.5878 15.4121 19.3285 14.0262 19.6286 12.5175C19.9287 11.0087 19.7747 9.4448 19.186 8.02358C18.5972 6.60235 17.6003 5.38762 16.3212 4.53297C15.0422 3.67833 13.5384 3.22217 12 3.22217C10.4617 3.22217 8.95794 3.67833 7.67886 4.53297C6.39978 5.38762 5.40286 6.60235 4.81415 8.02358C4.22544 9.4448 4.07139 11.0087 4.37148 12.5175C4.67156 14.0262 5.41231 15.4121 6.50005 16.4999L12 21.9999Z"
+                        stroke="currentColor"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="si-sch-loc__text">Auditorium, 318</span>
+                  </div>
+                </div>
+                <button type="button" class="si-sch-card__chevbtn" aria-expanded="true" aria-controls="uikit-sch-table-extra" tabindex="-1">
+                  <span class="si-sch-card__chev" aria-hidden="true">
+                    <svg class="si-sch-chevron" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="si-sch-extra" id="uikit-sch-table-extra">
+                <p class="si-sch-detail-line">Breakout locations (sample markup from <code>schedule-page.js</code> <code>tableHtml</code>).</p>
+                <div class="si-sch-table" role="table" aria-label="Sample breakout locations">
+                  <div class="si-sch-table__head" role="row">
+                    <div class="si-sch-table__h" role="columnheader">Audience</div>
+                    <div class="si-sch-table__h si-sch-table__h--loc" role="columnheader">Location</div>
+                  </div>
+                  <div class="si-sch-table__group" role="rowgroup">
+                    <div class="si-sch-table__group-label" role="row">
+                      <div class="si-sch-table__group-cell" role="cell">Breakout · Morning</div>
+                    </div>
+                    <div class="si-sch-table__rows">
+                      <div class="si-sch-table__row">
+                        <div class="si-sch-table__cell">School</div>
+                        <div class="si-sch-table__cell si-sch-table__cell--loc">113</div>
+                      </div>
+                      <div class="si-sch-table__row is-stripe">
+                        <div class="si-sch-table__cell">ECE</div>
+                        <div class="si-sch-table__cell si-sch-table__cell--loc">M06</div>
+                      </div>
+                      <div class="si-sch-table__row">
+                        <div class="si-sch-table__cell">MS</div>
+                        <div class="si-sch-table__cell si-sch-table__cell--loc">TBD</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="si-sch-group-matrix">
+                  <table class="si-sch-matrix-table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Track</th>
+                        <th scope="col">Room</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>A</td>
+                        <td>201</td>
+                      </tr>
+                      <tr>
+                        <td>B</td>
+                        <td>302</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="si-uikit-block" aria-labelledby="uikit-sch">
+        <h2 class="si-uikit__h" id="uikit-sch">Schedule session cards</h2>
+        <p class="si-uikit__note" style="margin-top: 0; margin-bottom: 1rem">
+          与 Figma「Schedule session cards」画板一致（<a href="https://www.figma.com/design/Ccy7A3959PvAjHU29QP31P/SummerInstitute-2026?node-id=91-638" style="color: var(--si-accent)">node 91:638</a>）。无详情：白底蓝字；有详情：ice 底深蓝字，悬停 sky 底深字。&lt;720px：有详情时首行为时间 + chevron，下为主题、受众、地点；≥720px：160px 时间 | 主题与受众 | 200px 地点 | 24px chevron（无地点时无中间地点列）。
+        </p>
+        <div class="si-uikit__stack" style="max-width: 100%">
+          <article class="si-sch-card si-sch-card--simple">
+            <div class="si-sch-card__inner">
+              <div class="si-sch-card__lead si-sch-card__lead--simple">
+                <div class="si-sch-card__headrow">
+                  <span class="si-sch-card__time">09:00 – 10:30</span>
+                  <span class="si-sch-card__chevspacer" aria-hidden="true"></span>
+                </div>
+                <div class="si-sch-card__topics">
+                  <ul class="si-sch-bullets">
+                    <li><span class="si-sch-item-text">Simple — no expandable detail</span></li>
+                  </ul>
+                </div>
+                <p class="si-sch-audience">For All</p>
+                <div class="si-sch-loc">
+                  <svg class="si-sch-pin" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <path d="M12 11H12.01V11.01H12V11Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    <path
+                      d="M12 21.9999L17.5 16.4999C18.5878 15.4121 19.3285 14.0262 19.6286 12.5175C19.9287 11.0087 19.7747 9.4448 19.186 8.02358C18.5972 6.60235 17.6003 5.38762 16.3212 4.53297C15.0422 3.67833 13.5384 3.22217 12 3.22217C10.4617 3.22217 8.95794 3.67833 7.67886 4.53297C6.39978 5.38762 5.40286 6.60235 4.81415 8.02358C4.22544 9.4448 4.07139 11.0087 4.37148 12.5175C4.67156 14.0262 5.41231 15.4121 6.50005 16.4999L12 21.9999Z"
+                      stroke="currentColor"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="si-sch-loc__text">Auditorium, 318</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="si-sch-card si-sch-card--detail">
+            <div class="si-sch-card__inner">
+              <div class="si-sch-card__lead si-sch-card__lead--expand">
+                <button type="button" class="si-sch-card__timebtn" aria-expanded="false" aria-controls="uikit-sch-extra" aria-label="Expand session details">
+                  <span class="si-sch-card__time">14:00 – 15:00</span>
+                </button>
+                <div class="si-sch-card__topicswrap">
+                  <div class="si-sch-card__topics">
+                    <ul class="si-sch-bullets">
+                      <li><span class="si-sch-item-text">Detail card — hover for background only; click the time row or chevron to expand</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="si-sch-audience">For All</p>
+                <div class="si-sch-card__locslot">
+                  <div class="si-sch-loc">
+                    <svg class="si-sch-pin" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <path d="M12 11H12.01V11.01H12V11Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                      <path
+                        d="M12 21.9999L17.5 16.4999C18.5878 15.4121 19.3285 14.0262 19.6286 12.5175C19.9287 11.0087 19.7747 9.4448 19.186 8.02358C18.5972 6.60235 17.6003 5.38762 16.3212 4.53297C15.0422 3.67833 13.5384 3.22217 12 3.22217C10.4617 3.22217 8.95794 3.67833 7.67886 4.53297C6.39978 5.38762 5.40286 6.60235 4.81415 8.02358C4.22544 9.4448 4.07139 11.0087 4.37148 12.5175C4.67156 14.0262 5.41231 15.4121 6.50005 16.4999L12 21.9999Z"
+                        stroke="currentColor"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="si-sch-loc__text">Auditorium, 318</span>
+                  </div>
+                </div>
+                <button type="button" class="si-sch-card__chevbtn" aria-expanded="false" aria-controls="uikit-sch-extra" tabindex="-1">
+                  <span class="si-sch-card__chev" aria-hidden="true">
+                    <svg class="si-sch-chevron" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                      <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="si-sch-extra" id="uikit-sch-extra">
+                <p class="si-sch-detail-line">Extra content appears when the header toggle is clicked.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <p class="si-uikit__note" style="margin-top: 2rem">
+        <a class="si-loc-link" href="index.html" style="color: var(--si-accent)">← 返回站点首页</a>
+      </p>
+    </div>
+    <script>
+      (function () {
+        document.querySelectorAll(".si-sch-card--detail .si-sch-card__lead--expand").forEach(function (lead) {
+          var timeBtn = lead.querySelector(".si-sch-card__timebtn");
+          var chevBtn = lead.querySelector(".si-sch-card__chevbtn");
+          var card = lead.closest(".si-sch-card--detail");
+          if (!timeBtn || !card) return;
+          function setLabel(next) {
+            timeBtn.setAttribute("aria-label", next ? "Collapse session details" : "Expand session details");
+          }
+          var initiallyOpen = timeBtn.getAttribute("aria-expanded") === "true";
+          setLabel(initiallyOpen);
+          function flip() {
+            var open = timeBtn.getAttribute("aria-expanded") === "true";
+            var next = !open;
+            timeBtn.setAttribute("aria-expanded", next ? "true" : "false");
+            if (chevBtn) chevBtn.setAttribute("aria-expanded", next ? "true" : "false");
+            card.classList.toggle("is-expanded", next);
+            setLabel(next);
+          }
+          timeBtn.addEventListener("click", flip);
+          if (chevBtn) chevBtn.addEventListener("click", flip);
+        });
+      })();
+    </script>
+      <script src="js/vendor/three.min.js"></script>
+    <script src="js/silk-background.js" defer></script>
+  </body>
+</html>

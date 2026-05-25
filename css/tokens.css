@@ -1,0 +1,81 @@
+/* =====================================================================
+   Summer Institute — design tokens (single source of truth)
+   - Adjust colors / type / radii here; refresh ui-kit.html to preview.
+   - main.css @imports this file first.
+   ====================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Noto+Sans+SC:wght@300;400;500;700&display=swap");
+
+/* --- Page gutters (spec: mobile-first; tablet 803–1279; desktop 1280+) --- */
+:root {
+  --page-gutter: 24px;
+}
+
+@media (min-width: 803px) and (max-width: 1279px) {
+  :root {
+    --page-gutter: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --page-gutter: 64px;
+  }
+}
+
+/* --- Brand: surfaces & text (Figma dark home + inner pages) --- */
+:root {
+  --si-bg: transparent;
+  --si-fg: #ffffff;
+  --si-accent: #9be2fc;
+  --si-card: #ffffff;
+  --si-card-text: #3255a4;
+  --si-card-muted: rgba(255, 255, 255, 0.82);
+  --si-menu-tile: #34b5f4;
+  --si-lavender: #a4acd4;
+  --si-emphasis: #ffe240;
+}
+
+/* --- Glass surface (Figma Glass: Light -45° 100% · Refraction 40 · Depth 60 · Dispersion 100 · Frost 16 · Splay 0) --- */
+:root {
+  --si-glass-light-angle: -45deg;
+  --si-glass-light-intensity: 1;
+  --si-glass-refraction: 40;
+  --si-glass-depth: 60;
+  --si-glass-dispersion: 100;
+  --si-glass-frost: 16px;
+  --si-glass-splay: 0px;
+}
+
+/* --- Typography ---
+   浏览器按字符回退：西文在 Gotham / Montserrat / Helvetica 中选；
+   中文在前述字体缺字时落到苹方 / 思源黑体 / 微软雅黑。
+   - Gotham：多为本机已装；网页嵌入需自有字体文件 + @font-face（授权）。
+   - Montserrat、Noto Sans SC（思源黑体）：已通过文件顶部 Google Fonts @import 加载；内网或无外网时请删除该 @import 并改为自托管 woff2 + @font-face。
+   ------------------------------------------------------------------ */
+:root {
+  --si-font-latin: "Gotham", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --si-font-han: "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Source Han Sans SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --si-font: var(--si-font-latin), var(--si-font-han);
+}
+
+@media (max-width: 402px) {
+  :root {
+    --si-h1: clamp(2rem, 11vw, 3.5rem);
+    --si-h2: clamp(1.75rem, 7vw, 2.5rem);
+  }
+}
+
+@media (min-width: 403px) {
+  :root {
+    --si-h1: 3.5rem;
+    --si-h2: 2.5rem;
+  }
+}
+
+/* --- Radii --- */
+:root {
+  --si-radius-tab: 4px;
+  --si-radius-card: 4px;
+  --si-radius-tight: 2px;
+}
