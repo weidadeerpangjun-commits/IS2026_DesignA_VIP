@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="menu.hotel">Hotel Information</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="si" data-page="inner" data-section="hotel">
+    <a class="skip-link" href="#inner-main" data-i18n="a11y.skip">跳到主内容</a>
+    <div class="si-page si-page--inner">
+      <header class="si-schedule-top">
+        <div class="container si-schedule-top__inner">
+          <div class="si-schedule-brand">
+            <img
+              class="si-schedule-logo"
+              src="img/Logo_SI2026.svg"
+              alt=""
+              width="93"
+              height="72"
+              decoding="async"
+              data-i18n-alt="schedule.logoAlt"
+            />
+          </div>
+          <div class="si-schedule-top__actions">
+            <a class="si-schedule-menu-pill" href="menu.html" data-i18n="schedule.menu">Menu</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="inner-main" class="si-inner-main container">
+        <h1 class="si-inner-page-title" data-i18n="menu.hotel">Hotel Information</h1>
+
+        <section class="si-inner-stack" aria-labelledby="hotel-brand">
+          <h2 id="hotel-brand" class="visually-hidden" data-i18n="hotel.brandHeading">酒店品牌</h2>
+          <div class="si-card si-card--white si-card--hotel-brand">
+            <div class="si-hotel-brand">
+              <img
+                class="si-hotel-raffles-logo"
+                src="img/andaz.png"
+                alt=""
+                width="320"
+          
+                height="120"
+                decoding="async"
+                data-i18n-alt="hotel.rafflesAlt"
+              />
+              <!-- <p class="si-hotel-name" data-i18n="hotel.hotelName">深圳鹏瑞莱佛士酒店</p> -->
+            </div>
+          </div>
+        </section>
+
+        <section class="si-inner-stack" aria-labelledby="hotel-address">
+          <h2 id="hotel-address" class="si-section-label" data-i18n="hotel.subAddress">地址</h2>
+          <div class="si-card si-card--lavender si-card--prose">
+            <div class="si-loc-row si-loc-row--address-inline">
+              <img
+                class="si-hotel-address-pin"
+                src="icon/ic_pin.svg"
+                alt=""
+                width="24"
+                height="24"
+                decoding="async"
+                aria-hidden="true"
+              />
+              <p class="si-loc-text" data-i18n="hotel.addressFull">
+                广东省深圳市南山区科苑南路2600号
+              </p>
+            </div>
+            <p class="si-hotel-route-row">
+              <button
+                type="button"
+                class="si-map-route-btn"
+                data-map-route
+                data-map-lat="22.518194"
+                data-map-lng="113.9425"
+                data-map-name-zh="深圳湾安达仕酒店"
+                data-map-name-en="Andaz Shenzhen Bay"
+                data-i18n-aria-label="hotel.viewRoute"
+                aria-label="查看路线"
+              >
+                <span data-i18n="hotel.viewRoute">查看路线</span>
+                <span class="si-map-route-btn__arrow" aria-hidden="true">→</span>
+              </button>
+            </p>
+          </div>
+        </section>
+
+        <section class="si-inner-stack" aria-labelledby="hotel-phone">
+          <h2 id="hotel-phone" class="si-section-label" data-i18n="hotel.subTel">酒店电话</h2>
+          <div class="si-card si-card--ice si-card--prose">
+            <div class="si-loc-row si-loc-row--address-inline">
+              <img
+                class="si-hotel-inline-icon"
+                src="icon/ic_call.svg"
+                alt=""
+                width="24"
+                height="24"
+                decoding="async"
+                aria-hidden="true"
+              />
+              <p class="si-tel-num si-loc-text" data-i18n="hotel.phone">0755-86668666</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="si-inner-stack" aria-labelledby="hotel-breakfast">
+          <h2 id="hotel-breakfast" class="si-section-label" data-i18n="hotel.subBreakfast">早餐</h2>
+          <div class="si-card si-card--white si-card--prose">
+            <div class="si-loc-row si-loc-row--address-inline">
+              <img
+                class="si-hotel-inline-icon"
+                src="icon/ic_time.svg"
+                alt=""
+                width="24"
+                height="24"
+                decoding="async"
+                aria-hidden="true"
+              />
+              <p class="si-loc-text" data-i18n="hotel.breakfastTime">6:30AM-10:30AM</p>
+            </div>
+            <div class="si-loc-row si-loc-row--address-inline">
+              <img
+                class="si-hotel-inline-icon"
+                src="icon/ic_breakfast.svg"
+                alt=""
+                width="24"
+                height="24"
+                decoding="async"
+                aria-hidden="true"
+              />
+              <p class="si-loc-text" data-i18n="hotel.breakfastVenue">酒店34楼星空坊餐厅</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="si-inner-stack" aria-labelledby="hotel-notice">
+          <h2 id="hotel-notice" class="si-section-label" data-i18n="hotel.subNotice">酒店入住须知</h2>
+          <div class="si-card si-card--ice si-card--prose">
+            <ol class="si-ol si-ol--tight">
+              <li data-i18n="hotel.notice1">入住时间：15:00后</li>
+              <li>
+                <span data-i18n="hotel.notice2">退房时间：12:00 前</span>
+                <p class="si-hotel-notice-nested" data-i18n="hotel.notice2detail">
+                  若在8月8日返程，请在早上前往蛇口校区培训前须办理好退房手续，并带上行李，行李集中存放在校区指定地点。
+                </p>
+              </li>
+              <li data-i18n="hotel.notice3">如在入住期间需要帮助，请及时联系集团行政事务中心或各校行政人事部。</li>
+              <li class="si-hotel-notice-point">
+                <span data-i18n="hotel.notice4">酒店上车/下车点：</span>
+                <button
+                  type="button"
+                  class="si-img-lightbox-trigger"
+                  data-si-lightbox-src="images/andaz-pick-up.png"
+                  data-i18n-aria-label="hotel.viewLargeImage"
+                  aria-label="查看大图"
+                >
+                  <img
+                    class="si-hotel-point-img"
+                    src="images/andaz-pick-up.png"
+                    alt=""
+                    height="160"
+                    decoding="async"
+                    loading="lazy"
+                    data-i18n-alt="hotel.pickupPointImgAlt"
+                  />
+                </button>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </main>
+    </div>
+
+      <footer class="si-footer">
+        <div class="container si-footer__inner">
+          <div class="si-footer__toolbar">
+            <a class="si-home-abbrev-btn" href="abbreviations.html" data-i18n="abbr.indexLink">缩略语表</a>
+            <button type="button" class="si-lang" id="lang-toggle" aria-label="">
+              <span class="si-lang__label" data-i18n="header.langLabel">中文→EN</span>
+            </button>
+          </div>
+          <p class="si-footer__copy" data-i18n="footer.copyright">Copyright © 2026 Teknova (Shenzhen) Education Technology Co., Limited. All Rights Reserved</p>
+          <p class="si-footer__icp">
+            <a class="si-footer__link" href="https://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank" data-i18n="footer.icp">ICP备案号：粤ICP备19153114号</a>
+          </p>
+        </div>
+      </footer>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/map-route.js" defer></script>
+    <script src="js/image-lightbox.js" defer></script>
+    <script src="js/image-background.js" defer></script>
+  </body>
+</html>

@@ -64,28 +64,28 @@
       <section class="si-uikit-block" aria-labelledby="uikit-glass">
         <h2 class="si-uikit__h" id="uikit-glass">Glass</h2>
         <p class="si-uikit__note" style="margin-top: 0; margin-bottom: 1rem">
-          Figma Glass 效果参数映射至 <code>css/tokens.css</code> 与可复用类 <code>.si-glass</code>（<code>css/main.css</code>）。在 Silk 背景上叠加 Frost 模糊、-45° 高光、Refraction 边框与 Dispersion 色散边。
+          Figma Glass 效果（<code>css/tokens.css</code>）已应用于全站 <code>.si-card</code>、<code>.si-scope</code>、Tab、按钮与菜单链接等，统一使用 <code>.si-glass</code> 同一套 token。
         </p>
         <div class="si-uikit__glass-params" role="list">
           <div class="si-uikit__glass-param" role="listitem">
             <span class="si-uikit__glass-param-label">Light</span>
-            <span>Angle <strong>-45°</strong> · Intensity <strong>100%</strong></span>
+            <span>Angle <strong>45°</strong> · Intensity <strong>20%</strong></span>
           </div>
           <div class="si-uikit__glass-param" role="listitem">
             <span class="si-uikit__glass-param-label">Refraction</span>
-            <span><strong>40</strong></span>
+            <span><strong>5</strong></span>
           </div>
           <div class="si-uikit__glass-param" role="listitem">
             <span class="si-uikit__glass-param-label">Depth</span>
-            <span><strong>60</strong></span>
+            <span><strong>80</strong></span>
           </div>
           <div class="si-uikit__glass-param" role="listitem">
             <span class="si-uikit__glass-param-label">Dispersion</span>
-            <span><strong>100</strong></span>
+            <span><strong>160</strong></span>
           </div>
           <div class="si-uikit__glass-param" role="listitem">
             <span class="si-uikit__glass-param-label">Frost</span>
-            <span><strong>16</strong></span>
+            <span><strong>0</strong></span>
           </div>
           <div class="si-uikit__glass-param" role="listitem">
             <span class="si-uikit__glass-param-label">Splay</span>
@@ -135,7 +135,7 @@
           <button type="button" class="si-tab" role="tab">Admin Role</button>
         </div>
         <p class="si-uikit__note" style="margin-top: 1.25rem">Schedule date tabs</p>
-        <div class="si-date-tabs" role="tablist" style="max-width: 520px">
+        <div class="si-date-tabs" role="tablist">
           <button type="button" class="si-date-tab" role="tab">
             <span class="si-date-tab__month">Aug</span>
             <span class="si-date-tab__day">5</span>
@@ -179,8 +179,8 @@
               ></span>
               <span class="si-menu-link__text">Schedule</span>
               <span class="si-card__arrow" aria-hidden="true"
-                ><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                  <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" /></svg
+                ><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <path d="M17.84 15.4679C18.14 14.8679 18.44 14.3279 18.74 13.8479C19.06 13.3679 19.38 12.9379 19.7 12.5579H2V11.5379H19.7C19.38 11.1579 19.06 10.7279 18.74 10.2479C18.44 9.76793 18.14 9.22793 17.84 8.62793H18.65C19.89 10.0479 21.2 11.1279 22.58 11.8679V12.2279C21.2 12.9479 19.89 14.0279 18.65 15.4679H17.84Z" fill="currentColor"/></svg
               ></span>
             </a>
           </li>
@@ -198,28 +198,25 @@
         >
           <button type="button" class="si-scope">
             <div class="si-scope__body">
+              <h3 class="si-scope__title">August 5th–7th</h3>
+              <ul class="si-scope__list">
+                <li>中方四级及以上高层</li>
+                <li>成都校区副校务长、广州双语校区助理校务长</li>
+                <li>南贝幼/福贝幼常务副总经理、福贝幼副总经理</li>
+              </ul>
+            </div>
+            <span class="si-scope__arrow" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="si-scope">
+            <div class="si-scope__body">
               <h3 class="si-scope__title">August 3rd–7th</h3>
               <ul class="si-scope__list">
-                <li>Role line A</li>
-                <li>Role line B</li>
+                <li>CEHOS</li>
+                <li>Senior CIO/CIO</li>
+                <li>HOS</li>
               </ul>
             </div>
-            <span class="si-scope__arrow" aria-hidden="true"
-              ><svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" /></svg
-            ></span>
-          </button>
-          <button type="button" class="si-scope si-scope--muted">
-            <div class="si-scope__body">
-              <h3 class="si-scope__title">Muted card</h3>
-              <ul class="si-scope__list">
-                <li>Sample</li>
-              </ul>
-            </div>
-            <span class="si-scope__arrow" aria-hidden="true"
-              ><svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" /></svg
-            ></span>
+            <span class="si-scope__arrow" aria-hidden="true"></span>
           </button>
         </div>
       </section>
@@ -359,8 +356,9 @@
                 </div>
                 <button type="button" class="si-sch-card__chevbtn" aria-expanded="true" aria-controls="uikit-sch-table-extra" tabindex="-1">
                   <span class="si-sch-card__chev" aria-hidden="true">
-                    <svg class="si-sch-chevron" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    <svg class="si-sch-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <path d="M3 12.5H21V11.5H3V12.5Z" fill="currentColor" />
+                      <path d="M11.5 3.5L11.5 21.5H12.5L12.5 3.5L11.5 3.5Z" fill="currentColor" />
                     </svg>
                   </span>
                 </button>
@@ -480,8 +478,9 @@
                 </div>
                 <button type="button" class="si-sch-card__chevbtn" aria-expanded="false" aria-controls="uikit-sch-extra" tabindex="-1">
                   <span class="si-sch-card__chev" aria-hidden="true">
-                    <svg class="si-sch-chevron" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                      <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" />
+                    <svg class="si-sch-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                      <path d="M3 12.5H21V11.5H3V12.5Z" fill="currentColor" />
+                      <path d="M11.5 3.5L11.5 21.5H12.5L12.5 3.5L11.5 3.5Z" fill="currentColor" />
                     </svg>
                   </span>
                 </button>
@@ -498,6 +497,21 @@
         <a class="si-loc-link" href="index.html" style="color: var(--si-accent)">← 返回站点首页</a>
       </p>
     </div>
+
+    <footer class="si-footer">
+      <div class="container si-footer__inner">
+        <div class="si-footer__toolbar">
+          <a class="si-home-abbrev-btn" href="abbreviations.html" data-i18n="abbr.indexLink">缩略语表</a>
+          <button type="button" class="si-lang" id="lang-toggle" aria-label="">
+            <span class="si-lang__label" data-i18n="header.langLabel">中文→EN</span>
+          </button>
+        </div>
+        <p class="si-footer__copy" data-i18n="footer.copyright">Copyright © 2026 Teknova (Shenzhen) Education Technology Co., Limited. All Rights Reserved</p>
+        <p class="si-footer__icp">
+          <a class="si-footer__link" href="https://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank" data-i18n="footer.icp">ICP备案号：粤ICP备19153114号</a>
+        </p>
+      </div>
+    </footer>
     <script>
       (function () {
         document.querySelectorAll(".si-sch-card--detail .si-sch-card__lead--expand").forEach(function (lead) {
@@ -523,7 +537,7 @@
         });
       })();
     </script>
-      <script src="js/vendor/three.min.js"></script>
-    <script src="js/silk-background.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/image-background.js" defer></script>
   </body>
 </html>

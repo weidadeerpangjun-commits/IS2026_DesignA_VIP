@@ -1,5 +1,5 @@
 @import url("tokens.css");
-@import url("silk-background.css");
+@import url("image-background.css");
 
 *,
 *::before,
@@ -19,7 +19,7 @@ body.si {
   -webkit-font-smoothing: antialiased;
 }
 
-body.si.has-silk-background {
+body.si.has-site-background {
   background: transparent;
 }
 
@@ -54,8 +54,86 @@ body.si.has-silk-background {
 }
 
 .si-page {
+  display: flex;
+  flex-direction: column;
   min-height: 100dvh;
   background: var(--si-bg);
+}
+
+.si-footer {
+  margin-top: auto;
+  padding-block: 2rem 2.5rem;
+  padding-bottom: max(2.5rem, env(safe-area-inset-bottom, 0px));
+  /* border-top: 1px solid rgb(255 255 255 / 10%); */
+  color: var(--si-lavender);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.si-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.si-footer__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.si-footer__toolbar .si-home-abbrev-btn,
+.si-footer__toolbar .si-lang {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(1rem * 1.25 + 1rem);
+  padding: 0.5rem 0.875rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25;
+  flex-shrink: 0;
+}
+
+.si-footer__toolbar .si-lang {
+  margin-left: auto;
+}
+
+.si-footer__toolbar .si-lang--menu {
+  align-self: auto;
+  margin-bottom: 0;
+}
+
+.si-footer__copy,
+.si-footer__icp {
+  margin: 0;
+}
+
+.si-footer__link {
+  color: var(--si-fg);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.si-footer__link:hover {
+  color: var(--si-accent);
+}
+
+.si-footer__link:focus-visible {
+  outline: 2px solid var(--si-accent);
+  outline-offset: 2px;
+}
+
+body.si-page--schdb {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
 }
 
 .si-hero {
@@ -91,7 +169,6 @@ body.si.has-silk-background {
 
 .si-lang {
   border: 0;
-  background: none;
   color: var(--si-fg);
   font: inherit;
   font-weight: 400;
@@ -100,12 +177,11 @@ body.si.has-silk-background {
   cursor: pointer;
   padding: 0.25rem 0.5rem;
   border-radius: var(--si-radius-tab);
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .si-lang:hover,
 .si-lang:focus-visible {
-  background: var(--si-menu-tile);
   color: var(--si-fg);
   text-decoration: none;
 }
@@ -124,10 +200,10 @@ body.si.has-silk-background {
 
 .si-h1 {
   margin: 0;
-  font-size: var(--si-h1, 3.5rem);
+  font-size: 4rem;
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.01em;
 }
 
 .si-h1--zh {
@@ -145,17 +221,16 @@ body.si.has-silk-background {
 
 .si-h3 {
   margin: 0;
-  font-size: 1.875rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 400;
   line-height: 1.45;
   letter-spacing: -0.005em;
 }
 
 .si-h5 {
   margin: 0;
-  font-size: 1.25rem;
-  font-weight: 300;
-  line-height: 1.45;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 /* 24px / medium — Heading 4：日程时间、菜单链接文案、卡片内标题 */
@@ -219,22 +294,18 @@ body.si.has-silk-background {
   align-items: center;
   justify-content: center;
   padding: 0.35rem 0.9rem;
-  border-radius: 999px;
+  border-radius: var(--si-radius-tab);
   font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.25;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: var(--si-accent);
-  background: rgb(255 255 255 / 0.08);
-  border: 1px solid rgb(155 226 252 / 0.4);
-  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  color: var(--si-fg);
+  transition: color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
 .si-home-abbrev-btn:hover {
   color: var(--si-fg);
-  background: var(--si-menu-tile);
-  border-color: transparent;
 }
 
 .si-home-abbrev-btn:focus-visible {
@@ -266,6 +337,12 @@ body.si.has-silk-background {
   color: var(--si-accent);
 }
 
+.si-choose__chev svg {
+  display: block;
+  color: var(--si-accent);
+  transform: rotate(90deg);
+}
+
 .si-tabs {
   display: flex;
   gap: 4px;
@@ -292,17 +369,15 @@ body.si.has-silk-background {
   line-height: 1.2;
   cursor: pointer;
   text-align: center;
-  background: var(--si-bg);
   color: var(--si-fg);
+  transition: color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .si-tab.is-active {
-  background: var(--si-fg);
-  color: var(--si-card-text);
+  color: var(--si-fg);
 }
 
 .si-tab:hover:not(.is-active) {
-  background: var(--si-menu-tile);
   color: var(--si-fg);
 }
 
@@ -333,12 +408,12 @@ body.si.has-silk-background {
   text-align: left;
   cursor: pointer;
   font: inherit;
-  background: var(--si-card);
-  color: var(--si-card-text);
+  color: var(--si-fg);
   display: flex;
   gap: 0.75rem;
   align-items: flex-start;
-  transition: background-color 0.15s ease, color 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+  transition: color 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease, background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 @media (min-width: 480px) {
@@ -350,20 +425,17 @@ body.si.has-silk-background {
 
 .si-card--muted,
 .si-scope--muted {
-  background: var(--si-card-muted);
+  color: var(--si-fg);
 }
 
-/* Home (index) — teaching/admin scope cards: solid white + blue text; hover = menu link */
+/* Home (index) — scope cards: glass + white text */
 body[data-page="home"] .si-panels__panel > .si-scope--muted {
-  background: var(--si-card);
-  color: var(--si-card-text);
+  color: var(--si-fg);
   box-shadow: inset 0 0 0 1px rgb(50 85 164 / 0.14);
 }
 
 body[data-page="home"] .si-panels__panel > .si-scope:hover {
-  background: var(--si-menu-tile);
   color: var(--si-fg);
-  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
 }
 
 body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
@@ -387,7 +459,7 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   line-height: 1.333;
 }
 
-/* Index scope cards: custom marker (no bullets) — icon/ic_scope.svg */
+/* Index scope cards: custom marker — icon/menu_scope.svg (white fills + --si-menu-tile strokes) */
 .si-scope__list {
   margin: 0;
   padding-left: 0;
@@ -401,21 +473,41 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 }
 
 .si-scope__list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.65rem;
+  position: relative;
+  padding-left: calc(1.75rem + 0.65rem);
   margin-bottom: 0.5rem;
 }
 
-.si-scope__list li::before {
+.si-scope__list li::before,
+.si-scope__list li::after {
   content: "";
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0.08em;
   width: 1.75rem;
   height: 1.75rem;
-  margin-top: 0.08em;
-  background-color: currentColor;
-  -webkit-mask-image: url("../icon/ic_scope.svg");
-  mask-image: url("../icon/ic_scope.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.si-scope__list li::before {
+  background-color: var(--si-fg);
+  -webkit-mask-image: url("../icon/menu_scope-fill.svg");
+  mask-image: url("../icon/menu_scope-fill.svg");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.si-scope__list li::after {
+  background-color: var(--si-menu-tile);
+  -webkit-mask-image: url("../icon/menu_scope-stroke.svg");
+  mask-image: url("../icon/menu_scope-stroke.svg");
   -webkit-mask-size: contain;
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -432,10 +524,18 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 .si-card__arrow,
 .si-scope__arrow {
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 24px;
   height: 24px;
   color: inherit;
   margin-top: 2px;
+}
+
+.si-card__arrow svg,
+.si-scope__arrow svg {
+  display: block;
 }
 
 .si-card:focus-visible,
@@ -448,7 +548,6 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   max-width: 354px;
   padding: 1rem 0.75rem;
   border-radius: var(--si-radius-card);
-  background: var(--si-card);
   color: var(--si-card-text);
   font-size: 1.125rem;
   line-height: 1.45;
@@ -466,16 +565,16 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   max-width: 354px;
   padding: 0.65rem 1rem;
   border-radius: var(--si-radius-card);
-  background: var(--si-accent);
-  color: var(--si-card-text);
+  color: var(--si-fg);
   font-size: 1.05rem;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
+  transition: color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .si-admin-cta:hover {
-  filter: brightness(1.05);
+  color: var(--si-fg);
 }
 
 .si-admin-cta:focus-visible {
@@ -561,15 +660,12 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   padding: 1rem 1.5rem;
   border-radius: var(--si-radius-card);
   text-decoration: none;
-  color: var(--si-card-text);
-  background: var(--si-card);
-  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  color: var(--si-fg);
+  transition: color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .si-menu-link:hover {
-  background: var(--si-menu-tile);
   color: var(--si-fg);
-  box-shadow: 0 4px 14px rgb(0 0 0 / 12%);
 }
 
 .si-menu-link:focus-visible {
@@ -584,7 +680,7 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  color: var(--si-menu-tile);
+  color: var(--si-fg);
   transition: color 0.15s ease;
 }
 
@@ -614,7 +710,7 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 
 .si-detail-header__inner {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 0.75rem 1rem;
 }
@@ -685,7 +781,7 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   z-index: 30;
   background: var(--si-bg);
   padding-block: 1.5rem;
-  border-bottom: 1px solid rgb(255 255 255 / 10%);
+  /* border-bottom: 1px solid rgb(255 255 255 / 10%); */
   /* Match logo to Menu pill: vertical padding + one line (see .si-schedule-menu-pill) */
   --si-schedule-pill-height: calc(1rem + 1.45 * 1rem);
 }
@@ -737,13 +833,11 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   border: 0;
   cursor: pointer;
   font-family: inherit;
-  background: var(--si-fg);
-  color: var(--si-card-text);
-  transition: background-color 0.15s ease, color 0.15s ease;
+  color: var(--si-fg);
+  transition: color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .si-schedule-menu-pill:hover {
-  background: var(--si-menu-tile);
   color: var(--si-fg);
 }
 
@@ -774,14 +868,22 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 
 .si-date-tabs {
   display: flex;
-  gap: 0.75rem;
-  width: 100%;
+  /* gap: 0.75rem; */
+  /* width: 100%; */
+  /* width-max: 750px; */
+  max-width: 420px;
   margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .si-date-tab {
-  flex: 1;
-  min-width: 0;
+  flex: 0 0 102px;
+  width: 64px;
+  min-width: 64px;
+  max-width: 64px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -795,18 +897,88 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   font: inherit;
   color: var(--si-lavender);
   background: transparent;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  isolation: auto;
+  overflow: visible;
+  transition: color 0.15s ease;
+}
+
+.si-date-tab::before,
+.si-date-tab::after {
+  display: none;
 }
 
 .si-date-tab.is-active {
-  padding: 0.75rem;
-  background: var(--si-fg);
-  color: var(--si-card-text);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 60px;
+  color: var(--si-fg);
+  background: rgb(255 255 255 / calc(0.06 + var(--si-glass-refraction) * 0.002));
+  backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
+  -webkit-backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
+  border: 1px solid rgb(255 255 255 / calc(0.18 + var(--si-glass-refraction) * 0.004));
+  box-shadow:
+    0 calc(var(--si-glass-depth) * 0.12px) calc(var(--si-glass-depth) * 0.53px) var(--si-glass-splay)
+      rgb(0 0 0 / calc(var(--si-glass-depth) * 0.005)),
+    inset 0 1px 0 rgb(255 255 255 / calc(0.25 + var(--si-glass-light-intensity) * 0.25)),
+    inset 1px 1px 0 rgb(255 255 255 / calc(0.1 * var(--si-glass-light-intensity)));
+  transition: color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.si-date-tab.is-active::before {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    var(--si-glass-light-angle),
+    rgb(255 255 255 / calc(0.55 * var(--si-glass-light-intensity))) 0%,
+    rgb(255 255 255 / calc(0.12 * var(--si-glass-light-intensity))) 28%,
+    transparent 52%
+  );
+  mix-blend-mode: overlay;
+}
+
+.si-date-tab.is-active::after {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgb(255 180 220 / calc(var(--si-glass-dispersion) * 0.0025)) 0%,
+    rgb(180 220 255 / calc(var(--si-glass-dispersion) * 0.0025)) 50%,
+    rgb(220 255 200 / calc(var(--si-glass-dispersion) * 0.002)) 100%
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  opacity: calc(var(--si-glass-dispersion) / 100);
+}
+
+.si-date-tab.is-active:hover {
+  background: rgb(255 255 255 / calc(0.14 + var(--si-glass-refraction) * 0.003));
+}
+
+.si-date-tab.is-active > * {
+  position: relative;
+  z-index: 1;
 }
 
 .si-date-tab:hover:not(.is-active) {
-  background: var(--si-menu-tile);
   color: var(--si-fg);
+  background: transparent;
+  box-shadow: none;
 }
 
 .si-date-tab__month,
@@ -845,28 +1017,24 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 .si-sch-card {
   border-radius: var(--si-radius-card);
   overflow: hidden;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-/* 无详情：白底蓝字 */
+/* 无详情：玻璃底 + 蓝字 */
 .si-sch-card--simple {
-  background: var(--si-card);
-  color: var(--si-card-text);
+  color: var(--si-white);
 }
 
-/* 有详情（折叠）：ice 底深蓝字；右上角 chevron */
+/* 有详情（折叠）：玻璃底 + 深蓝字 */
 .si-sch-card--detail {
-  background: var(--si-accent);
-  color: var(--si-card-text);
+  color: var(--si-white);
 }
 
 .si-sch-card--detail .si-sch-pin {
-  color: var(--si-card-text);
+  color: var(--si-white);
 }
 
-/* 悬停有详情的 card：仅 sky 底 + 字色变化；详情区由点击切换 .is-expanded */
 .si-sch-card--detail:hover {
-  background: var(--si-menu-tile);
   color: var(--si-fg);
 }
 
@@ -878,8 +1046,9 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  padding-top: 0;
+  padding: 0;
   margin: 0;
+  gap: 0;
   pointer-events: none;
   transition: max-height 0.4s ease, opacity 0.25s ease, padding-top 0.2s ease;
 }
@@ -888,45 +1057,50 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   max-height: 2400px;
   opacity: 1;
   padding-top: 0.25rem;
+  gap: 1rem;
   pointer-events: auto;
 }
 
 .si-sch-card--detail.is-expanded .si-sch-chevron {
-  transform: rotate(180deg);
+  transform: rotate(45deg);
 }
 
 .si-sch-card__inner {
   padding: 0.75rem;
   display: flex;
   flex-direction: column;
+  gap: 0;
+}
+
+.si-sch-card--detail.is-expanded .si-sch-card__inner {
   gap: 1rem;
 }
 
 .si-sch-card__lead--simple {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 @media (min-width: 720px) {
-  /* Figma「无详情，720+」：160 | 主题+受众 | 200 地点；列间距 10px */
+  /* Figma「无详情，720+」：时间列 | 主题+受众 | 地点；列间距加大避免与主题贴太近 */
   .si-sch-card__lead--simple {
     display: grid;
-    grid-template-columns: 160px 1fr;
-    column-gap: 10px;
+    grid-template-columns: minmax(12.5rem, auto) 1fr;
+    column-gap: 1.5rem;
     row-gap: 16px;
     align-items: start;
   }
 
   .si-sch-card__lead--simple:has(> .si-sch-loc) {
-    grid-template-columns: 160px 1fr 200px;
+    grid-template-columns: minmax(12.5rem, auto) 1fr 200px;
   }
 
   .si-sch-card__lead--simple > .si-sch-card__headrow {
     grid-column: 1;
     grid-row: 1 / -1;
-    width: 160px;
-    max-width: 160px;
+    width: auto;
+    max-width: none;
     flex-shrink: 0;
     flex-direction: column;
     align-items: flex-start;
@@ -935,8 +1109,8 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   }
 
   .si-sch-card__lead--simple .si-sch-card__time {
-    width: 200px;
-    max-width: 200px;
+    width: auto;
+    max-width: 12.5rem;
     box-sizing: border-box;
     overflow-wrap: break-word;
   }
@@ -970,8 +1144,7 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 .si-sch-card__lead--expand {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: auto auto auto auto;
-  gap: 1rem 0.75rem;
+  gap: 1.25rem 0.75rem;
   align-items: start;
 }
 
@@ -1011,15 +1184,14 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 
 @media (min-width: 720px) {
   .si-sch-card__lead--expand {
-    grid-template-columns: 160px 1fr 28px;
-    grid-template-rows: auto auto;
-    column-gap: 10px;
+    grid-template-columns: minmax(12.5rem, auto) 1fr 28px;
+    column-gap: 1.5rem;
     row-gap: 16px;
     align-items: start;
   }
 
   .si-sch-card__lead--expand:has(> .si-sch-card__locslot) {
-    grid-template-columns: 160px 1fr 200px 28px;
+    grid-template-columns: minmax(12.5rem, auto) 1fr 200px 28px;
   }
 
   .si-sch-card__lead--expand > .si-sch-card__timebtn {
@@ -1059,8 +1231,8 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   }
 
   .si-sch-card__lead--expand .si-sch-card__timebtn .si-sch-card__time {
-    width: 200px;
-    max-width: 200px;
+    width: auto;
+    max-width: 12.5rem;
     display: block;
     box-sizing: border-box;
     overflow-wrap: break-word;
@@ -1151,6 +1323,13 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.333;
+}
+
+@media (min-width: 720px) {
+  .si-sch-card__topicswrap .si-sch-card__topics,
+  .si-sch-card__lead--simple > .si-sch-card__topics {
+    padding-left: 0.15rem;
+  }
 }
 
 .si-sch-bullets li {
@@ -1323,7 +1502,7 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 .si-inner-main {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
   padding-block: 2rem 3rem;
 }
 
@@ -1412,7 +1591,7 @@ body[data-section="abbrev"] .si-abbr-list li:last-child {
   display: block;
   width: 24px;
   height: 24px;
-  margin-top: 2px;
+  /* margin-top: 2px; */
 }
 
 .si-hotel-inline-icon {
@@ -1429,6 +1608,19 @@ body[data-section="hotel"] .si-card--prose > .si-loc-row + .si-loc-row {
 
 body[data-section="hotel"] .si-card--prose > .si-loc-row p {
   margin: 0;
+}
+
+/* Hotel page: unify copy color to white */
+body[data-section="hotel"] .si-section-label,
+body[data-section="hotel"] .si-card--white,
+body[data-section="hotel"] .si-card--ice,
+body[data-section="hotel"] .si-card--lavender,
+body[data-section="hotel"] .si-loc-text,
+body[data-section="hotel"] .si-card--prose,
+body[data-section="hotel"] .si-card--prose p,
+body[data-section="hotel"] .si-ol,
+body[data-section="hotel"] .si-hotel-notice-nested {
+  color: var(--si-fg);
 }
 
 /* 内页信息卡：默认可读不可点；需可点时加 .si-card--clickable 或使用 a.si-card / button.si-card */
@@ -1460,6 +1652,8 @@ body[data-section="hotel"] .si-card--prose > .si-loc-row p {
   align-items: center;
   gap: 0.75rem;
   text-align: center;
+  background: white;
+  border-radius: 8px;
 }
 
 .si-card.si-card--hotel-brand {
@@ -1490,8 +1684,192 @@ body[data-section="hotel"] .si-card--prose > .si-loc-row p {
   height: 160px;
   width: auto;
   max-width: 100%;
-  margin-top: 0.75rem;
+  margin-top: 0;
   border-radius: var(--si-radius-tight, 8px);
+}
+
+.si-img-lightbox-trigger {
+  display: block;
+  /* margin-top: 0.75rem; */
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  cursor: zoom-in;
+  font: inherit;
+  text-align: left;
+  max-width: 100%;
+}
+
+.si-img-lightbox-trigger:focus-visible {
+  outline: 2px solid var(--si-accent);
+  outline-offset: 3px;
+  border-radius: var(--si-radius-tight, 8px);
+}
+
+.si-lightbox:not([open]) {
+  display: none;
+}
+
+.si-lightbox[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.25rem 1.5rem;
+  border: 0;
+  margin: auto;
+  max-width: min(96vw, 1200px);
+  width: max-content;
+  background: rgb(8 18 40 / 0.96);
+  color: var(--si-fg);
+  border-radius: var(--si-radius-card);
+}
+
+.si-lightbox::backdrop {
+  background: rgb(0 0 0 / 0.72);
+}
+
+.si-lightbox__img {
+  display: block;
+  max-width: min(92vw, 1120px);
+  max-height: min(85vh, 900px);
+  width: auto;
+  height: auto;
+  border-radius: var(--si-radius-tight, 8px);
+}
+
+.si-lightbox__close {
+  flex-shrink: 0;
+  border: 0;
+  padding: 0.5rem 1.75rem;
+  border-radius: var(--si-radius-tab);
+  background: rgb(255 255 255 / 0.12);
+  color: var(--si-fg);
+  font: inherit;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.si-lightbox__close:hover {
+  background: rgb(255 255 255 / 0.2);
+}
+
+.si-lightbox__close:focus-visible {
+  outline: 2px solid var(--si-accent);
+  outline-offset: 2px;
+}
+
+.si-hotel-route-row {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.75rem 0 0;
+}
+
+.si-map-route-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--si-fg);
+  font: inherit;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  cursor: pointer;
+  /* text-decoration: underline;
+  text-underline-offset: 0.15em; */
+}
+
+.si-map-route-btn:hover {
+  color: var(--si-accent);
+}
+
+.si-map-route-btn:focus-visible {
+  outline: 2px solid var(--si-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.si-map-picker:not([open]) {
+  display: none;
+}
+
+.si-map-picker[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+  padding: 1.25rem 1.25rem 1rem;
+  border: 0;
+  margin: auto;
+  max-width: min(92vw, 360px);
+  width: 100%;
+  background: rgb(8 18 40 / 0.98);
+  color: var(--si-fg);
+  border-radius: var(--si-radius-card);
+}
+
+.si-map-picker::backdrop {
+  background: rgb(0 0 0 / 0.72);
+}
+
+.si-map-picker__title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.si-map-picker__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.si-map-picker__link {
+  display: block;
+  padding: 0.85rem 1rem;
+  border-radius: var(--si-radius-tab);
+  color: var(--si-fg);
+  font-size: 1.0625rem;
+  line-height: 1.45;
+  text-align: center;
+  text-decoration: none;
+  background: rgb(255 255 255 / 0.08);
+}
+
+.si-map-picker__link:hover {
+  background: rgb(255 255 255 / 0.16);
+  color: var(--si-accent);
+}
+
+.si-map-picker__link:focus-visible {
+  outline: 2px solid var(--si-accent);
+  outline-offset: 2px;
+}
+
+.si-map-picker__list li + li {
+  margin-top: 0.5rem;
+}
+
+.si-map-picker__cancel {
+  border: 0;
+  padding: 0.5rem 1rem;
+  border-radius: var(--si-radius-tab);
+  background: transparent;
+  color: var(--si-lavender);
+  font: inherit;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.si-map-picker__cancel:hover {
+  color: var(--si-fg);
 }
 
 .si-hotel-name {
@@ -1507,37 +1885,50 @@ body[data-section="hotel"] .si-card--prose > .si-loc-row p {
 }
 
 .si-card--white {
-  background: var(--si-card);
   color: var(--si-card-text);
   padding: 1rem 1.25rem;
 }
 
 .si-card--tile {
-  background: var(--si-menu-tile);
   color: var(--si-fg);
   padding: 1rem 1.25rem;
 }
 
 .si-card--ice {
-  background: var(--si-accent);
   color: var(--si-card-text);
   padding: 1rem 1.25rem;
 }
 
 .si-card--lavender {
-  background: var(--si-lavender);
   color: var(--si-fg);
   padding: 1rem 1.25rem;
 }
 
-/* Glass surface — maps Figma Glass effect tokens to CSS backdrop + layered highlights */
-.si-glass {
+/* Glass surfaces — cards, tabs, buttons (tokens: --si-glass-* in tokens.css) */
+:is(
+  .si-glass,
+  .si-card,
+  .si-scope,
+  a.si-card,
+  button.si-card,
+  .si-tab,
+  .si-lang,
+  .si-menu-link,
+  .si-home-abbrev-btn,
+  .si-schedule-menu-pill,
+  .si-sch-card,
+  .si-inner-doc-tile,
+  .si-admin-note,
+  .si-admin-cta,
+  .si-schdb-toolbar__btn,
+  .si-schdb-versions-list__btn,
+  .si-schdb-card-actions__btn,
+  .si-schdb-form-actions__primary,
+  .si-schdb-form-actions__ghost
+) {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  border-radius: var(--si-radius-card);
-  color: var(--si-fg);
-  padding: 1rem 1.25rem;
   background: rgb(255 255 255 / calc(0.06 + var(--si-glass-refraction) * 0.002));
   backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
   -webkit-backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
@@ -1549,10 +1940,64 @@ body[data-section="hotel"] .si-card--prose > .si-loc-row p {
     inset 1px 1px 0 rgb(255 255 255 / calc(0.1 * var(--si-glass-light-intensity)));
 }
 
-.si-glass::before {
+:is(
+  .si-glass,
+  .si-card,
+  .si-scope,
+  a.si-card,
+  button.si-card,
+  .si-tab,
+  .si-lang,
+  .si-menu-link,
+  .si-home-abbrev-btn,
+  .si-schedule-menu-pill,
+  .si-sch-card,
+  .si-inner-doc-tile,
+  .si-admin-note,
+  .si-admin-cta,
+  .si-schdb-toolbar__btn,
+  .si-schdb-versions-list__btn,
+  .si-schdb-card-actions__btn,
+  .si-schdb-form-actions__primary,
+  .si-schdb-form-actions__ghost
+):hover {
+  background: rgb(255 255 255 / calc(0.14 + var(--si-glass-refraction) * 0.003));
+}
+
+:is(.si-tab.is-active) {
+  background: rgb(255 255 255 / calc(0.32 + var(--si-glass-refraction) * 0.004));
+  color: var(--si-fg);
+}
+
+.si-schedule-menu-pill {
+  background: rgb(255 255 255 / calc(0.28 + var(--si-glass-refraction) * 0.004));
+}
+
+:is(
+  .si-glass,
+  .si-card,
+  .si-scope,
+  a.si-card,
+  button.si-card,
+  .si-tab,
+  .si-lang,
+  .si-menu-link,
+  .si-home-abbrev-btn,
+  .si-schedule-menu-pill,
+  .si-sch-card,
+  .si-inner-doc-tile,
+  .si-admin-note,
+  .si-admin-cta,
+  .si-schdb-toolbar__btn,
+  .si-schdb-versions-list__btn,
+  .si-schdb-card-actions__btn,
+  .si-schdb-form-actions__primary,
+  .si-schdb-form-actions__ghost
+)::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: -1;
   border-radius: inherit;
   pointer-events: none;
   background: linear-gradient(
@@ -1564,10 +2009,30 @@ body[data-section="hotel"] .si-card--prose > .si-loc-row p {
   mix-blend-mode: overlay;
 }
 
-.si-glass::after {
+:is(
+  .si-glass,
+  .si-card,
+  .si-scope,
+  a.si-card,
+  button.si-card,
+  .si-tab,
+  .si-lang,
+  .si-menu-link,
+  .si-home-abbrev-btn,
+  .si-schedule-menu-pill,
+  .si-sch-card,
+  .si-admin-note,
+  .si-admin-cta,
+  .si-schdb-toolbar__btn,
+  .si-schdb-versions-list__btn,
+  .si-schdb-card-actions__btn,
+  .si-schdb-form-actions__primary,
+  .si-schdb-form-actions__ghost
+):not(.si-inner-doc-tile)::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: -1;
   border-radius: inherit;
   pointer-events: none;
   padding: 1px;
@@ -1583,13 +2048,81 @@ body[data-section="hotel"] .si-card--prose > .si-loc-row p {
   opacity: calc(var(--si-glass-dispersion) / 100);
 }
 
-.si-glass > * {
+:is(
+  .si-glass,
+  .si-card,
+  .si-scope,
+  .si-menu-link,
+  .si-sch-card,
+  .si-inner-doc-tile,
+  .si-admin-note,
+  .si-tab,
+  .si-lang,
+  .si-schedule-menu-pill,
+  .si-home-abbrev-btn,
+  .si-admin-cta
+) > *,
+:is(
+  .si-sch-card__inner,
+  .si-sch-card__lead,
+  .si-sch-card__topicswrap,
+  .si-sch-card__topics,
+  .si-sch-extra
+) {
   position: relative;
   z-index: 1;
 }
 
+.si-glass {
+  border-radius: var(--si-radius-card);
+  color: var(--si-fg);
+  padding: 1rem 1.25rem;
+}
+
+/* Buttons & tabs: default white text on glass */
+:is(
+  .si-tab,
+  .si-lang,
+  .si-menu-link,
+  .si-home-abbrev-btn,
+  .si-schedule-menu-pill,
+  .si-scope,
+  .si-admin-cta,
+  .si-schdb-toolbar__btn,
+  .si-schdb-versions-list__btn,
+  .si-schdb-card-actions__btn,
+  .si-schdb-form-actions__primary,
+  .si-schdb-form-actions__ghost,
+  button.si-card,
+  a.si-inner-doc-tile
+) {
+  color: var(--si-fg);
+}
+
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .si-glass {
+  :is(
+    .si-glass,
+    .si-card,
+    .si-scope,
+    a.si-card,
+    button.si-card,
+    .si-tab,
+    .si-lang,
+    .si-menu-link,
+    .si-home-abbrev-btn,
+    .si-schedule-menu-pill,
+    .si-sch-card,
+    .si-inner-doc-tile,
+    .si-admin-note,
+    .si-admin-cta,
+    .si-schdb-toolbar__btn,
+    .si-schdb-versions-list__btn,
+    .si-schdb-card-actions__btn
+  ) {
+    background: rgb(255 255 255 / 0.18);
+  }
+
+  .si-date-tab.is-active {
     background: rgb(255 255 255 / 0.18);
   }
 }
@@ -1609,6 +2142,24 @@ body[data-section="hotel"] .si-card--prose > .si-loc-row p {
 
 .si-card--prose p:last-child {
   margin-bottom: 0;
+}
+
+/* Transport: nested pickup card inside shuttle table — no extra glass chrome */
+body[data-section="transport"] .si-sch-extra .si-card.si-card--white.si-card--prose {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body[data-section="transport"] .si-sch-extra .si-card.si-card--white.si-card--prose::before,
+body[data-section="transport"] .si-sch-extra .si-card.si-card--white.si-card--prose::after {
+  display: none;
+}
+
+body[data-section="transport"] .si-sch-extra .si-card.si-card--white.si-card--prose:hover {
+  background: transparent;
 }
 
 .si-card--white .si-card__title--blue {
@@ -1723,6 +2274,126 @@ body[data-section="transport-timetable"] .si-shuttle-footnote {
   color: var(--si-lavender);
 }
 
+/* Transportation hub: shuttle accordions (Figma Frame 2147236518) */
+body[data-section="transport"] .si-transport-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+body[data-section="transport"] .si-transport-section-title {
+  margin: 0;
+  font-size: var(--si-h2, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--si-fg);
+}
+
+body[data-section="transport"] .si-transport-dinner-scope {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--si-lavender);
+}
+
+body[data-section="transport"] .si-transport-shuttle {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+body[data-section="transport"] .si-transport-accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+body[data-section="transport"] .si-transport-panel__lead {
+  grid-template-columns: 1fr auto;
+  column-gap: 0.75rem;
+  row-gap: 0;
+}
+
+body[data-section="transport"] .si-transport-panel__lead > .si-sch-card__timebtn {
+  min-width: 0;
+}
+
+body[data-section="transport"] .si-transport-panel__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  align-items: flex-start;
+}
+
+body[data-section="transport"] .si-transport-panel__label {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.35;
+  opacity: 0.85;
+}
+
+body[data-section="transport"] .si-transport-panel__name {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+@media (min-width: 720px) {
+  body[data-section="transport"] .si-transport-panel__lead {
+    grid-template-columns: 1fr 28px;
+    column-gap: 10px;
+  }
+
+  body[data-section="transport"] .si-transport-panel__lead > .si-sch-card__timebtn {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  body[data-section="transport"] .si-transport-panel__lead > .si-sch-card__chevbtn {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  body[data-section="transport"] .si-transport-panel__lead .si-sch-card__timebtn .si-sch-card__time {
+    width: auto;
+    max-width: none;
+  }
+}
+
+body[data-section="transport"] .si-sch-extra .table-style-a__wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  flex-flow: column;
+}
+
+body[data-section="transport"] .si-sch-extra .table-style-a__table {
+  margin: 0;
+}
+
+body[data-section="transport"] .si-transport-dinner .table-style-a__wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+body[data-section="transport"] .si-transport-dinner-table {
+  margin: 0;
+}
+
+body[data-section="transport"] .si-transport-dinner-table th:first-child,
+body[data-section="transport"] .si-transport-dinner-table td:first-child {
+  text-align: left;
+}
+
+body[data-section="transport"] .si-transport-dinner-table th:last-child,
+body[data-section="transport"] .si-transport-dinner-table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
 /* Campus dinner: table-style-a (body.table-style-a on transport-campus-dinner.html) */
 body[data-section="transport-campus-dinner"] .si-inner-main > .si-card.table-style-a__wrap {
   /* max-width: 640px; */
@@ -1733,6 +2404,14 @@ body[data-section="transport-campus-dinner"] .si-inner-main > .si-card.table-sty
 
 body[data-section="transport-campus-dinner"] .table-style-a__table {
   margin: 0;
+}
+
+body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--si-lavender);
 }
 
 .si-ol {
@@ -1777,12 +2456,12 @@ body[data-section="transport-campus-dinner"] .table-style-a__table {
   min-height: 4.5rem;
   padding: 1rem 1.25rem;
   border-radius: var(--si-radius-card);
-  background: var(--si-menu-tile);
   color: var(--si-fg);
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25;
   text-decoration: none;
+  transition: color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .si-inner-doc-tile::after {
@@ -1794,10 +2473,12 @@ body[data-section="transport-campus-dinner"] .table-style-a__table {
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
   transform: rotate(-45deg) translate(-2px, -2px);
+  position: relative;
+  z-index: 1;
 }
 
 .si-inner-doc-tile:hover {
-  filter: brightness(1.04);
+  color: var(--si-fg);
 }
 
 .si-inner-doc-tile:focus-visible {
@@ -1832,7 +2513,7 @@ body[data-section="transport-campus-dinner"] .table-style-a__table {
 .table-style-a .si-card.table-style-a__wrap {
   background: #ffffff;
   border: 1px solid rgba(50, 85, 164, 0.28);
-  border-radius: 4px;
+  border-radius: 12px;
   overflow: hidden;
   color: var(--si-card-text);
 }
@@ -2011,18 +2692,12 @@ body[data-section="transport-campus-dinner"] .table-style-a__table {
 }
 
 .si-schdb-toolbar__btn {
-  border: 1px solid rgb(255 255 255 / 0.35);
-  border-radius: var(--si-radius-tab, 8px);
+  border-radius: var(--si-radius-tab);
   padding: 0.45rem 0.85rem;
   font: inherit;
   font-size: 0.95rem;
   cursor: pointer;
   color: var(--si-fg);
-  background: rgb(255 255 255 / 0.08);
-}
-
-.si-schdb-toolbar__btn:hover {
-  background: rgb(255 255 255 / 0.14);
 }
 
 .si-schdb-main {
@@ -2095,18 +2770,12 @@ body[data-section="transport-campus-dinner"] .table-style-a__table {
 }
 
 .si-schdb-versions-list__btn {
-  border: 1px solid rgb(255 255 255 / 0.35);
-  border-radius: var(--si-radius-tab, 8px);
+  border-radius: var(--si-radius-tab);
   padding: 0.25rem 0.6rem;
   font: inherit;
   font-size: 0.8rem;
   cursor: pointer;
   color: var(--si-fg);
-  background: rgb(255 255 255 / 0.08);
-}
-
-.si-schdb-versions-list__btn:hover {
-  background: rgb(255 255 255 / 0.14);
 }
 
 .si-schdb-versions-list__btn--danger {
@@ -2371,18 +3040,12 @@ textarea.si-schdb-input {
 }
 
 .si-schdb-card-actions__btn {
-  border: 1px solid rgb(255 255 255 / 0.35);
-  border-radius: var(--si-radius-tab, 8px);
+  border-radius: var(--si-radius-tab);
   padding: 0.35rem 0.75rem;
   font: inherit;
   font-size: 0.875rem;
   cursor: pointer;
   color: var(--si-fg);
-  background: rgb(255 255 255 / 0.08);
-}
-
-.si-schdb-card-actions__btn:hover {
-  background: rgb(255 255 255 / 0.14);
 }
 
 .si-schdb-card-actions__btn--danger {
@@ -2393,11 +3056,10 @@ textarea.si-schdb-input {
 .si-schdb-card-actions__btn--sync {
   border-color: rgb(140 200 255 / 0.5);
   color: rgb(220 235 255);
-  background: rgb(80 140 220 / 0.35);
 }
 
 .si-schdb-card-actions__btn--sync:hover {
-  background: rgb(100 160 240 / 0.45);
+  color: rgb(240 248 255);
 }
 
 .si-schdb-form-actions {
@@ -2409,22 +3071,19 @@ textarea.si-schdb-input {
 
 .si-schdb-form-actions__primary {
   border: 0;
-  border-radius: var(--si-radius-tab, 8px);
-  padding: 0.45rem 1rem;
-  font: inherit;
-  cursor: pointer;
-  color: var(--si-card-text);
-  background: var(--si-accent);
-}
-
-.si-schdb-form-actions__ghost {
-  border: 1px solid rgb(255 255 255 / 0.35);
-  border-radius: var(--si-radius-tab, 8px);
+  border-radius: var(--si-radius-tab);
   padding: 0.45rem 1rem;
   font: inherit;
   cursor: pointer;
   color: var(--si-fg);
-  background: transparent;
+}
+
+.si-schdb-form-actions__ghost {
+  border-radius: var(--si-radius-tab);
+  padding: 0.45rem 1rem;
+  font: inherit;
+  cursor: pointer;
+  color: var(--si-fg);
 }
 
 .si-schdb-form-actions__danger {

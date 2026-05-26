@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="menu.photo">Photo Live Streaming</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="si" data-page="detail" data-section="photo">
+    <a class="skip-link" href="#detail-main" data-i18n="a11y.skip">跳到主内容</a>
+    <div class="si-page">
+      <header class="si-detail-header">
+        <div class="container si-detail-header__inner">
+          <a class="si-back" href="menu.html" data-i18n="detail.back">返回</a>
+          <h1 class="si-detail-title" data-i18n="menu.photo">Photo Live Streaming</h1>
+        </div>
+      </header>
+      <main id="detail-main" class="si-detail-main container">
+        <p class="si-detail-scope" id="detail-scope" aria-live="polite"></p>
+        <section class="si-detail-body" aria-labelledby="detail-heading">
+          <h2 class="visually-hidden" id="detail-heading" data-i18n="detail.sectionHeading">内容区</h2>
+          <p class="si-placeholder" id="detail-placeholder"></p>
+        </section>
+      </main>
+    </div>
+
+      <footer class="si-footer">
+        <div class="container si-footer__inner">
+          <div class="si-footer__toolbar">
+            <a class="si-home-abbrev-btn" href="abbreviations.html" data-i18n="abbr.indexLink">缩略语表</a>
+            <button type="button" class="si-lang" id="lang-toggle" aria-label="">
+              <span class="si-lang__label" data-i18n="header.langLabel">中文→EN</span>
+            </button>
+          </div>
+          <p class="si-footer__copy" data-i18n="footer.copyright">Copyright © 2026 Teknova (Shenzhen) Education Technology Co., Limited. All Rights Reserved</p>
+          <p class="si-footer__icp">
+            <a class="si-footer__link" href="https://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank" data-i18n="footer.icp">ICP备案号：粤ICP备19153114号</a>
+          </p>
+        </div>
+      </footer>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/image-background.js" defer></script>
+  </body>
+</html>

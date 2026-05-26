@@ -36,15 +36,15 @@
   --si-emphasis: #ffe240;
 }
 
-/* --- Glass surface (Figma Glass: Light -45° 100% · Refraction 40 · Depth 60 · Dispersion 100 · Frost 16 · Splay 0) --- */
+/* --- Glass surface (Figma Glass: Light 45° 20% · Refraction 5 · Depth 80 · Dispersion 160 · Frost 0 · Splay 0) --- */
 :root {
-  --si-glass-light-angle: -45deg;
-  --si-glass-light-intensity: 1;
-  --si-glass-refraction: 40;
-  --si-glass-depth: 60;
-  --si-glass-dispersion: 100;
-  --si-glass-frost: 16px;
-  --si-glass-splay: 0px;
+  --si-glass-light-angle: 45deg;
+  --si-glass-light-intensity: 0.2;
+  --si-glass-refraction: 5;
+  --si-glass-depth: 80;
+  --si-glass-dispersion: 160;
+  --si-glass-frost: 0;
+  --si-glass-splay: 0;
 }
 
 /* --- Typography ---
@@ -75,7 +75,7 @@
 
 /* --- Radii --- */
 :root {
-  --si-radius-tab: 4px;
-  --si-radius-card: 4px;
+  --si-radius-tab: 24px;
+  --si-radius-card: 16px;
   --si-radius-tight: 2px;
 }
