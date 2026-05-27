@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="menu.schedule">Schedule</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="si" data-page="schedule">
+    <a class="skip-link" href="#schedule-main" data-i18n="a11y.skip">跳到主内容</a>
+
+    <div class="si-page si-page--schedule">
+      <header class="si-schedule-top">
+        <div class="container si-schedule-top__inner">
+          <div class="si-schedule-brand">
+            <img
+              class="si-schedule-logo"
+              src="img/Logo_SI2026.svg"
+              alt=""
+              width="93"
+              height="72"
+              decoding="async"
+              data-i18n-alt="schedule.logoAlt"
+            />
+          </div>
+          <div class="si-schedule-top__actions">
+            <a class="si-schedule-menu-pill" href="menu.html" data-i18n="schedule.menu">Menu</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="schedule-main" class="si-schedule-main container">
+        <p class="si-schedule-scope" id="schedule-scope" hidden></p>
+
+        <h1 class="si-schedule-title" data-i18n="menu.schedule">Schedule</h1>
+
+        <div class="si-date-tabs" role="tablist" aria-label="" id="schedule-date-tabs"></div>
+
+        <div id="schedule-day-panels" class="si-schedule-panels"></div>
+      </main>
+
+      <footer class="si-footer">
+        <div class="container si-footer__inner">
+          <div class="si-footer__toolbar">
+            <a class="si-home-abbrev-btn" href="abbreviations.html" data-i18n="abbr.indexLink">缩略语表</a>
+            <button type="button" class="si-lang" id="lang-toggle" aria-label="">
+              <span class="si-lang__label" data-i18n="header.langLabel">中文→EN</span>
+            </button>
+          </div>
+          <p class="si-footer__copy" data-i18n="footer.copyright">Copyright © 2026 Teknova (Shenzhen) Education Technology Co., Limited. All Rights Reserved</p>
+          <p class="si-footer__icp">
+            <a class="si-footer__link" href="https://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank" data-i18n="footer.icp">ICP备案号：粤ICP备19153114号</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/schedule-page.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/image-background.js" defer></script>
+  </body>
+</html>

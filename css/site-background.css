@@ -1,0 +1,50 @@
+/* Global ambient background — ARCHIVED (Aurora)
+   Active: css/image-background.css · js/image-background.js
+   Silk: css/silk-background.css + js/silk-background.js + three.min.js */
+
+#site-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: linear-gradient(145deg, #081224 0%, #1a3568 38%, #3255a4 100%);
+}
+
+#site-background canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+body.si.has-site-background,
+body.si:has(#site-background) {
+  background: transparent !important;
+}
+
+body.si > :not(#site-background) {
+  position: relative;
+  z-index: 1;
+}
+
+.si-page {
+  background: transparent;
+}
+
+.si-hero,
+.si-menu-hero,
+.si-page--schedule,
+.si-page--schdb,
+.si-page--inner {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #site-background canvas {
+    display: none;
+  }
+
+  body.si {
+    background: linear-gradient(145deg, #081224 0%, #1a3568 38%, #3255a4 100%);
+  }
+}

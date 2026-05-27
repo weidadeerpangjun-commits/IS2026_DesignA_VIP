@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="menu.transportation">Transportation Arrangement</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="si table-style-a" data-page="inner" data-section="transport">
+    <a class="skip-link" href="#inner-main" data-i18n="a11y.skip">跳到主内容</a>
+    <div class="si-page si-page--inner">
+      <header class="si-schedule-top">
+        <div class="container si-schedule-top__inner">
+          <div class="si-schedule-brand">
+            <img
+              class="si-schedule-logo"
+              src="img/Logo_SI2026.svg"
+              alt=""
+              width="93"
+              height="72"
+              decoding="async"
+              data-i18n-alt="schedule.logoAlt"
+            />
+          </div>
+          <div class="si-schedule-top__actions">
+            <a class="si-schedule-menu-pill" href="menu.html" data-i18n="schedule.menu">Menu</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="inner-main" class="si-inner-main container">
+        <section class="si-transport-section si-transport-shuttle" aria-labelledby="transport-shuttle-heading">
+          <h1 id="transport-shuttle-heading" class="si-transport-section-title" data-i18n="transport.tile2">Shuttle Schedule</h1>
+          <p class="si-inner-lead" data-i18n="transport.timetableLead"></p>
+
+          <div class="si-transport-accordions">
+            <article class="si-sch-card si-sch-card--detail si-transport-panel" data-expandable="true">
+              <div class="si-sch-card__inner">
+                <div class="si-sch-card__lead si-sch-card__lead--expand si-transport-panel__lead">
+                  <button
+                    type="button"
+                    class="si-sch-card__timebtn"
+                    aria-expanded="false"
+                    aria-controls="transport-panel-1"
+                  >
+                    <span class="si-sch-card__time si-transport-panel__heading">
+                      <span class="si-transport-panel__label" data-i18n="transport.panel1Label">住宿地点：</span>
+                      <span class="si-transport-panel__name" data-i18n="transport.panel1Name">安达仕酒店</span>
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    class="si-sch-card__chevbtn"
+                    aria-expanded="false"
+                    aria-controls="transport-panel-1"
+                    tabindex="-1"
+                  >
+                    <span class="si-sch-card__chev" aria-hidden="true">
+                      <svg
+                        class="si-sch-chevron"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path d="M3 12.5H21V11.5H3V12.5Z" fill="currentColor" />
+                        <path d="M11.5 3.5L11.5 21.5H12.5L12.5 3.5L11.5 3.5Z" fill="currentColor" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="si-sch-extra" id="transport-panel-1">
+                  <div class="si-card table-style-a__wrap si-card--tablewrap">
+                    <table
+                      class="si-inner-table si-inner-table--center table-style-a__table table-style-a__table--cells-center"
+                    >
+                      <thead>
+                        <tr>
+                          <th scope="col" data-i18n="transport.scheduleColDate">日期</th>
+                          <th scope="col" data-i18n="transport.scheduleColDepart">发车时间</th>
+                          <th scope="col" data-i18n="transport.scheduleColRoute">路线</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="3" data-i18n="transport.andazDate5">8月5日 (周三)</td>
+                          <td data-i18n="transport.andaz5t1">7:20</td>
+                          <td data-i18n="transport.andaz5r1">酒店 → 南贝幼校区</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.andaz5t2">17:30</td>
+                          <td data-i18n="transport.andaz5r2">南贝幼校区 → 晚宴餐厅（南山香格里拉酒店）</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.andaz5t3">20:30</td>
+                          <td data-i18n="transport.andaz5r3">晚宴餐厅（南山香格里拉酒店）→ 酒店</td>
+                        </tr>
+                        <tr>
+                          <td rowspan="3" data-i18n="transport.andazDate6">8月6日 (周四)</td>
+                          <td data-i18n="transport.andaz6t1">7:40</td>
+                          <td data-i18n="transport.andaz6r1">酒店 → 蛇口校区</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.andaz6t2">17:30</td>
+                          <td data-i18n="transport.andaz6r2">蛇口校区 → 各校自定餐厅</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.andaz6t3">20:30</td>
+                          <td data-i18n="transport.andaz6r3">各校自定餐厅 → 酒店（校区行政安排）</td>
+                        </tr>
+                        <tr>
+                          <td rowspan="2" data-i18n="transport.andazDate7">8月7日 (周五)</td>
+                          <td data-i18n="transport.andaz7t1">7:40</td>
+                          <td data-i18n="transport.andaz7r1">酒店 → 蛇口校区</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.andaz7t2">17:30</td>
+                          <td data-i18n="transport.andaz7r2">蛇口校区 → 机场/归校</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="si-card si-card--white si-card--prose">
+                      <span data-i18n="hotel.notice4">酒店上车/下车点：</span>
+                      <button
+                        type="button"
+                        class="si-img-lightbox-trigger"
+                        data-si-lightbox-src="images/andaz-pick-up.png"
+                        data-i18n-aria-label="hotel.viewLargeImage"
+                        aria-label="查看大图"
+                      >
+                        <img
+                          class="si-hotel-point-img"
+                          src="images/andaz-pick-up.png"
+                          alt=""
+                          height="160"
+                          decoding="async"
+                          loading="lazy"
+                          data-i18n-alt="hotel.pickupPointImgAlt"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="si-sch-card si-sch-card--detail si-transport-panel" data-expandable="true">
+              <div class="si-sch-card__inner">
+                <div class="si-sch-card__lead si-sch-card__lead--expand si-transport-panel__lead">
+                  <button
+                    type="button"
+                    class="si-sch-card__timebtn"
+                    aria-expanded="false"
+                    aria-controls="transport-panel-2"
+                  >
+                    <span class="si-sch-card__time si-transport-panel__heading">
+                      <span class="si-transport-panel__label" data-i18n="transport.panel2Label">住宿地点：</span>
+                      <span class="si-transport-panel__name" data-i18n="transport.panel2Name">蛇口校区公寓</span>
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    class="si-sch-card__chevbtn"
+                    aria-expanded="false"
+                    aria-controls="transport-panel-2"
+                    tabindex="-1"
+                  >
+                    <span class="si-sch-card__chev" aria-hidden="true">
+                      <svg
+                        class="si-sch-chevron"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path d="M3 12.5H21V11.5H3V12.5Z" fill="currentColor" />
+                        <path d="M11.5 3.5L11.5 21.5H12.5L12.5 3.5L11.5 3.5Z" fill="currentColor" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="si-sch-extra" id="transport-panel-2">
+                  <div class="si-card table-style-a__wrap si-card--tablewrap">
+                    <table
+                      class="si-inner-table si-inner-table--center table-style-a__table table-style-a__table--cells-center"
+                    >
+                      <thead>
+                        <tr>
+                          <th scope="col" data-i18n="transport.scheduleColDate">日期</th>
+                          <th scope="col" data-i18n="transport.scheduleColDepart">发车时间</th>
+                          <th scope="col" data-i18n="transport.scheduleColRoute">路线</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="3" data-i18n="transport.apartmentDate5">8月5日 (周三)</td>
+                          <td data-i18n="transport.apt5t1">7:40</td>
+                          <td data-i18n="transport.apt5r1">蛇口校区 → 南贝幼校区</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.apt5t2">17:30</td>
+                          <td data-i18n="transport.apt5r2">南贝幼校区 → 晚宴餐厅（南山香格里拉酒店）</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.apt5t3">20:30</td>
+                          <td data-i18n="transport.apt5r3">酒店 → 蛇口校区</td>
+                        </tr>
+                        <tr>
+                          <td rowspan="2" data-i18n="transport.apartmentDate6">8月6日 (周四)</td>
+                          <td data-i18n="transport.apt6t1">17:30</td>
+                          <td data-i18n="transport.apt6r1">蛇口校区 → 各校自定餐厅</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.apt6t2">20:30</td>
+                          <td data-i18n="transport.apt6r2">各校自定餐厅 → 蛇口校区（校区行政安排）</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="si-sch-card si-sch-card--detail si-transport-panel" data-expandable="true">
+              <div class="si-sch-card__inner">
+                <div class="si-sch-card__lead si-sch-card__lead--expand si-transport-panel__lead">
+                  <button
+                    type="button"
+                    class="si-sch-card__timebtn"
+                    aria-expanded="false"
+                    aria-controls="transport-panel-3"
+                  >
+                    <span class="si-sch-card__time si-transport-panel__heading">
+                      <span class="si-transport-panel__label" data-i18n="transport.panel3Label">住宿地点：</span>
+                      <span class="si-transport-panel__name" data-i18n="transport.panel3Name">其他</span>
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    class="si-sch-card__chevbtn"
+                    aria-expanded="false"
+                    aria-controls="transport-panel-3"
+                    tabindex="-1"
+                  >
+                    <span class="si-sch-card__chev" aria-hidden="true">
+                      <svg
+                        class="si-sch-chevron"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path d="M3 12.5H21V11.5H3V12.5Z" fill="currentColor" />
+                        <path d="M11.5 3.5L11.5 21.5H12.5L12.5 3.5L11.5 3.5Z" fill="currentColor" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="si-sch-extra" id="transport-panel-3">
+                  <div class="si-card table-style-a__wrap si-card--tablewrap">
+                    <table
+                      class="si-inner-table si-inner-table--center table-style-a__table table-style-a__table--cells-center"
+                    >
+                      <thead>
+                        <tr>
+                          <th scope="col" data-i18n="transport.scheduleColDate">日期</th>
+                          <th scope="col" data-i18n="transport.scheduleColDepart">发车时间</th>
+                          <th scope="col" data-i18n="transport.scheduleColRoute">路线</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="3" data-i18n="transport.leadersDate5">8月5日 (周三)</td>
+                          <td data-i18n="transport.lr5t1">另行通知</td>
+                          <td data-i18n="transport.lr5r1">家 → 南贝幼校区</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.lr5t2">17:30</td>
+                          <td data-i18n="transport.lr5r2">南贝幼校区 → 晚宴餐厅（南山香格里拉酒店）</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.lr5t3">20:30</td>
+                          <td data-i18n="transport.lr5r3">酒店 → 家</td>
+                        </tr>
+                        <tr>
+                          <td rowspan="3" data-i18n="transport.leadersDate6">8月6日 (周四)</td>
+                          <td data-i18n="transport.lr6t1">自行安排</td>
+                          <td data-i18n="transport.lr6r1">家 → 蛇口校区</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.lr6t2">17:30</td>
+                          <td data-i18n="transport.lr6r2">蛇口校区 → 各校自定餐厅</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.lr6t3">20:30</td>
+                          <td data-i18n="transport.lr6r3">各校自定餐厅 → 家（校区行政安排）</td>
+                        </tr>
+                        <tr>
+                          <td data-i18n="transport.leadersDate7">8月7日 (周五)</td>
+                          <td data-i18n="transport.lr7t1">自行安排</td>
+                          <td data-i18n="transport.lr7r1">家 ⇌ 蛇口校区</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="si-transport-section si-transport-dinner" aria-labelledby="transport-dinner-heading">
+          <h1 id="transport-dinner-heading" class="si-transport-section-title" data-i18n="transport.tile1">Bus for Campus Dinner</h1>
+          <p class="si-transport-dinner-scope" data-i18n="transport.dinnerScope">仅限8月6日校区聚餐</p>
+          <p class="si-inner-lead" data-i18n="transport.dinnerLead"></p>
+          <div class="si-card table-style-a__wrap si-card--tablewrap">
+            <table class="si-inner-table table-style-a__table si-transport-dinner-table">
+              <caption class="visually-hidden" data-i18n="transport.dinnerBusCaption"></caption>
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="transport.dinnerBusColPersonnel">人员</th>
+                  <th scope="col" data-i18n="transport.dinnerBusColVehicle">Vehicle no.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="transport.dinnerBusR1p">蛇口校区/总校办/BOES</td>
+                  <td data-i18n="transport.dinnerBusR1v">1,2,3</td>
+                </tr>
+                <tr>
+                  <td data-i18n="transport.dinnerBusR2p">广州校区/武汉校区</td>
+                  <td data-i18n="transport.dinnerBusR2v">4,5,6</td>
+                </tr>
+                <tr>
+                  <td data-i18n="transport.dinnerBusR3p">杭州校区</td>
+                  <td data-i18n="transport.dinnerBusR3v">7,8</td>
+                </tr>
+                <tr>
+                  <td data-i18n="transport.dinnerBusR4p">小径湾校区</td>
+                  <td data-i18n="transport.dinnerBusR4v">9</td>
+                </tr>
+                <tr>
+                  <td data-i18n="transport.dinnerBusR5p">南京校区/北京校区</td>
+                  <td data-i18n="transport.dinnerBusR5v">10,11,12,13</td>
+                </tr>
+                <tr>
+                  <td data-i18n="transport.dinnerBusR6p">福田校区</td>
+                  <td data-i18n="transport.dinnerBusR6v">A,B</td>
+                </tr>
+                <tr>
+                  <td data-i18n="transport.dinnerBusR7p">成都校区</td>
+                  <td data-i18n="transport.dinnerBusR7v">14</td>
+                </tr>
+                <tr>
+                  <td data-i18n="transport.dinnerBusR8p">南贝幼校区/福贝幼校区</td>
+                  <td data-i18n="transport.dinnerBusR8v">15</td>
+                </tr>
+                <tr>
+                  <td data-i18n="transport.dinnerBusR9p">光明校区</td>
+                  <td data-i18n="transport.dinnerBusR9v">16</td>
+                </tr>
+                <tr>
+                  <td data-i18n="transport.dinnerBusR10p">广州双语校区</td>
+                  <td data-i18n="transport.dinnerBusR10v">17,18</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+      <footer class="si-footer">
+        <div class="container si-footer__inner">
+          <div class="si-footer__toolbar">
+            <a class="si-home-abbrev-btn" href="abbreviations.html" data-i18n="abbr.indexLink">缩略语表</a>
+            <button type="button" class="si-lang" id="lang-toggle" aria-label="">
+              <span class="si-lang__label" data-i18n="header.langLabel">中文→EN</span>
+            </button>
+          </div>
+          <p class="si-footer__copy" data-i18n="footer.copyright">Copyright © 2026 Teknova (Shenzhen) Education Technology Co., Limited. All Rights Reserved</p>
+          <p class="si-footer__icp">
+            <a class="si-footer__link" href="https://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank" data-i18n="footer.icp">ICP备案号：粤ICP备19153114号</a>
+          </p>
+        </div>
+      </footer>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/transport-page.js" defer></script>
+    <script src="js/image-lightbox.js" defer></script>
+    <script src="js/image-background.js" defer></script>
+  </body>
+</html>

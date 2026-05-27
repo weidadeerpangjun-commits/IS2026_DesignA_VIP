@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="schdb.metaTitle">日程数据录入 · 2026 Summer Institute</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="si si-page si-page--schdb" data-page="schdb">
+    <a class="skip-link" href="#schdb-main" data-i18n="a11y.skip">跳到主内容</a>
+
+    <header class="si-schdb-header">
+      <div class="container si-schdb-header__inner">
+        <div class="si-schdb-header__row">
+          <div>
+            <h1 class="si-h2 si-schdb-header__title" data-i18n="schdb.title">日程数据录入</h1>
+            <p class="si-schdb-lead" data-i18n="schdb.lead"></p>
+          </div>
+          <div class="si-schdb-header__actions">
+            <button type="button" class="si-schdb-toolbar__btn si-schdb-header__sync-front" id="schdb-sync-front" data-i18n="schdb.syncToFront">
+              同步所有日程到前台
+            </button>
+          </div>
+        </div>
+        <nav class="si-schdb-nav" aria-label="">
+          <a class="si-schdb-nav__link" href="menu.html" data-i18n="schedule.menu">菜单</a>
+          <a class="si-schdb-nav__link" href="schedule.html" data-i18n="menu.schedule">日程安排</a>
+        </nav>
+        <div class="si-schdb-toolbar">
+          <span class="si-schdb-toolbar__status" id="schdb-save-status" aria-live="polite"></span>
+          <button type="button" class="si-schdb-toolbar__btn" id="schdb-save" data-i18n="schdb.saveToSchedule">
+            Save to schedule
+          </button>
+          <button type="button" class="si-schdb-toolbar__btn" id="schdb-export" data-i18n="schdb.export">
+            导出 JSON
+          </button>
+          <button type="button" class="si-schdb-toolbar__btn" id="schdb-import-btn" data-i18n="schdb.importPick">
+            选择 JSON 文件
+          </button>
+          <input type="file" id="schdb-import" accept="application/json,.json" hidden />
+        </div>
+      </div>
+    </header>
+
+    <section
+      id="schdb-versions-section"
+      class="si-schdb-versions-section container"
+      aria-labelledby="schdb-versions-heading"
+    >
+      <h2 id="schdb-versions-heading" class="si-schdb-versions__title" data-i18n="schdb.versionsHeading">
+        Saved JSON versions
+      </h2>
+      <p class="si-schdb-versions__hint" data-i18n="schdb.versionsHint"></p>
+      <ul id="schdb-versions-list" class="si-schdb-versions-list" role="list"></ul>
+    </section>
+
+    <main id="schdb-main" class="si-schdb-main container"></main>
+
+    <footer class="si-footer">
+      <div class="container si-footer__inner">
+        <div class="si-footer__toolbar">
+          <a class="si-home-abbrev-btn" href="abbreviations.html" data-i18n="abbr.indexLink">缩略语表</a>
+          <button type="button" class="si-lang si-lang--menu" id="lang-toggle" aria-label="">
+            <span class="si-lang__label" data-i18n="header.langLabel">中文→EN</span>
+          </button>
+        </div>
+        <p class="si-footer__copy" data-i18n="footer.copyright">Copyright © 2026 Teknova (Shenzhen) Education Technology Co., Limited. All Rights Reserved</p>
+        <p class="si-footer__icp">
+          <a class="si-footer__link" href="https://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank" data-i18n="footer.icp">ICP备案号：粤ICP备19153114号</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/schedule-page.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/schedule-db-page.js" defer></script>
+    <script src="js/image-background.js" defer></script>
+  </body>
+</html>
