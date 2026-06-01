@@ -36,8 +36,8 @@
             <div class="si-uikit__swatch-meta"><strong>--si-fg</strong><br />主前景（白）</div>
           </div>
           <div class="si-uikit__swatch" role="listitem">
-            <div class="si-uikit__swatch-color" style="background: var(--si-accent)"></div>
-            <div class="si-uikit__swatch-meta"><strong>--si-accent</strong><br />浅蓝强调 / 冰面卡片</div>
+            <div class="si-uikit__swatch-color" style="background: var(--si-gold-gradient)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-gold-gradient</strong><br />金色渐变强调（原 --si-accent）</div>
           </div>
           <div class="si-uikit__swatch" role="listitem">
             <div class="si-uikit__swatch-color" style="background: var(--si-card); border: 1px solid rgb(255 255 255 / 0.2)"></div>
@@ -63,14 +63,26 @@
             <div class="si-uikit__swatch-color" style="background: var(--si-emphasis)"></div>
             <div class="si-uikit__swatch-meta"><strong>--si-emphasis</strong><br />波浪下划线高亮</div>
           </div>
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: var(--si-gold-gradient)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-gold-gradient</strong><br />金色渐变文字</div>
+          </div>
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: var(--brand-color-gold)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--brand-color-gold</strong><br />金色描边</div>
+          </div>
+          <div class="si-uikit__swatch" role="listitem">
+            <div class="si-uikit__swatch-color" style="background: var(--si-gold-surface); border: 1px solid var(--brand-color-gold)"></div>
+            <div class="si-uikit__swatch-meta"><strong>--si-gold-surface</strong><br />卡片底 · .si-gold</div>
+          </div>
         </div>
         <p class="si-uikit__note">排版：<code>--si-h1</code> <code>--si-h2</code>（响应式见 tokens）；圆角：<code>--si-radius-tab</code> <code>--si-radius-card</code> <code>--si-radius-tight</code>；页边距：<code>--page-gutter</code>。</p>
       </section>
 
       <section class="si-uikit-block" aria-labelledby="uikit-glass">
-        <h2 class="si-uikit__h" id="uikit-glass">Glass</h2>
+        <h2 class="si-uikit__h" id="uikit-glass">Gold surface</h2>
         <p class="si-uikit__note" style="margin-top: 0; margin-bottom: 1rem">
-          Figma Glass 效果（<code>css/tokens.css</code>）已应用于全站 <code>.si-card</code>、<code>.si-scope</code>、Tab、按钮与菜单链接等，统一使用 <code>.si-glass</code> 同一套 token。
+          深蓝金边面板（<code>css/tokens.css</code>）已应用于全站 <code>.si-card</code>、<code>.si-scope</code>、Tab、按钮与菜单链接等，统一使用 <code>.si-gold</code>（<code>--si-gold-surface</code>、<code>--brand-color-gold</code>）。
         </p>
         <div class="si-uikit__glass-params" role="list">
           <div class="si-uikit__glass-param" role="listitem">
@@ -99,16 +111,16 @@
           </div>
         </div>
         <div class="si-uikit__glass-stage">
-          <div class="si-glass si-uikit__glass-panel">
-            <p class="si-h4" style="margin: 0 0 0.35rem">Glass panel</p>
-            <p class="si-body" style="margin: 0; font-size: 1rem; opacity: 0.92">Backdrop blur + layered highlight</p>
+          <div class="si-gold si-uikit__glass-panel">
+            <p class="si-h4" style="margin: 0 0 0.35rem">Gold panel</p>
+            <p class="si-body" style="margin: 0; font-size: 1rem; opacity: 0.92">#163285 surface · 1px gold border · 16px radius</p>
           </div>
-          <div class="si-glass si-uikit__glass-panel si-uikit__glass-panel--compact">
+          <div class="si-gold si-uikit__glass-panel si-uikit__glass-panel--compact">
             <p style="margin: 0; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase">Compact</p>
           </div>
-          <div class="si-card si-glass si-uikit__glass-panel">
-            <h3 class="si-card__title" style="margin: 0">Card + glass</h3>
-            <p style="margin: 0.5rem 0 0; font-size: 1rem; line-height: 1.45; opacity: 0.9">Combine <code>.si-card</code> with <code>.si-glass</code> for frosted surfaces.</p>
+          <div class="si-card si-gold si-uikit__glass-panel">
+            <h3 class="si-card__title" style="margin: 0">Card + gold</h3>
+            <p style="margin: 0.5rem 0 0; font-size: 1rem; line-height: 1.45; opacity: 0.9">Combine <code>.si-card</code> with <code>.si-gold</code> for luxury surfaces.</p>
           </div>
         </div>
       </section>
@@ -258,13 +270,13 @@
           样式在 <code>css/main.css</code>：<code>wifi-help.html</code> 在 <code>body</code> 上加 <code>table-style-a</code>；表格外层为
           <code>.si-card.table-style-a__wrap.si-card--tablewrap</code>，表格为
           <code>.si-inner-table.table-style-a__table</code> 及修饰符 <code>--bisz-cols</code> / <code>--cells-center</code>。日程详情展开区为
-          <code>.si-sch-table</code>、<code>.si-sch-group-matrix</code>、
-          <code>.si-sch-matrix-table</code>（由 <code>js/schedule-page.js</code> 生成）。
+          <code>.si-sch-table</code>（div 表格，深蓝斑马）与 <code>.si-sch-group-matrix</code> 内
+          <code>table-style-a</code>（由 <code>js/schedule-page.js</code> 生成）。
         </p>
 
-        <h3 class="si-uikit__subh">Table style A · 白底斑马表格</h3>
+        <h3 class="si-uikit__subh">Table style A · 深蓝斑马表格</h3>
         <p class="si-uikit__note" style="margin-top: 0">
-          与 <code>wifi-help.html</code> 三表一致：在预览容器上加 <code>table-style-a</code>（正式页挂在 <code>body</code>）；卡套用
+          奇数行 <code>#163285</code>、偶数行 <code>#415C9E</code>、白字；在预览容器上加 <code>table-style-a</code>（正式页挂在 <code>body</code>）；卡套用
           <code>si-card table-style-a__wrap si-card--tablewrap</code>。
         </p>
         <div class="table-style-a si-uikit__table-preview-stack">
@@ -396,25 +408,27 @@
                     </div>
                   </div>
                 </div>
-                <div class="si-sch-group-matrix">
-                  <table class="si-sch-matrix-table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Track</th>
-                        <th scope="col">Room</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>A</td>
-                        <td>201</td>
-                      </tr>
-                      <tr>
-                        <td>B</td>
-                        <td>302</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="table-style-a si-sch-group-matrix">
+                  <div class="si-card table-style-a__wrap si-card--tablewrap">
+                    <table class="si-inner-table table-style-a__table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Track</th>
+                          <th scope="col">Room</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>A</td>
+                          <td>201</td>
+                        </tr>
+                        <tr>
+                          <td>B</td>
+                          <td>302</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -425,7 +439,7 @@
       <section class="si-uikit-block" aria-labelledby="uikit-sch">
         <h2 class="si-uikit__h" id="uikit-sch">Schedule session cards</h2>
         <p class="si-uikit__note" style="margin-top: 0; margin-bottom: 1rem">
-          与 Figma「Schedule session cards」画板一致（<a href="https://www.figma.com/design/Ccy7A3959PvAjHU29QP31P/SummerInstitute-2026?node-id=91-638" style="color: var(--si-accent)">node 91:638</a>）。无详情：白底蓝字；有详情：ice 底深蓝字，悬停 sky 底深字。&lt;720px：有详情时首行为时间 + chevron，下为主题、受众、地点；≥720px：160px 时间 | 主题与受众 | 200px 地点 | 24px chevron（无地点时无中间地点列）。
+          与 Figma「Schedule session cards」画板一致（<a href="https://www.figma.com/design/Ccy7A3959PvAjHU29QP31P/SummerInstitute-2026?node-id=91-638" class="si-gold-gradient-text">node 91:638</a>）。无详情：白底蓝字；有详情：ice 底深蓝字，悬停 sky 底深字。&lt;720px：有详情时首行为时间 + chevron，下为主题、受众、地点；≥720px：160px 时间 | 主题与受众 | 200px 地点 | 24px chevron（无地点时无中间地点列）。
         </p>
         <div class="si-uikit__stack" style="max-width: 100%">
           <article class="si-sch-card si-sch-card--simple">
@@ -500,7 +514,7 @@
       </section>
 
       <p class="si-uikit__note" style="margin-top: 2rem">
-        <a class="si-loc-link" href="index.html" style="color: var(--si-accent)">← 返回站点首页</a>
+        <a class="si-loc-link si-gold-gradient-text" href="index.html">← 返回站点首页</a>
       </p>
     </div>
 

@@ -70,6 +70,60 @@
       .replace(/"/g, "&quot;");
   }
 
+  function mergeAdjacentMatrixBodyHtml(textGrid) {
+    const src = getSrc();
+    if (src && typeof src.mergeAdjacentMatrixBodyHtml === "function") {
+      return src.mergeAdjacentMatrixBodyHtml(textGrid);
+    }
+    if (!textGrid || !textGrid.length) return "";
+    const rows = textGrid.length;
+    const cols = textGrid.reduce(function (max, row) {
+      return Math.max(max, row.length);
+    }, 0);
+    if (!cols) return "";
+    const grid = textGrid.map(function (row) {
+      const next = row.slice();
+      while (next.length < cols) next.push("");
+      return next.map(function (cell) {
+        return String(cell == null ? "" : cell);
+      });
+    });
+    const covered = Array.from({ length: rows }, function () {
+      return Array(cols).fill(false);
+    });
+    let html = "";
+    for (let i = 0; i < rows; i++) {
+      html += "<tr>";
+      for (let j = 0; j < cols; j++) {
+        if (covered[i][j]) continue;
+        const val = grid[i][j];
+        let rowspan = 1;
+        while (i + rowspan < rows && grid[i + rowspan][j] === val) rowspan++;
+        let colspan = 1;
+        while (j + colspan < cols) {
+          let blockOk = true;
+          for (let r = 0; r < rowspan; r++) {
+            if (grid[i + r][j + colspan] !== val) {
+              blockOk = false;
+              break;
+            }
+          }
+          if (!blockOk) break;
+          colspan++;
+        }
+        for (let r = 0; r < rowspan; r++) {
+          for (let c = 0; c < colspan; c++) covered[i + r][j + c] = true;
+        }
+        const attrs = [];
+        if (rowspan > 1) attrs.push('rowspan="' + rowspan + '"');
+        if (colspan > 1) attrs.push('colspan="' + colspan + '"');
+        html += "<td" + (attrs.length ? " " + attrs.join(" ") : "") + ">" + escapeHtml(val) + "</td>";
+      }
+      html += "</tr>";
+    }
+    return html;
+  }
+
   function groupMatrixPreviewHtml(m) {
     if (!matrixHasContent(m)) return "";
     const lang = getLang();
@@ -79,17 +133,13 @@
         return `<th scope="col">${escapeHtml(h)}</th>`;
       })
       .join("");
-    const trs = (m.rows || [])
-      .map(function (row) {
-        const tds = row
-          .map(function (cell) {
-            const v = lang === "en" ? cell.en || cell.zh : cell.zh || cell.en;
-            return `<td>${escapeHtml(v)}</td>`;
-          })
-          .join("");
-        return `<tr>${tds}</tr>`;
-      })
-      .join("");
+    const grid = (m.rows || []).map(function (row) {
+      return row.map(function (cell) {
+        const v = lang === "en" ? cell.en || cell.zh : cell.zh || cell.en;
+        return String(v || "");
+      });
+    });
+    const trs = mergeAdjacentMatrixBodyHtml(grid);
     return `<table class="si-schdb-matrix-table"><thead><tr>${ths}</tr></thead><tbody>${trs}</tbody></table>`;
   }
 
@@ -245,6 +295,85 @@
     } catch {
       /* ignore */
     }
+  }
+
+  function reorderInArray(arr, fromIndex, toIndex) {
+    if (fromIndex === toIndex) return;
+    if (fromIndex < 0 || toIndex < 0 || fromIndex >= arr.length || toIndex >= arr.length) return;
+    const item = arr.splice(fromIndex, 1)[0];
+    arr.splice(toIndex, 0, item);
+  }
+
+  function getDaySlotPacks(dayId) {
+    const doc = readPublishDoc();
+    const prefix = dayId + ":";
+    let max = -1;
+    Object.keys(doc.slots).forEach(function (key) {
+      if (!key.startsWith(prefix)) return;
+      const idx = parseInt(key.slice(prefix.length), 10);
+      if (!Number.isNaN(idx) && idx > max) max = idx;
+    });
+    const packs = [];
+    for (let i = 0; i <= max; i++) {
+      packs[i] = doc.slots[dayId + ":" + i] || null;
+    }
+    return packs;
+  }
+
+  function setDaySlotPacks(dayId, packs) {
+    const doc = readPublishDoc();
+    const prefix = dayId + ":";
+    Object.keys(doc.slots).forEach(function (key) {
+      if (key.startsWith(prefix)) delete doc.slots[key];
+    });
+    packs.forEach(function (pack, i) {
+      if (pack) doc.slots[dayId + ":" + i] = pack;
+    });
+    try {
+      localStorage.setItem(
+        publishStorageKey(),
+        JSON.stringify({ v: doc.v || 1, slots: doc.slots })
+      );
+    } catch {
+      /* ignore */
+    }
+  }
+
+  function reorderDayEntries(scopeId, dayId, fromIndex, toIndex) {
+    if (fromIndex === toIndex) return;
+    readRowsFromDom();
+    const key = compositeKey(scopeId, dayId);
+    const arr = state.entries[key] || [];
+    if (
+      fromIndex < 0 ||
+      toIndex < 0 ||
+      fromIndex >= arr.length ||
+      toIndex >= arr.length
+    ) {
+      return;
+    }
+
+    reorderInArray(arr, fromIndex, toIndex);
+    state.entries[key] = arr;
+
+    const packs = getDaySlotPacks(dayId);
+    while (packs.length < arr.length) packs.push(null);
+    if (packs.length > arr.length) packs.length = arr.length;
+    reorderInArray(packs, fromIndex, toIndex);
+    setDaySlotPacks(dayId, packs);
+
+    if (editingKey === key && editingIndex >= 0) {
+      if (editingIndex === fromIndex) {
+        editingIndex = toIndex;
+      } else if (fromIndex < editingIndex && toIndex >= editingIndex) {
+        editingIndex -= 1;
+      } else if (fromIndex > editingIndex && toIndex <= editingIndex) {
+        editingIndex += 1;
+      }
+    }
+
+    markDirty();
+    renderAll();
   }
 
   function emptyRow() {
@@ -472,11 +601,53 @@
     });
   }
 
+  function bilingualLinesToItems(zhText, enText) {
+    const zl = String(zhText || "")
+      .replace(/\r\n/g, "\n")
+      .split("\n");
+    const el = String(enText || "")
+      .replace(/\r\n/g, "\n")
+      .split("\n");
+    const n = Math.max(zl.length, el.length);
+    const items = [];
+    for (let i = 0; i < n; i++) {
+      const zh = (zl[i] || "").trim();
+      const en = (el[i] || "").trim();
+      if (zh || en) items.push({ zh: zh, en: en });
+    }
+    if (!items.length && ((zhText || "").trim() || (enText || "").trim())) {
+      items.push({ zh: (zhText || "").trim(), en: (enText || "").trim() });
+    }
+    return items;
+  }
+
+  function topicsFromRow(row) {
+    if ((row.topicZh || "").trim() || (row.topicEn || "").trim()) {
+      return { topicZh: row.topicZh || "", topicEn: row.topicEn || "" };
+    }
+    if (row._sourceEv && Array.isArray(row._sourceEv.items) && row._sourceEv.items.length) {
+      return {
+        topicZh: row._sourceEv.items
+          .map(function (i) {
+            return i.zh || "";
+          })
+          .join("\n"),
+        topicEn: row._sourceEv.items
+          .map(function (i) {
+            return i.en || "";
+          })
+          .join("\n"),
+      };
+    }
+    return { topicZh: row.topicZh || "", topicEn: row.topicEn || "" };
+  }
+
   function formRowToSyntheticEvent(row) {
     const hasDetail = !!(row.detailZh || row.detailEn);
     const gm = mergeGroupMatrix(row.groupTsvZh, row.groupTsvEn);
     const hasGroup = gm && matrixHasContent(gm);
-    const items = [{ zh: row.topicZh || "", en: row.topicEn || "" }];
+    const items = bilingualLinesToItems(row.topicZh, row.topicEn);
+    if (!items.length) items.push({ zh: "", en: "" });
     const ev = {
       variant: "primary",
       expandable: !!(hasDetail || hasGroup),
@@ -517,6 +688,11 @@
         const gmFromTsv = mergeGroupMatrix(row.groupTsvZh, row.groupTsvEn);
         if (matrixHasContent(gmFromTsv)) {
           c.groupMatrix = gmFromTsv;
+        }
+        const topicItems = bilingualLinesToItems(row.topicZh, row.topicEn);
+        if (topicItems.length) c.items = topicItems;
+        if ((row.introZh || "").trim() || (row.introEn || "").trim()) {
+          c.audience = { zh: row.introZh || "", en: row.introEn || "" };
         }
         const inner =
           (c.detailLines && c.detailLines.length) ||
@@ -643,6 +819,7 @@
   }
 
   function renderEntryForm(scopeId, dayId, index, row) {
+    const formRow = Object.assign({}, row, topicsFromRow(row));
     const wrap = document.createElement("fieldset");
     wrap.className = "si-schdb-entry";
     wrap.setAttribute("data-row-index", String(index));
@@ -680,7 +857,7 @@
         }
         inp.className = "si-schdb-input";
         inp.setAttribute("data-field", field);
-        inp.value = row[field] || "";
+        inp.value = formRow[field] || "";
         inp.addEventListener("input", markDirty);
         cell.appendChild(inp);
         grid.appendChild(cell);
@@ -690,8 +867,42 @@
     }
 
     pair("schdb.fieldTime", "timeZh", "timeEn", false);
-    pair("schdb.fieldTopic", "topicZh", "topicEn", false);
-    pair("schdb.fieldIntro", "introZh", "introEn", "medium");
+
+    const topicBox = document.createElement("div");
+    topicBox.className = "si-schdb-field";
+    const topicLab = document.createElement("div");
+    topicLab.className = "si-schdb-field__label";
+    topicLab.textContent = t("schdb.fieldTopic");
+    topicBox.appendChild(topicLab);
+    const topicHint = document.createElement("p");
+    topicHint.className = "si-schdb-hint";
+    topicHint.textContent = t("schdb.topicHint");
+    topicBox.appendChild(topicHint);
+    const topicGrid = document.createElement("div");
+    topicGrid.className = "si-schdb-pair";
+    [
+      ["schdb.subZh", "topicZh"],
+      ["schdb.subEn", "topicEn"],
+    ].forEach(function ([subK, field]) {
+      const cell = document.createElement("div");
+      cell.className = "si-schdb-pair__cell";
+      const sl = document.createElement("span");
+      sl.className = "si-schdb-pair__sub";
+      sl.textContent = t(subK);
+      cell.appendChild(sl);
+      const inp = document.createElement("textarea");
+      inp.className = "si-schdb-input";
+      inp.rows = 4;
+      inp.setAttribute("data-field", field);
+      inp.value = formRow[field] || "";
+      inp.addEventListener("input", markDirty);
+      cell.appendChild(inp);
+      topicGrid.appendChild(cell);
+    });
+    topicBox.appendChild(topicGrid);
+    wrap.appendChild(topicBox);
+
+    pair("schdb.fieldIntro", "introZh", "introEn", "large");
     pair("schdb.fieldLoc", "locZh", "locEn", false);
     pair("schdb.fieldDetail", "detailZh", "detailEn", "large");
 
@@ -720,7 +931,7 @@
       ta.className = "si-schdb-input si-schdb-input--tsv";
       ta.rows = 6;
       ta.setAttribute("data-field", field);
-      ta.value = row[field] || "";
+      ta.value = formRow[field] || "";
       ta.addEventListener("input", markDirty);
       cell.appendChild(ta);
       gGrid.appendChild(cell);
@@ -787,11 +998,51 @@
     return wrap;
   }
 
+  function createDragHandle(scopeId, dayId, index) {
+    const handle = document.createElement("span");
+    handle.className = "si-schdb-drag-handle";
+    handle.setAttribute("data-schdb-drag-handle", "1");
+    handle.setAttribute("draggable", "true");
+    handle.setAttribute("role", "button");
+    handle.setAttribute("tabindex", "0");
+    handle.setAttribute("aria-label", t("schdb.dragHandleAria"));
+    handle.title = t("schdb.dragHandleTitle");
+    handle.innerHTML =
+      '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">' +
+      '<circle cx="7" cy="6" r="1.35" fill="currentColor"/>' +
+      '<circle cx="13" cy="6" r="1.35" fill="currentColor"/>' +
+      '<circle cx="7" cy="10" r="1.35" fill="currentColor"/>' +
+      '<circle cx="13" cy="10" r="1.35" fill="currentColor"/>' +
+      '<circle cx="7" cy="14" r="1.35" fill="currentColor"/>' +
+      '<circle cx="13" cy="14" r="1.35" fill="currentColor"/>' +
+      "</svg>";
+    handle.addEventListener("click", function (ev) {
+      ev.preventDefault();
+    });
+    handle.addEventListener("keydown", function (ev) {
+      if (ev.key === " " || ev.key === "Enter") ev.preventDefault();
+    });
+    return handle;
+  }
+
   function createCardRow(scopeId, dayId, index, row) {
     const src = getSrc();
     const wrap = document.createElement("div");
     wrap.className = "si-schdb-cardrow";
     wrap.setAttribute("data-row-index", String(index));
+
+    const head = document.createElement("div");
+    head.className = "si-schdb-cardrow__head";
+
+    const headMain = document.createElement("div");
+    headMain.className = "si-schdb-cardrow__head-main";
+    headMain.appendChild(createDragHandle(scopeId, dayId, index));
+    const label = document.createElement("span");
+    label.className = "si-schdb-cardrow__label";
+    label.textContent = sessionLegend(index);
+    headMain.appendChild(label);
+    head.appendChild(headMain);
+    wrap.appendChild(head);
 
     const slot = document.createElement("div");
     slot.className = "si-schdb-card-slot";
@@ -880,6 +1131,58 @@
     return wrap;
   }
 
+  function wireDayDragSort(host, scopeId, dayId) {
+    const k = compositeKey(scopeId, dayId);
+    if (editingKey === k) return;
+
+    const rows = host.querySelectorAll(".si-schdb-cardrow[data-row-index]");
+    rows.forEach(function (row) {
+      const handle = row.querySelector("[data-schdb-drag-handle]");
+      if (!handle) return;
+
+      handle.addEventListener("dragstart", function (ev) {
+        const fromIndex = parseInt(row.getAttribute("data-row-index") || "-1", 10);
+        if (Number.isNaN(fromIndex) || fromIndex < 0) return;
+        row.classList.add("is-dragging");
+        if (ev.dataTransfer) {
+          ev.dataTransfer.effectAllowed = "move";
+          ev.dataTransfer.setData("text/plain", String(fromIndex));
+        }
+      });
+
+      handle.addEventListener("dragend", function () {
+        row.classList.remove("is-dragging");
+        host.querySelectorAll(".si-schdb-cardrow.is-drag-over").forEach(function (el) {
+          el.classList.remove("is-drag-over");
+        });
+      });
+
+      row.addEventListener("dragover", function (ev) {
+        ev.preventDefault();
+        if (ev.dataTransfer) ev.dataTransfer.dropEffect = "move";
+        row.classList.add("is-drag-over");
+      });
+
+      row.addEventListener("dragleave", function (ev) {
+        if (!row.contains(ev.relatedTarget)) {
+          row.classList.remove("is-drag-over");
+        }
+      });
+
+      row.addEventListener("drop", function (ev) {
+        ev.preventDefault();
+        row.classList.remove("is-drag-over");
+        const fromIndex = parseInt(
+          (ev.dataTransfer && ev.dataTransfer.getData("text/plain")) || "-1",
+          10
+        );
+        const toIndex = parseInt(row.getAttribute("data-row-index") || "-1", 10);
+        if (Number.isNaN(fromIndex) || Number.isNaN(toIndex) || fromIndex === toIndex) return;
+        reorderDayEntries(scopeId, dayId, fromIndex, toIndex);
+      });
+    });
+  }
+
   function wireCardToggles(host) {
     const src = getSrc();
     if (src && typeof src.wireExpandToggles === "function") {
@@ -932,6 +1235,7 @@
     });
 
     wireCardToggles(host);
+    wireDayDragSort(host, scopeId, dayId);
   }
 
   function renderScope(container, scopeIds) {

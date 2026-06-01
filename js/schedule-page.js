@@ -142,6 +142,26 @@
     }
   }
 
+  function bilingualLinesToItems(zhText, enText) {
+    const zl = String(zhText || "")
+      .replace(/\r\n/g, "\n")
+      .split("\n");
+    const el = String(enText || "")
+      .replace(/\r\n/g, "\n")
+      .split("\n");
+    const n = Math.max(zl.length, el.length);
+    const items = [];
+    for (let i = 0; i < n; i++) {
+      const zh = (zl[i] || "").trim();
+      const en = (el[i] || "").trim();
+      if (zh || en) items.push({ zh: zh, en: en });
+    }
+    if (!items.length && ((zhText || "").trim() || (enText || "").trim())) {
+      items.push({ zh: (zhText || "").trim(), en: (enText || "").trim() });
+    }
+    return items;
+  }
+
   function rowDbToEvent(row) {
     if (!row) return null;
 
@@ -159,7 +179,8 @@
       }
 
       if ((row.topicZh || "").trim() || (row.topicEn || "").trim()) {
-        ev.items = [{ zh: row.topicZh || "", en: row.topicEn || "" }];
+        const topicItems = bilingualLinesToItems(row.topicZh, row.topicEn);
+        if (topicItems.length) ev.items = topicItems;
       }
 
       if ((row.introZh || "").trim() || (row.introEn || "").trim()) {
@@ -207,7 +228,8 @@
     const hasDetail = !!(row.detailZh || row.detailEn);
     const gm = mergeGroupMatrixFromRow(row);
     const hasGroup = gm && matrixHasContentSch(gm);
-    const items = [{ zh: row.topicZh || "", en: row.topicEn || "" }];
+    const items = bilingualLinesToItems(row.topicZh, row.topicEn);
+    if (!items.length) items.push({ zh: "", en: "" });
     const ev = {
       variant: "primary",
       expandable: !!(hasDetail || hasGroup),
@@ -487,6 +509,68 @@
     );
   }
 
+  function mergeAdjacentMatrixBodyHtml(textGrid) {
+    if (!textGrid || !textGrid.length) return "";
+    const rows = textGrid.length;
+    const cols = textGrid.reduce(function (max, row) {
+      return Math.max(max, row.length);
+    }, 0);
+    if (!cols) return "";
+
+    const grid = textGrid.map(function (row) {
+      const next = row.slice();
+      while (next.length < cols) next.push("");
+      return next.map(function (cell) {
+        return String(cell == null ? "" : cell);
+      });
+    });
+
+    const covered = Array.from({ length: rows }, function () {
+      return Array(cols).fill(false);
+    });
+    let html = "";
+
+    for (let i = 0; i < rows; i++) {
+      html += "<tr>";
+      for (let j = 0; j < cols; j++) {
+        if (covered[i][j]) continue;
+        const val = grid[i][j];
+
+        let rowspan = 1;
+        while (i + rowspan < rows && grid[i + rowspan][j] === val) {
+          rowspan++;
+        }
+
+        let colspan = 1;
+        while (j + colspan < cols) {
+          let blockOk = true;
+          for (let r = 0; r < rowspan; r++) {
+            if (grid[i + r][j + colspan] !== val) {
+              blockOk = false;
+              break;
+            }
+          }
+          if (!blockOk) break;
+          colspan++;
+        }
+
+        for (let r = 0; r < rowspan; r++) {
+          for (let c = 0; c < colspan; c++) {
+            covered[i + r][j + c] = true;
+          }
+        }
+
+        const attrs = [];
+        if (rowspan > 1) attrs.push('rowspan="' + rowspan + '"');
+        if (colspan > 1) attrs.push('colspan="' + colspan + '"');
+        html += "<td" + (attrs.length ? " " + attrs.join(" ") : "") + ">" + escapeHtml(val) + "</td>";
+      }
+      html += "</tr>";
+    }
+
+    return html;
+  }
+
   function groupMatrixHtml(m) {
     if (!matrixHasContentSch(m)) return "";
     const ths = m.columns
@@ -494,22 +578,20 @@
         return `<th scope="col">${escapeHtml(L(c))}</th>`;
       })
       .join("");
-    const trs = (m.rows || [])
-      .map(function (row) {
-        const tds = row
-          .map(function (cell) {
-            return `<td>${escapeHtml(L(cell))}</td>`;
-          })
-          .join("");
-        return `<tr>${tds}</tr>`;
-      })
-      .join("");
+    const grid = (m.rows || []).map(function (row) {
+      return row.map(function (cell) {
+        return L(cell);
+      });
+    });
+    const trs = mergeAdjacentMatrixBodyHtml(grid);
     return (
-      `<div class="si-sch-group-matrix"><table class="si-sch-matrix-table"><thead><tr>` +
+      `<div class="table-style-a si-sch-group-matrix">` +
+      `<div class="si-card table-style-a__wrap si-card--tablewrap">` +
+      `<table class="si-inner-table table-style-a__table"><thead><tr>` +
       ths +
       `</tr></thead><tbody>` +
       trs +
-      `</tbody></table></div>`
+      `</tbody></table></div></div>`
     );
   }
 
@@ -844,6 +926,7 @@
     cardHtml,
     formatScheduleTime,
     wireExpandToggles,
+    mergeAdjacentMatrixBodyHtml,
     whenReady: whenScheduleEventsReady,
     refreshPublishLayer,
     applyEntriesSyncFromLocalStorage,

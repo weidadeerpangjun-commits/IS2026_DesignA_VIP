@@ -113,6 +113,21 @@ body.si.has-site-background {
   margin-bottom: 0;
 }
 
+.si-footer__toolbar .si-home-abbrev-btn,
+.si-footer__toolbar .si-lang {
+  border: 0;
+  background: transparent;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.si-footer__toolbar .si-home-abbrev-btn:hover,
+.si-footer__toolbar .si-home-abbrev-btn:focus-visible,
+.si-footer__toolbar .si-lang:hover,
+.si-footer__toolbar .si-lang:focus-visible {
+  background: transparent;
+}
+
 .si-footer__copy,
 .si-footer__icp {
   margin: 0;
@@ -141,11 +156,10 @@ body.si.has-site-background {
 }
 
 .si-footer__link:hover {
-  color: var(--si-accent);
+  text-decoration-color: var(--si-gold-end);
 }
 
 .si-footer__link:focus-visible {
-  outline: 2px solid var(--si-accent);
   outline-offset: 2px;
 }
 
@@ -206,7 +220,6 @@ body.si-page--schdb {
 }
 
 .si-lang:focus-visible {
-  outline: 2px solid var(--si-accent);
   outline-offset: 2px;
 }
 
@@ -218,7 +231,7 @@ body.si-page--schdb {
 }
 
 .si-h1 {
-  margin: 0;
+  margin: 16px 0;
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.1;
@@ -227,6 +240,71 @@ body.si-page--schdb {
 
 .si-h1--zh {
   letter-spacing: -0.03em;
+}
+
+.si-gold-text,
+.si-gold-gradient-text {
+  background: var(--si-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Text accent (replaces legacy --si-accent / #9be2fc) */
+:is(
+  .si-footer__link:hover,
+  .si-back,
+  .si-detail-scope,
+  .si-map-route-btn:hover,
+  .si-schdb-nav__link,
+  .si-schdb-cathead--fold-category:hover,
+  .si-schdb-day__summary,
+  .si-schdb-remove
+) {
+  background: var(--si-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.si-back:hover,
+.si-schdb-nav__link:hover,
+.si-schdb-day__summary:hover {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+
+.si-map-picker__link:hover {
+  color: var(--si-gold-end);
+}
+
+/* Focus rings: solid cap from gold gradient (outline cannot use gradient) */
+:is(
+  .si-footer__link,
+  .si-lang,
+  .si-home-abbrev-btn,
+  .si-tab,
+  .si-schedule-menu-pill,
+  .si-date-tab,
+  .si-img-lightbox-trigger,
+  .si-lightbox__close,
+  .si-map-route-btn,
+  .si-map-picker__link,
+  .si-inner-doc-tile,
+  .si-schdb-cathead--fold-category,
+  .si-schdb-input
+):focus-visible,
+.si-schdb-input:focus {
+  outline: 2px solid var(--si-gold-end);
+}
+
+body[data-page="home"] .si-h1--zh,
+body[data-page="menu"] .si-h1--zh {
+  background: var(--si-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .si-hero-logo {
@@ -278,6 +356,7 @@ body.si-page--schdb {
   font-weight: 500;
   line-height: 1.25;
   letter-spacing: -0.01em;
+  color: var(--si-gold-gradient);
 }
 
 .si-h4 {
@@ -287,6 +366,7 @@ body.si-page--schdb {
 .si-menu-link__text {
   flex: 1;
   min-width: 0;
+  /* color: var(--brand-color-gold); */
 }
 
 .si-card__title,
@@ -302,7 +382,7 @@ body.si-page--schdb {
 }
 
 .si-dates {
-  margin: 0;
+  margin: 40px 0;
   font-size: 1.875rem;
   font-weight: 300;
   line-height: 1.45;
@@ -344,7 +424,6 @@ body.si-page--schdb {
 }
 
 .si-home-abbrev-btn:focus-visible {
-  outline: 2px solid var(--si-accent);
   outline-offset: 3px;
 }
 
@@ -357,11 +436,11 @@ body.si-page--schdb {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
+  gap: 1rem;
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.45;
-  color: var(--si-accent);
+  color: var(--si-gold-end);
   /* text-decoration: underline;
   text-underline-offset: 0.2em; */
 }
@@ -369,12 +448,12 @@ body.si-page--schdb {
 .si-choose__chev {
   flex-shrink: 0;
   display: flex;
-  color: var(--si-accent);
+  color: var(--brand-color-gold);
 }
 
 .si-choose__chev svg {
   display: block;
-  color: var(--si-accent);
+  color: var(--brand-color-gold);
   transform: rotate(90deg);
 }
 
@@ -417,7 +496,6 @@ body.si-page--schdb {
 }
 
 .si-tab:focus-visible {
-  outline: 2px solid var(--si-accent);
   outline-offset: 2px;
 }
 
@@ -571,6 +649,7 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 .si-card__arrow svg,
 .si-scope__arrow svg {
   display: block;
+  color: var(--brand-color-gold);
 }
 
 .si-card:focus-visible,
@@ -712,10 +791,10 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
 
 .si-scope-chip {
   margin: 1rem 0 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.45;
-  color: var(--si-accent);
+  color: var(--brand-color-gold);
 }
 
 .si-menu-main {
@@ -758,11 +837,13 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   padding: 1rem 1.5rem;
   border-radius: var(--si-radius-card);
   text-decoration: none;
-  color: var(--si-fg);
   transition: color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .si-menu-link:hover {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
   color: var(--si-fg);
 }
 
@@ -778,13 +859,22 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  color: var(--si-fg);
+  color: var(--brand-color-gold);
   transition: color 0.15s ease;
 }
 
+.si-menu-link .si-card__arrow,
+.si-menu-link .si-card__arrow svg {
+  color: var(--brand-color-gold);
+}
+
 .si-menu-link:hover .si-menu-icon,
-.si-menu-link:focus-visible .si-menu-icon {
-  color: var(--si-fg);
+.si-menu-link:focus-visible .si-menu-icon,
+.si-menu-link:hover .si-card__arrow,
+.si-menu-link:hover .si-card__arrow svg,
+.si-menu-link:focus-visible .si-card__arrow,
+.si-menu-link:focus-visible .si-card__arrow svg {
+  color: var(--brand-color-gold);
 }
 
 .si-menu-icon svg {
@@ -814,8 +904,8 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
 }
 
 .si-back {
-  color: var(--si-accent);
   text-decoration: underline;
+  text-decoration-color: var(--si-gold-end);
   text-underline-offset: 0.2em;
   font-size: 1rem;
   white-space: nowrap;
@@ -843,7 +933,6 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   margin: 0 0 1rem;
   font-size: 0.95rem;
   line-height: 1.45;
-  color: var(--si-accent);
 }
 
 .si-placeholder {
@@ -878,7 +967,7 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   top: 0;
   z-index: 30;
   margin: 0;
-  background: linear-gradient(180deg, #162f7f 0%, #263f8e 100%);
+  background: linear-gradient(180deg, #001348 0%, rgba(3, 25, 82, 0.00) 100%);
   padding-top: max(1.5rem, env(safe-area-inset-top, 0px));
   padding-bottom: 1.5rem;
   /* border-bottom: 1px solid rgb(255 255 255 / 10%); */
@@ -942,7 +1031,6 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
 }
 
 .si-schedule-menu-pill:focus-visible {
-  outline: 2px solid var(--si-accent);
   outline-offset: 2px;
 }
 
@@ -952,9 +1040,9 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
 
 .si-schedule-scope {
   margin: 0 0 1rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.45;
-  color: var(--si-accent);
+  color: var(--brand-color-gold);
 }
 
 .si-schedule-title {
@@ -1016,50 +1104,17 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   overflow: hidden;
   border-radius: 60px;
   color: var(--si-fg);
-  background: rgb(255 255 255 / calc(0.06 + var(--si-glass-refraction) * 0.002));
-  backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
-  -webkit-backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
-  border: 1px solid rgb(255 255 255 / calc(0.18 + var(--si-glass-refraction) * 0.004));
+  background: var(--si-gold-surface);
+  border: 1px solid var(--brand-color-gold);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   box-shadow: none;
   transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
-.si-date-tab.is-active::before {
-  display: block;
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(
-    var(--si-glass-light-angle),
-    rgb(255 255 255 / calc(0.55 * var(--si-glass-light-intensity))) 0%,
-    rgb(255 255 255 / calc(0.12 * var(--si-glass-light-intensity))) 28%,
-    transparent 52%
-  );
-  mix-blend-mode: overlay;
-}
-
+.si-date-tab.is-active::before,
 .si-date-tab.is-active::after {
-  display: block;
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: inherit;
-  pointer-events: none;
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    rgb(255 180 220 / calc(var(--si-glass-dispersion) * 0.0025)) 0%,
-    rgb(180 220 255 / calc(var(--si-glass-dispersion) * 0.0025)) 50%,
-    rgb(220 255 200 / calc(var(--si-glass-dispersion) * 0.002)) 100%
-  );
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-  opacity: calc(var(--si-glass-dispersion) / 100);
+  display: none;
 }
 
 .si-date-tab.is-active:hover {
@@ -1090,7 +1145,6 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
 }
 
 .si-date-tab:focus-visible {
-  outline: 2px solid var(--si-accent);
   outline-offset: 2px;
 }
 
@@ -1440,6 +1494,7 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.333;
+  white-space: pre-line;
 }
 
 .si-sch-loc {
@@ -1465,6 +1520,15 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.333;
+}
+
+/* Schedule extra: Table style A (blue zebra) for div-based breakout tables */
+.si-sch-extra .si-sch-table {
+  border: 1px solid rgb(255 255 255 / 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--si-table-zebra-a);
+  color: var(--si-fg);
 }
 
 .si-sch-table {
@@ -1526,12 +1590,44 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   border-bottom: 0;
 }
 
+.si-sch-extra .si-sch-table__head,
+.si-sch-extra .si-sch-table__group,
+.si-sch-extra .si-sch-table__row {
+  border-color: rgb(255 255 255 / 0.18);
+}
+
+.si-sch-extra .si-sch-table__head {
+  font-weight: 700;
+  background: var(--si-table-zebra-a);
+  color: var(--si-fg);
+}
+
+.si-sch-extra .si-sch-table__group-cell,
+.si-sch-extra .si-sch-table__cell {
+  color: var(--si-fg);
+}
+
+.si-sch-extra .si-sch-table__rows .si-sch-table__row:nth-child(odd) {
+  background-color: var(--si-table-zebra-a);
+}
+
+.si-sch-extra .si-sch-table__rows .si-sch-table__row:nth-child(even) {
+  background-color: var(--si-table-zebra-b);
+}
+
+.si-sch-extra .si-sch-table__row.is-stripe {
+  background-color: inherit;
+}
+
 .si-sch-table__row.is-stripe {
   background: rgb(255 255 255 / 0.2);
 }
 
-.si-sch-card--detail.is-expanded .si-sch-table {
-  border-color: rgb(255 255 255 / 0.45);
+.si-sch-card--detail.is-expanded .si-sch-extra .si-sch-table,
+.si-sch-card--detail.is-expanded .si-sch-extra .si-sch-table__head,
+.si-sch-card--detail.is-expanded .si-sch-extra .si-sch-table__group,
+.si-sch-card--detail.is-expanded .si-sch-extra .si-sch-table__row {
+  border-color: rgb(255 255 255 / 0.18);
 }
 
 .si-sch-card--detail.is-expanded .si-sch-table__head,
@@ -1542,6 +1638,14 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
 
 .si-sch-card--detail.is-expanded:hover .si-sch-table__row.is-stripe {
   background: rgb(255 255 255 / 0.14);
+}
+
+.si-sch-card--detail.is-expanded:hover .si-sch-extra .si-sch-table__rows .si-sch-table__row:nth-child(odd) {
+  background-color: var(--si-table-zebra-a);
+}
+
+.si-sch-card--detail.is-expanded:hover .si-sch-extra .si-sch-table__rows .si-sch-table__row:nth-child(even) {
+  background-color: var(--si-table-zebra-b);
 }
 
 .si-sch-card--detail .si-sch-table__row.is-stripe {
@@ -1563,9 +1667,20 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   margin-top: 0.75rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  border-radius: 4px;
 }
 
+.si-sch-extra .si-sch-group-matrix.table-style-a .table-style-a__wrap {
+  margin: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.si-sch-extra .si-sch-group-matrix.table-style-a .table-style-a__table {
+  margin: 0;
+}
+
+/* Legacy matrix markup (if any static HTML still uses si-sch-matrix-table) */
 .si-sch-matrix-table {
   width: 100%;
   border-collapse: collapse;
@@ -1719,6 +1834,10 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   color: var(--si-fg);
 }
 
+body[data-section="hotel"] .si-loc-text {
+  white-space: pre-line;
+}
+
 /* 内页信息卡：默认可读不可点；需可点时加 .si-card--clickable 或使用 a.si-card / button.si-card */
 .si-page--inner .si-card {
   cursor: default;
@@ -1798,7 +1917,6 @@ body[data-section="hotel"] .si-hotel-notice-nested {
 }
 
 .si-img-lightbox-trigger:focus-visible {
-  outline: 2px solid var(--si-accent);
   outline-offset: 3px;
   border-radius: var(--si-radius-tight, 8px);
 }
@@ -1853,7 +1971,6 @@ body[data-section="hotel"] .si-hotel-notice-nested {
 }
 
 .si-lightbox__close:focus-visible {
-  outline: 2px solid var(--si-accent);
   outline-offset: 2px;
 }
 
@@ -1879,12 +1996,7 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   text-underline-offset: 0.15em; */
 }
 
-.si-map-route-btn:hover {
-  color: var(--si-accent);
-}
-
 .si-map-route-btn:focus-visible {
-  outline: 2px solid var(--si-accent);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -1940,11 +2052,9 @@ body[data-section="hotel"] .si-hotel-notice-nested {
 
 .si-map-picker__link:hover {
   background: rgb(255 255 255 / 0.16);
-  color: var(--si-accent);
 }
 
 .si-map-picker__link:focus-visible {
-  outline: 2px solid var(--si-accent);
   outline-offset: 2px;
 }
 
@@ -2000,17 +2110,15 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   padding: 1rem 1.25rem;
 }
 
-/* Glass surfaces — cards, tabs, buttons (tokens: --si-glass-* in tokens.css) */
+/* Gold surfaces — cards, tabs, buttons (replaces glass on luxury branch) */
 :is(
-  .si-glass,
+  .si-gold,
   .si-card,
   .si-scope,
   a.si-card,
   button.si-card,
   .si-tab,
-  .si-lang,
   .si-menu-link,
-  .si-home-abbrev-btn,
   .si-schedule-menu-pill,
   .si-sch-card,
   .si-inner-doc-tile,
@@ -2025,23 +2133,22 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: rgb(255 255 255 / calc(0.06 + var(--si-glass-refraction) * 0.002));
-  backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
-  -webkit-backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
-  border: 1px solid rgb(255 255 255 / calc(0.18 + var(--si-glass-refraction) * 0.004));
+  border-radius: var(--si-radius-card);
+  /* border: 1px solid var(--brand-color-gold); */
+  background: var(--si-gold-surface);
   box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 :is(
-  .si-glass,
+  .si-gold,
   .si-card,
   .si-scope,
   a.si-card,
   button.si-card,
   .si-tab,
-  .si-lang,
   .si-menu-link,
-  .si-home-abbrev-btn,
   .si-schedule-menu-pill,
   .si-sch-card,
   .si-inner-doc-tile,
@@ -2053,29 +2160,27 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   .si-schdb-form-actions__primary,
   .si-schdb-form-actions__ghost
 ):hover {
-  background: rgb(255 255 255 / calc(0.14 + var(--si-glass-refraction) * 0.003));
+  background: #1a3a94;
   box-shadow: none;
 }
 
 :is(.si-tab.is-active) {
-  background: rgb(255 255 255 / calc(0.32 + var(--si-glass-refraction) * 0.004));
+  background: #1e4599;
   color: var(--si-fg);
 }
 
 .si-schedule-menu-pill {
-  background: rgb(255 255 255 / calc(0.28 + var(--si-glass-refraction) * 0.004));
+  background: var(--si-gold-surface);
 }
 
 :is(
-  .si-glass,
+  .si-gold,
   .si-card,
   .si-scope,
   a.si-card,
   button.si-card,
   .si-tab,
-  .si-lang,
   .si-menu-link,
-  .si-home-abbrev-btn,
   .si-schedule-menu-pill,
   .si-sch-card,
   .si-inner-doc-tile,
@@ -2086,32 +2191,15 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   .si-schdb-card-actions__btn,
   .si-schdb-form-actions__primary,
   .si-schdb-form-actions__ghost
-)::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(
-    var(--si-glass-light-angle),
-    rgb(255 255 255 / calc(0.55 * var(--si-glass-light-intensity))) 0%,
-    rgb(255 255 255 / calc(0.12 * var(--si-glass-light-intensity))) 28%,
-    transparent 52%
-  );
-  mix-blend-mode: overlay;
-}
-
+)::before,
 :is(
-  .si-glass,
+  .si-gold,
   .si-card,
   .si-scope,
   a.si-card,
   button.si-card,
   .si-tab,
-  .si-lang,
   .si-menu-link,
-  .si-home-abbrev-btn,
   .si-schedule-menu-pill,
   .si-sch-card,
   .si-admin-note,
@@ -2122,27 +2210,11 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   .si-schdb-form-actions__primary,
   .si-schdb-form-actions__ghost
 ):not(.si-inner-doc-tile)::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  border-radius: inherit;
-  pointer-events: none;
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    rgb(255 180 220 / calc(var(--si-glass-dispersion) * 0.0025)) 0%,
-    rgb(180 220 255 / calc(var(--si-glass-dispersion) * 0.0025)) 50%,
-    rgb(220 255 200 / calc(var(--si-glass-dispersion) * 0.002)) 100%
-  );
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-  opacity: calc(var(--si-glass-dispersion) / 100);
+  display: none;
 }
 
 :is(
-  .si-glass,
+  .si-gold,
   .si-card,
   .si-scope,
   .si-menu-link,
@@ -2150,9 +2222,7 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   .si-inner-doc-tile,
   .si-admin-note,
   .si-tab,
-  .si-lang,
   .si-schedule-menu-pill,
-  .si-home-abbrev-btn,
   .si-admin-cta
 ) > *,
 :is(
@@ -2166,18 +2236,27 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   z-index: 1;
 }
 
-.si-glass {
+.si-gold {
   border-radius: var(--si-radius-card);
+  border: 1px solid var(--brand-color-gold);
+  background: var(--si-gold-surface);
   color: var(--si-fg);
   padding: 1rem 1.25rem;
 }
 
-/* Buttons & tabs: default white text on glass */
+/* Legacy alias for UI kit demos */
+.si-glass {
+  border-radius: var(--si-radius-card);
+  border: 1px solid var(--brand-color-gold);
+  background: var(--si-gold-surface);
+  color: var(--si-fg);
+  padding: 1rem 1.25rem;
+}
+
+/* Buttons & tabs: default white text on gold surfaces */
 :is(
   .si-tab,
-  .si-lang,
   .si-menu-link,
-  .si-home-abbrev-btn,
   .si-schedule-menu-pill,
   .si-scope,
   .si-admin-cta,
@@ -2194,15 +2273,13 @@ body[data-section="hotel"] .si-hotel-notice-nested {
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   :is(
-    .si-glass,
+    .si-gold,
     .si-card,
     .si-scope,
     a.si-card,
     button.si-card,
     .si-tab,
-    .si-lang,
     .si-menu-link,
-    .si-home-abbrev-btn,
     .si-schedule-menu-pill,
     .si-sch-card,
     .si-inner-doc-tile,
@@ -2212,11 +2289,11 @@ body[data-section="hotel"] .si-hotel-notice-nested {
     .si-schdb-versions-list__btn,
     .si-schdb-card-actions__btn
   ) {
-    background: rgb(255 255 255 / 0.18);
+    background: var(--si-gold-surface);
   }
 
   .si-date-tab.is-active {
-    background: rgb(255 255 255 / 0.18);
+    background: var(--si-gold-surface);
   }
 }
 
@@ -2455,6 +2532,7 @@ body[data-section="transport"] .si-transport-panel__name {
   }
 }
 
+body[data-page="schedule"] .si-sch-extra .table-style-a__wrap,
 body[data-section="transport"] .si-sch-extra .table-style-a__wrap {
   overflow-x: auto;
   overflow-y: hidden;
@@ -2462,6 +2540,7 @@ body[data-section="transport"] .si-sch-extra .table-style-a__wrap {
   flex-flow: column;
 }
 
+body[data-page="schedule"] .si-sch-extra .table-style-a__table,
 body[data-section="transport"] .si-sch-extra .table-style-a__table {
   margin: 0;
 }
@@ -2575,7 +2654,6 @@ body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
 }
 
 .si-inner-doc-tile:focus-visible {
-  outline: 2px solid var(--si-accent);
   outline-offset: 3px;
 }
 
@@ -2602,13 +2680,13 @@ body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
   vertical-align: middle;
 }
 
-/* Table style A — white zebra table (wifi-help.html, dress-code, transport-timetable shuttle schedule, transport-campus-dinner). Scope: .table-style-a on body or a wrapper. */
+/* Table style A — blue zebra table (wifi-help, dress-code, transport, schedule extra). Scope: .table-style-a on body or a wrapper. */
 .table-style-a .si-card.table-style-a__wrap {
-  background: #ffffff;
-  border: 1px solid rgba(50, 85, 164, 0.28);
+  background: var(--si-table-zebra-a);
+  border: 1px solid rgb(255 255 255 / 0.2);
   border-radius: 12px;
   overflow: hidden;
-  color: var(--si-card-text);
+  color: var(--si-fg);
   box-shadow: none;
 }
 
@@ -2617,38 +2695,46 @@ body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
   border-collapse: collapse;
   font-size: 16px;
   line-height: 1.4;
+  color: var(--si-fg);
 }
 
 .table-style-a .table-style-a__table th,
 .table-style-a .table-style-a__table td {
-  border: 1px solid rgba(50, 85, 164, 0.22);
+  border: 1px solid rgb(255 255 255 / 0.18);
   padding: 0.65rem 0.85rem;
   vertical-align: middle;
   text-align: left;
-  color: var(--si-card-text);
+  color: var(--si-fg);
+}
+
+.table-style-a .table-style-a__table td[rowspan],
+.table-style-a .table-style-a__table th[rowspan] {
+  vertical-align: middle;
 }
 
 .table-style-a .table-style-a__table thead th {
   font-weight: 700;
   font-size: 16px;
-  background: #ffffff;
+  background: var(--si-table-zebra-a);
+  color: var(--si-fg);
 }
 
 .table-style-a .table-style-a__table tbody tr:nth-child(odd) th,
 .table-style-a .table-style-a__table tbody tr:nth-child(odd) td {
-  background-color: #ffffff;
+  background-color: var(--si-table-zebra-a);
+  color: var(--si-fg);
 }
 
 .table-style-a .table-style-a__table tbody tr:nth-child(even) th,
 .table-style-a .table-style-a__table tbody tr:nth-child(even) td {
-  background-color: #f0f3fa;
+  background-color: var(--si-table-zebra-b);
+  color: var(--si-fg);
 }
 
-@supports (background: color-mix(in srgb, white 50%, black 50%)) {
-  .table-style-a .table-style-a__table tbody tr:nth-child(even) th,
-  .table-style-a .table-style-a__table tbody tr:nth-child(even) td {
-    background-color: color-mix(in srgb, #ffffff 80%, var(--si-card-text) 20%);
-  }
+.table-style-a .si-card.table-style-a__wrap:hover {
+  background: var(--si-table-zebra-a);
+  border-color: rgb(255 255 255 / 0.2);
+  box-shadow: none;
 }
 
 .table-style-a .table-style-a__table--cells-center th,
@@ -2659,6 +2745,23 @@ body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
 .table-style-a .table-style-a__table--bisz-cols tbody tr:first-child th {
   font-weight: 700;
   font-size: 16px;
+  background: var(--si-table-zebra-a);
+  color: var(--si-fg);
+}
+
+.si-dress-attire {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.si-dress-attire__icon {
+  display: block;
+  width: 1.75rem;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .si-inner-table th,
@@ -2761,8 +2864,8 @@ body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
 }
 
 .si-schdb-nav__link {
-  color: var(--si-accent);
   text-decoration: underline;
+  text-decoration-color: var(--si-gold-end);
   text-underline-offset: 0.15em;
   font-size: 1rem;
 }
@@ -2890,12 +2993,8 @@ body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
   outline-offset: 3px;
 }
 
-.si-schdb-cathead--fold-category:hover {
-  color: var(--si-accent);
-}
-
 .si-schdb-cathead--fold-category:focus-visible {
-  outline: 2px solid var(--si-accent);
+  outline-offset: 3px;
 }
 
 .si-schdb-category + .si-schdb-cathead {
@@ -2934,7 +3033,6 @@ body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
   cursor: pointer;
   font-weight: 600;
   font-size: 1rem;
-  color: var(--si-accent);
   padding: 0.35rem 0;
 }
 
@@ -3015,7 +3113,6 @@ body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
 }
 
 .si-schdb-input:focus {
-  outline: 2px solid var(--si-accent);
   outline-offset: 1px;
 }
 
@@ -3029,8 +3126,8 @@ textarea.si-schdb-input {
   border: 0;
   padding: 0;
   background: none;
-  color: var(--si-accent);
   text-decoration: underline;
+  text-decoration-color: var(--si-gold-end);
   cursor: pointer;
   font: inherit;
   font-size: 0.9rem;
@@ -3044,7 +3141,7 @@ textarea.si-schdb-input {
   font: inherit;
   cursor: pointer;
   color: var(--si-card-text);
-  background: var(--si-accent);
+  background: var(--si-gold-gradient);
 }
 
 .si-schdb-addrow:hover {
@@ -3073,6 +3170,63 @@ textarea.si-schdb-input {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  border-radius: var(--si-radius-tab, 8px);
+  transition: box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.si-schdb-cardrow.is-drag-over {
+  box-shadow: inset 0 0 0 2px var(--brand-color-gold);
+}
+
+.si-schdb-cardrow.is-dragging {
+  opacity: 0.55;
+}
+
+.si-schdb-cardrow__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.si-schdb-cardrow__head-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.si-schdb-cardrow__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--brand-color-gold);
+}
+
+.si-schdb-drag-handle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 6px;
+  color: var(--brand-color-gold);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.si-schdb-drag-handle:active {
+  cursor: grabbing;
+}
+
+.si-schdb-drag-handle:focus-visible {
+  outline: 2px solid var(--si-gold-end);
+  outline-offset: 2px;
+}
+
+.si-schdb-drag-handle svg {
+  display: block;
 }
 
 .si-schdb-card-slot {
@@ -3225,6 +3379,7 @@ textarea.si-schdb-input {
   border: 1px solid rgb(255 255 255 / 0.25);
   padding: 0.3rem 0.45rem;
   text-align: left;
+  vertical-align: middle;
 }
 
 .si-schdb-matrix-table thead th {

@@ -26,13 +26,19 @@
 :root {
   --si-bg: transparent;
   --si-fg: #ffffff;
-  --si-accent: #9be2fc;
   --si-card: #ffffff;
   --si-card-text: #3255a4;
   --si-card-muted: rgba(255, 255, 255, 0.82);
   --si-menu-tile: #34b5f4;
   --si-lavender: #a4acd4;
   --si-emphasis: #ffe240;
+  --brand-color-gold: #cec190;
+  --si-gold-gradient: linear-gradient(90deg, #d3d3d3 2.02%, #cec190 61.86%);
+  --si-gold-start: #d3d3d3;
+  --si-gold-end: #cec190;
+  --si-gold-surface: #163285;
+  --si-table-zebra-a: #163285;
+  --si-table-zebra-b: #415c9e;
 }
 
 /* --- Glass surface (Figma Glass: Light 45° 20% · Refraction 5 · Depth 80 · Dispersion 160 · Frost 0 · Splay 0) --- */

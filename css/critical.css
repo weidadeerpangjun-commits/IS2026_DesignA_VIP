@@ -1,6 +1,9 @@
 /* Critical paint — load before main.css (no @import) to avoid white flash on navigation */
 html {
   background-color: #163285;
-  background-image: linear-gradient(180deg, #163285 0%, #a4acd4 100%);
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-attachment: fixed;
 }
