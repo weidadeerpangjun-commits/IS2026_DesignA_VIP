@@ -22,7 +22,7 @@ body.si:has(#site-background) {
   background: transparent !important;
 }
 
-body.si > :not(#site-background) {
+body.si > :not(#site-background):not(.skip-link) {
   position: relative;
   z-index: 1;
 }

@@ -20,7 +20,7 @@ body.si:has(#silk-background) {
   background: transparent !important;
 }
 
-body.si > :not(#silk-background) {
+body.si > :not(#silk-background):not(.skip-link) {
   position: relative;
   z-index: 1;
 }

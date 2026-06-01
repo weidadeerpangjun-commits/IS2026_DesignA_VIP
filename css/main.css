@@ -9,12 +9,13 @@
 
 html {
   font-family: var(--si-font);
+  min-height: 100%;
 }
 
 body.si {
   margin: 0;
   min-height: 100dvh;
-  background: var(--si-bg);
+  background: transparent;
   color: var(--si-fg);
   -webkit-font-smoothing: antialiased;
 }
@@ -30,6 +31,7 @@ body.si.has-site-background {
   width: 1px;
   height: 1px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .skip-link:focus {
@@ -62,8 +64,9 @@ body.si.has-site-background {
 
 .si-footer {
   margin-top: auto;
-  padding-block: 2rem 2.5rem;
-  padding-bottom: max(2.5rem, env(safe-area-inset-bottom, 0px));
+  margin-bottom: 0;
+  padding-top: 2rem;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   /* border-top: 1px solid rgb(255 255 255 / 10%); */
   color: var(--si-lavender);
   font-size: 0.875rem;
@@ -115,10 +118,26 @@ body.si.has-site-background {
   margin: 0;
 }
 
+.si-footer__copy {
+  color: var(--si-fg);
+}
+
+.si-footer__icp {
+  color: var(--si-card-text);
+}
+
+.si-footer__icp .si-footer__link {
+  color: var(--si-card-text);
+}
+
 .si-footer__link {
   color: var(--si-fg);
   text-decoration: underline;
   text-underline-offset: 0.15em;
+}
+
+.si-footer__icp .si-footer__link:hover {
+  color: #254480;
 }
 
 .si-footer__link:hover {
@@ -176,7 +195,7 @@ body.si-page--schdb {
   line-height: 1.45;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
-  border-radius: var(--si-radius-tab);
+  border-radius: 4px;
   transition: color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -208,6 +227,22 @@ body.si-page--schdb {
 
 .si-h1--zh {
   letter-spacing: -0.03em;
+}
+
+.si-hero-logo {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.si-hero-logo__img {
+  display: block;
+  height: 56px;
+  width: auto;
+  max-width: 100%;
 }
 
 .si-h2 {
@@ -294,7 +329,7 @@ body.si-page--schdb {
   align-items: center;
   justify-content: center;
   padding: 0.35rem 0.9rem;
-  border-radius: var(--si-radius-tab);
+  border-radius: 4px;
   font-size: 0.8125rem;
   font-weight: 500;
   line-height: 1.25;
@@ -431,7 +466,7 @@ body.si-page--schdb {
 /* Home (index) — scope cards: glass + white text */
 body[data-page="home"] .si-panels__panel > .si-scope--muted {
   color: var(--si-fg);
-  box-shadow: inset 0 0 0 1px rgb(50 85 164 / 0.14);
+  box-shadow: none;
 }
 
 body[data-page="home"] .si-panels__panel > .si-scope:hover {
@@ -589,6 +624,69 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 }
 
 /* Menu page — Figma node 25:2361 */
+
+@keyframes si-menu-reveal {
+  from {
+    transform: translate3d(0, min(-14vh, -80px), 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes si-menu-link-reveal {
+  from {
+    transform: translate3d(0, -18px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+body[data-page="menu"] .si-page {
+  animation: si-menu-reveal 0.72s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+body[data-page="menu"] .si-menu-list > li {
+  animation: si-menu-link-reveal 0.58s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+body[data-page="menu"] .si-menu-list > li:nth-child(1) {
+  animation-delay: 0.14s;
+}
+
+body[data-page="menu"] .si-menu-list > li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+body[data-page="menu"] .si-menu-list > li:nth-child(3) {
+  animation-delay: 0.26s;
+}
+
+body[data-page="menu"] .si-menu-list > li:nth-child(4) {
+  animation-delay: 0.32s;
+}
+
+body[data-page="menu"] .si-menu-list > li:nth-child(5) {
+  animation-delay: 0.38s;
+}
+
+body[data-page="menu"] .si-menu-list > li:nth-child(6) {
+  animation-delay: 0.44s;
+}
+
+body[data-page="menu"] .si-menu-list > li:nth-child(7) {
+  animation-delay: 0.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-page="menu"] .si-page,
+  body[data-page="menu"] .si-menu-list > li {
+    animation: none;
+  }
+}
 
 .si-menu-hero {
   background: var(--si-bg);
@@ -779,8 +877,10 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: var(--si-bg);
-  padding-block: 1.5rem;
+  margin: 0;
+  background: linear-gradient(180deg, #162f7f 0%, #263f8e 100%);
+  padding-top: max(1.5rem, env(safe-area-inset-top, 0px));
+  padding-bottom: 1.5rem;
   /* border-bottom: 1px solid rgb(255 255 255 / 10%); */
   /* Match logo to Menu pill: vertical padding + one line (see .si-schedule-menu-pill) */
   --si-schedule-pill-height: calc(1rem + 1.45 * 1rem);
@@ -825,7 +925,7 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   align-items: center;
   justify-content: center;
   padding: 0.5rem 0.75rem;
-  border-radius: var(--si-radius-tab);
+  border-radius: 4px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.45;
@@ -920,12 +1020,8 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
   -webkit-backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
   border: 1px solid rgb(255 255 255 / calc(0.18 + var(--si-glass-refraction) * 0.004));
-  box-shadow:
-    0 calc(var(--si-glass-depth) * 0.12px) calc(var(--si-glass-depth) * 0.53px) var(--si-glass-splay)
-      rgb(0 0 0 / calc(var(--si-glass-depth) * 0.005)),
-    inset 0 1px 0 rgb(255 255 255 / calc(0.25 + var(--si-glass-light-intensity) * 0.25)),
-    inset 1px 1px 0 rgb(255 255 255 / calc(0.1 * var(--si-glass-light-intensity)));
-  transition: color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+  box-shadow: none;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .si-date-tab.is-active::before {
@@ -1684,7 +1780,7 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   height: 160px;
   width: auto;
   max-width: 100%;
-  margin-top: 0;
+  margin-top: 8px;
   border-radius: var(--si-radius-tight, 8px);
 }
 
@@ -1933,11 +2029,7 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
   -webkit-backdrop-filter: blur(var(--si-glass-frost)) saturate(calc(1 + var(--si-glass-dispersion) * 0.004));
   border: 1px solid rgb(255 255 255 / calc(0.18 + var(--si-glass-refraction) * 0.004));
-  box-shadow:
-    0 calc(var(--si-glass-depth) * 0.12px) calc(var(--si-glass-depth) * 0.53px) var(--si-glass-splay)
-      rgb(0 0 0 / calc(var(--si-glass-depth) * 0.005)),
-    inset 0 1px 0 rgb(255 255 255 / calc(0.25 + var(--si-glass-light-intensity) * 0.25)),
-    inset 1px 1px 0 rgb(255 255 255 / calc(0.1 * var(--si-glass-light-intensity)));
+  box-shadow: none;
 }
 
 :is(
@@ -1962,6 +2054,7 @@ body[data-section="hotel"] .si-hotel-notice-nested {
   .si-schdb-form-actions__ghost
 ):hover {
   background: rgb(255 255 255 / calc(0.14 + var(--si-glass-refraction) * 0.003));
+  box-shadow: none;
 }
 
 :is(.si-tab.is-active) {
@@ -2207,8 +2300,8 @@ body[data-section="transport"] .si-sch-extra .si-card.si-card--white.si-card--pr
 
 .si-loc-link {
   color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
+  /* text-decoration: underline;
+  text-underline-offset: 0.15em; */
   font-size: 1.125rem;
   line-height: 1.35;
   word-break: break-word;
@@ -2516,6 +2609,7 @@ body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
   border-radius: 12px;
   overflow: hidden;
   color: var(--si-card-text);
+  box-shadow: none;
 }
 
 .table-style-a .table-style-a__table {
