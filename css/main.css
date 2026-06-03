@@ -316,7 +316,7 @@ body[data-page="menu"] .si-h1--zh {
 
 .si-hero-logo__img {
   display: block;
-  height: 40px;
+  height: 56px;
   width: auto;
   max-width: 100%;
 }
@@ -803,6 +803,10 @@ body[data-page="menu"] .si-menu-titles .si-h5 {
 
 body[data-page="menu"] .si-menu-titles .si-h1--zh {
   font-size: 2rem;
+}
+
+body[data-page="menu"] .si-hero-logo__img {
+  height: 40px;
 }
 
 .si-lang--menu {
