@@ -1,9 +1,21 @@
-/* Critical paint — load before main.css (no @import) to avoid white flash on navigation */
+/* Critical paint — load before main.css (no @import) to avoid flash on navigation */
 html {
-  background-color: #163285;
+  background-color: #011349;
+}
+
+body.si {
+  position: relative;
+  isolation: isolate;
+}
+
+body.si::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background-image: url("../images/background.png");
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }

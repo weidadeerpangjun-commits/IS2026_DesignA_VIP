@@ -1,23 +1,27 @@
-/* Global image background — active theme (CSS on html; no JS required)
+/* Global image background — fixed layer on body::before (no JS required)
    Aurora (archived): css/site-background.css + js/site-background.js
    Silk (archived): css/silk-background.css + js/silk-background.js + three.min.js */
 
 html {
-  background-color: #163285;
-  background-image: url("../images/background.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #011349;
 }
 
 body.si {
+  position: relative;
+  isolation: isolate;
   background: transparent !important;
 }
 
-body.si > :not(.skip-link) {
-  position: relative;
-  z-index: 1;
+body.si::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 
 .si-page {
