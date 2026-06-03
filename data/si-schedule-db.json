@@ -5,96 +5,278 @@
       {
         "timeZh": "8:30-9:00",
         "timeEn": "8:30-9:00",
-        "topicZh": "Welcome Speech",
-        "topicEn": "Welcome Speech",
+        "topicZh": "Welcome and Introduction from Dr. Reford\n（Presenter: Dr. Mark Reford）",
+        "topicEn": "Welcome and Introduction from Dr. Reford\n（Presenter: Dr. Mark Reford）",
+        "introZh": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "introEn": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "locZh": "211\nGym 2",
+        "locEn": "211\nGym 2",
+        "detailZh": "",
+        "detailEn": "",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "09:00 - 09:30",
+        "timeEn": "09:00 - 09:30",
+        "topicZh": "Updates to Observation and Coaching\n（Presenter: Steven Nielson）",
+        "topicEn": "Updates to Observation and Coaching\n（Presenter: Steven Nielson）",
+        "introZh": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "introEn": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "locZh": "211\nGym 2",
+        "locEn": "211\nGym 2",
+        "detailZh": "This session outlines the methodology for pre-observation, observation, and post-observation. It also includes a brief introduction of the respective updates within BG Cloud.",
+        "detailEn": "This session outlines the methodology for pre-observation, observation, and post-observation. It also includes a brief introduction of the respective updates within BG Cloud.",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "09:30 - 10:00",
+        "timeEn": "09:30 - 10:00",
+        "topicZh": "Co-Observation Expectations\n（Presenter: Tonya Parham）",
+        "topicEn": "Co-Observation Expectations\n（Presenter: Tonya Parham）",
+        "introZh": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "introEn": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "locZh": "211\nGym 2",
+        "locEn": "211\nGym 2",
+        "detailZh": "This session focuses on creating an environment where ITO visits are purposefully coordinated. The goal is to ensure school leadership benefits directly from the expertise provided by the ITO.",
+        "detailEn": "This session focuses on creating an environment where ITO visits are purposefully coordinated. The goal is to ensure school leadership benefits directly from the expertise provided by the ITO.",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "10:00 - 10:10",
+        "timeEn": "10:00 - 10:10",
+        "topicZh": "Transition",
+        "topicEn": "Transition",
         "introZh": "",
         "introEn": "",
-        "locZh": "M01 Library, BlSZ",
-        "locEn": "M01 Library, BlSZ",
+        "locZh": "",
+        "locEn": "",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
         "groupTsvEn": ""
       },
       {
-        "timeZh": "9:00-10:30",
-        "timeEn": "9:00-10:30",
-        "topicZh": "Perception surveys 2025-26",
-        "topicEn": "Perception surveys 2025-26",
-        "introZh": "•SPS\n•TPS\n•PPS\n•SPPS",
-        "introEn": "•SPS\n•TPS\n•PPS\n•SPPS",
-        "locZh": "M01 Library, BlSZ",
-        "locEn": "M01 Library, BlSZ",
-        "detailZh": "",
-        "detailEn": "",
+        "timeZh": "10:10 - 10:30",
+        "timeEn": "10:10 - 10:30",
+        "topicZh": "HoS Slams (Session 1)",
+        "topicEn": "HoS Slams (Session 1)",
+        "introZh": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "introEn": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "locZh": "401/402/403/404/\n405/406/407/408",
+        "locEn": "401/402/403/404/\n405/406/407/408",
+        "detailZh": "Heads of School share ideas that are relevant, interesting, innovative, or worthy of broader discussion, with a focus on school or division-level practices, systems, or initiatives that can support and enhance teaching and learning.",
+        "detailEn": "Heads of School share ideas that are relevant, interesting, innovative, or worthy of broader discussion, with a focus on school or division-level practices, systems, or initiatives that can support and enhance teaching and learning.",
         "groupTsvZh": "",
         "groupTsvEn": ""
       },
       {
-        "timeZh": "10:30-10:45",
-        "timeEn": "10:30-10:45",
+        "timeZh": "10:30 - 10:50",
+        "timeEn": "10:30 - 10:50",
         "topicZh": "Break",
         "topicEn": "Break",
         "introZh": "",
         "introEn": "",
-        "locZh": "M01 Library, BlSZ",
-        "locEn": "M01 Library, BlSZ",
+        "locZh": "",
+        "locEn": "",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
         "groupTsvEn": ""
       },
       {
-        "timeZh": "10:45-12:15",
-        "timeEn": "10:45-12:15",
-        "topicZh": "AI Policies for students and teachers",
-        "topicEn": "AI Policies for students and teachers",
+        "timeZh": "10:50 - 11:20",
+        "timeEn": "10:50 - 11:20",
+        "topicZh": "AI Updates\n(Presenter: Michael Davison)",
+        "topicEn": "AI Updates\n(Presenter: Michael Davison)",
+        "introZh": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "introEn": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "locZh": "211\nGym 2",
+        "locEn": "211\nGym 2",
+        "detailZh": "This item covers the AI work conducted during SY 2025-26 and the outlined workflow for 2026-27. It concludes with an emphasis on the initial implementation scheduled for SY 2027-28.",
+        "detailEn": "This item covers the AI work conducted during SY 2025-26 and the outlined workflow for 2026-27. It concludes with an emphasis on the initial implementation scheduled for SY 2027-28.",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "11:20 - 11:30",
+        "timeEn": "11:20 - 11:30",
+        "topicZh": "Transition",
+        "topicEn": "Transition",
         "introZh": "",
         "introEn": "",
-        "locZh": "M01 Library, BlSZ",
-        "locEn": "M01 Library, BlSZ",
+        "locZh": "",
+        "locEn": "",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
         "groupTsvEn": ""
       },
       {
-        "timeZh": "12:15-12:30",
-        "timeEn": "12:15-12:30",
-        "topicZh": "Summer Institute Expectations",
-        "topicEn": "Summer Institute Expectations",
+        "timeZh": "11:30 - 11:50",
+        "timeEn": "11:30 - 11:50",
+        "topicZh": "HoS Slams (Session 2)",
+        "topicEn": "HoS Slams (Session 2)",
+        "introZh": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "introEn": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "locZh": "401/402/403/404/\n405/406/407/408",
+        "locEn": "401/402/403/404/\n405/406/407/408",
+        "detailZh": "Heads of School share ideas that are relevant, interesting, innovative, or worthy of broader discussion, with a focus on school or division-level practices, systems, or initiatives that can support and enhance teaching and learning.",
+        "detailEn": "Heads of School share ideas that are relevant, interesting, innovative, or worthy of broader discussion, with a focus on school or division-level practices, systems, or initiatives that can support and enhance teaching and learning.",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "11:50 - 12:50",
+        "timeEn": "11:50 - 12:50",
+        "topicZh": "Lunch",
+        "topicEn": "Lunch",
         "introZh": "",
         "introEn": "",
-        "locZh": "M01 Library, BlSZ",
-        "locEn": "M01 Library, BlSZ",
+        "locZh": "Cafeteria, M Floor",
+        "locEn": "Cafeteria, M Floor",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
         "groupTsvEn": ""
       },
       {
-        "timeZh": "13:30 - 17:00",
-        "timeEn": "13:30 - 17:00",
-        "topicZh": "HOS Meeting: reflections on the SY 2024-25 and suggestions for the SY 2025-26",
-        "topicEn": "HOS Meeting: reflections on the SY 2024-25 and suggestions for the SY 2025-26",
+        "timeZh": "12:50 - 13:20",
+        "timeEn": "12:50 - 13:20",
+        "topicZh": "Management Evaluations",
+        "topicEn": "Management Evaluations",
+        "introZh": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "introEn": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "locZh": "211\nGym 2",
+        "locEn": "211\nGym 2",
+        "detailZh": "This session introduces the Professional Learning Rubrics.",
+        "detailEn": "This session introduces the Professional Learning Rubrics.",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "13:20 - 13:30",
+        "timeEn": "13:20 - 13:30",
+        "topicZh": "Transition",
+        "topicEn": "Transition",
         "introZh": "",
         "introEn": "",
-        "locZh": "M01 Library, BlSZ",
-        "locEn": "M01 Library, BlSZ",
+        "locZh": "",
+        "locEn": "",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
         "groupTsvEn": ""
       },
       {
-        "timeZh": "13:30 - 17:00",
-        "timeEn": "13:30 - 17:00",
-        "topicZh": "HOD: Preparation for Summer Institute",
-        "topicEn": "HOD: Preparation for Summer Institute",
-        "introZh": "Session lead and facilitators coordinate for the training\n- Go to the session rooms to be familiar with the environment and check again if anything needs to be adjusted",
-        "introEn": "Session lead and facilitators coordinate for the training\n- Go to the session rooms to be familiar with the environment and check again if anything needs to be adjusted",
-        "locZh": "M01 Library, BlSZ",
-        "locEn": "M01 Library, BlSZ",
+        "timeZh": "13:30 - 13:50",
+        "timeEn": "13:30 - 13:50",
+        "topicZh": "HoD Slams (Session 1)",
+        "topicEn": "HoD Slams (Session 1)",
+        "introZh": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "introEn": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "locZh": "401/402/403/404/\n405/406/407/408",
+        "locEn": "401/402/403/404/\n405/406/407/408",
+        "detailZh": "Heads of Division share ideas that are relevant, interesting, innovative, or worthy of broader discussion, with a focus on school or division-level practices, systems, or initiatives that can support and enhance teaching and learning.",
+        "detailEn": "Heads of Division share ideas that are relevant, interesting, innovative, or worthy of broader discussion, with a focus on school or division-level practices, systems, or initiatives that can support and enhance teaching and learning.",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "13:50 - 14:00",
+        "timeEn": "13:50 - 14:00",
+        "topicZh": "Transition",
+        "topicEn": "Transition",
+        "introZh": "",
+        "introEn": "",
+        "locZh": "",
+        "locEn": "",
+        "detailZh": "",
+        "detailEn": "",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "14:00 - 14:30",
+        "timeEn": "14:00 - 14:30",
+        "topicZh": "Management Training Program\n(Presenter: John Quirk)",
+        "topicEn": "Management Training Program\n(Presenter: John Quirk)",
+        "introZh": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "introEn": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "locZh": "211\nGym 2",
+        "locEn": "211\nGym 2",
+        "detailZh": "This session focuses on identifying and supporting future network leadership. It aims to ensure that purposeful, targeted growth opportunities are provided for the next generation of BIBS·C leadership.",
+        "detailEn": "This session focuses on identifying and supporting future network leadership. It aims to ensure that purposeful, targeted growth opportunities are provided for the next generation of BIBS·C leadership.",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "14:30 - 14:40",
+        "timeEn": "14:30 - 14:40",
+        "topicZh": "Transition",
+        "topicEn": "Transition",
+        "introZh": "",
+        "introEn": "",
+        "locZh": "",
+        "locEn": "",
+        "detailZh": "",
+        "detailEn": "",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "14:40 - 15:00",
+        "timeEn": "14:40 - 15:00",
+        "topicZh": "HoD Slams (Session 2)",
+        "topicEn": "HoD Slams (Session 2)",
+        "introZh": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "introEn": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "locZh": "401/402/403/404/\n405/406/407",
+        "locEn": "401/402/403/404/\n405/406/407",
+        "detailZh": "Heads of Division share ideas that are relevant, interesting, innovative, or worthy of broader discussion, with a focus on school or division-level practices, systems, or initiatives that can support and enhance teaching and learning.",
+        "detailEn": "Heads of Division share ideas that are relevant, interesting, innovative, or worthy of broader discussion, with a focus on school or division-level practices, systems, or initiatives that can support and enhance teaching and learning.",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "15:00 - 15:10",
+        "timeEn": "15:00 - 15:10",
+        "topicZh": "Transition",
+        "topicEn": "Transition",
+        "introZh": "",
+        "introEn": "",
+        "locZh": "",
+        "locEn": "",
+        "detailZh": "",
+        "detailEn": "",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "15:10 - 17:00",
+        "timeEn": "15:10 - 17:00",
+        "topicZh": "Preparation for Summer Institute\n(Presenter: CEHOS Office)",
+        "topicEn": "Preparation for Summer Institute\n(Presenter: CEHOS Office)",
+        "introZh": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "introEn": "CEHOS Office\nAll HOS & VHOS\nAll HOD",
+        "locZh": "211 Gym 2 / Breakout rooms",
+        "locEn": "211 Gym 2 / Breakout rooms",
+        "detailZh": "This item provides an overview of expectations for presenters and facilitators, as well as the overall storyline for the event. Participants will have the opportunity to collaborate with presenters and ask questions.",
+        "detailEn": "This item provides an overview of expectations for presenters and facilitators, as well as the overall storyline for the event. Participants will have the opportunity to collaborate with presenters and ask questions.",
+        "groupTsvZh": "",
+        "groupTsvEn": ""
+      },
+      {
+        "timeZh": "",
+        "timeEn": "",
+        "topicZh": "Dinner",
+        "topicEn": "Dinner",
+        "introZh": "",
+        "introEn": "",
+        "locZh": "Self Arrangement",
+        "locEn": "Self Arrangement",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
@@ -105,24 +287,10 @@
       {
         "timeZh": "08:30 - 10:30",
         "timeEn": "08:30 - 10:30",
-        "topicZh": "Opening Speech",
-        "topicEn": "Opening Speech",
-        "introZh": "All",
-        "introEn": "All",
-        "locZh": "Auditorium, 318",
-        "locEn": "Auditorium, 318",
-        "detailZh": "",
-        "detailEn": "",
-        "groupTsvZh": "",
-        "groupTsvEn": ""
-      },
-      {
-        "timeZh": "08:30 - 10:30",
-        "timeEn": "08:30 - 10:30",
-        "topicZh": "BASIS Mission and Governance",
-        "topicEn": "BASIS Mission and Governance",
-        "introZh": "",
-        "introEn": "",
+        "topicZh": "Opening Speech\n\"Through exceptional teaching and faculty mentoring...\"",
+        "topicEn": "Opening Speech\n\"Through exceptional teaching and faculty mentoring...\"",
+        "introZh": "ALL",
+        "introEn": "ALL",
         "locZh": "Auditorium, 318",
         "locEn": "Auditorium, 318",
         "detailZh": "",
@@ -147,104 +315,20 @@
       {
         "timeZh": "11:00 - 12:00",
         "timeEn": "11:00 - 12:00",
-        "topicZh": "BASIS 101Getting to know BASIS",
-        "topicEn": "BASIS 101Getting to know BASIS",
+        "topicZh": "BASIS 101\nGetting to know BASIS",
+        "topicEn": "BASIS 101\nGetting to know BASIS",
         "introZh": "",
         "introEn": "",
         "locZh": "",
         "locEn": "",
         "detailZh": "",
         "detailEn": "",
-        "groupTsvZh": "Attendees\tLocation\nGroup 1\tM06\nGroup 2\t211\nGroup 3\tM01\nGroup 4\t113",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": true,
-          "showChevron": true,
-          "expanded": false,
-          "time": {
-            "zh": "11:00 - 12:00",
-            "en": "11:00 - 12:00"
-          },
-          "items": [
-            {
-              "zh": "BASIS 101Getting to know BASIS",
-              "en": "BASIS 101Getting to know BASIS"
-            }
-          ],
-          "groupMatrix": {
-            "columns": [
-              {
-                "zh": "Attendees",
-                "en": ""
-              },
-              {
-                "zh": "Location",
-                "en": ""
-              }
-            ],
-            "rows": [
-              [
-                {
-                  "zh": "Group 1",
-                  "en": ""
-                },
-                {
-                  "zh": "M06",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "Group 2",
-                  "en": ""
-                },
-                {
-                  "zh": "211",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "Group 3",
-                  "en": ""
-                },
-                {
-                  "zh": "M01",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "Group 4",
-                  "en": ""
-                },
-                {
-                  "zh": "113",
-                  "en": ""
-                }
-              ]
-            ]
-          }
-        }
-      },
-      {
-        "timeZh": "12:00 - 12:30",
-        "timeEn": "12:00 - 12:30",
-        "topicZh": "School Tour (New Teachers Only)",
-        "topicEn": "School Tour (New Teachers Only)",
-        "introZh": "",
-        "introEn": "",
-        "locZh": "BISZ Campus",
-        "locEn": "BISZ Campus",
-        "detailZh": "",
-        "detailEn": "",
         "groupTsvZh": "",
         "groupTsvEn": ""
       },
       {
-        "timeZh": "12:00 - 13:30",
-        "timeEn": "12:00 - 13:30",
+        "timeZh": "12:00 - 12:30",
+        "timeEn": "12:00 - 12:30",
         "topicZh": "Lunch",
         "topicEn": "Lunch",
         "introZh": "",
@@ -267,82 +351,8 @@
         "locEn": "",
         "detailZh": "",
         "detailEn": "",
-        "groupTsvZh": "Attendees\tLocation\nGroup 1\t113\nGroup 2\tM06\nGroup 3\tECE Space (common area outside 107)\nGroup 4\t211",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": true,
-          "showChevron": true,
-          "expanded": false,
-          "time": {
-            "zh": "13:30 - 15:00",
-            "en": "13:30 - 15:00"
-          },
-          "items": [
-            {
-              "zh": "What does a BASIS Classroom Look Like?",
-              "en": "What does a BASIS Classroom Look Like?"
-            }
-          ],
-          "audience": {
-            "zh": "CJ, Do Now; Language Objectives; Learning Objectives; CFUs, etc.; Classroom Management;\nCo-Teaching with videos",
-            "en": "CJ, Do Now; Language Objectives; Learning Objectives; CFUs, etc.; Classroom Management;\nCo-Teaching with videos"
-          },
-          "groupMatrix": {
-            "columns": [
-              {
-                "zh": "Attendees",
-                "en": ""
-              },
-              {
-                "zh": "Location",
-                "en": ""
-              }
-            ],
-            "rows": [
-              [
-                {
-                  "zh": "Group 1",
-                  "en": ""
-                },
-                {
-                  "zh": "113",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "Group 2",
-                  "en": ""
-                },
-                {
-                  "zh": "M06",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "Group 3",
-                  "en": ""
-                },
-                {
-                  "zh": "ECE Space (common area outside 107)",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "Group 4",
-                  "en": ""
-                },
-                {
-                  "zh": "211",
-                  "en": ""
-                }
-              ]
-            ]
-          }
-        }
+        "groupTsvZh": "",
+        "groupTsvEn": ""
       },
       {
         "timeZh": "15:00 - 15:30",
@@ -369,690 +379,8 @@
         "locEn": "",
         "detailZh": "",
         "detailEn": "",
-        "groupTsvZh": "Campus\tGroup\tLocation\nBISZ\tSchool\tM01\nBISZ\tECE\tM04\nBISZ\tPS\tM01\nBISZ\tMS\tM02\nBISZ\tHS\tM03\nBIGZ\tSchool\t313\nBIGZ\tECE\t316\nBIGZ\tPS\t313\nBIGZ\tMS\t315\nBIGZ\tHS\t314\nBIHZ\tSchool\t405\nBIHZ\tECE\t408\nBIHZ\tPS\t405\nBIHZ\tMS\t406\nBIHZ\tHS\t407\nBIPH\tSchool\tM06\nBIPH\tECE\t221\nBIPH\tPS\t208\nBIPH\tMS\t209\nBIPH\tHS\tM06\nBINJ\tSchool\t402\nBINJ\tECE\t403\nBINJ\tPS\t401\nBINJ\tMS\t402\nBINJ\tHS\t404\nBBSZ\tSchool\t113\nBBSZ\tECE\t114\nBBSZ\tPS\t113\nBBSZ\tMS\t115\nBBSZ\tHS\t116\nBIBCD\tSchool\t211\nBIBCD\tECE\t215\nBIBCD\tPS\t211\nBIBCD\tMS\t213\nBIBCD\tHS\t214\nBIBWH\tSchool\t210\nBIBWH\tECE\t217\nBIBWH\tPS\t219\nBIBWH\tMS/HS\t210\nBBGM\tSchool\t312\nBBGM\tECE\t308\nBBGM\tPS\t307\nBBGM\tMS\t312\nBBGM\tHS\t311\nBKNS\tSchool\t417\nBKFT\tSchool\t413",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": true,
-          "showChevron": true,
-          "expanded": false,
-          "time": {
-            "zh": "15:30 - 17:00",
-            "en": "15:30 - 17:00"
-          },
-          "items": [
-            {
-              "zh": "Meetings by school and divisions",
-              "en": "Meetings by school and divisions"
-            }
-          ],
-          "audience": {
-            "zh": "Expectations from the CEHOS Office - Team Building, etc.",
-            "en": "Expectations from the CEHOS Office - Team Building, etc."
-          },
-          "groupMatrix": {
-            "columns": [
-              {
-                "zh": "Campus",
-                "en": ""
-              },
-              {
-                "zh": "Group",
-                "en": ""
-              },
-              {
-                "zh": "Location",
-                "en": ""
-              }
-            ],
-            "rows": [
-              [
-                {
-                  "zh": "BISZ",
-                  "en": ""
-                },
-                {
-                  "zh": "School",
-                  "en": ""
-                },
-                {
-                  "zh": "M01",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BISZ",
-                  "en": ""
-                },
-                {
-                  "zh": "ECE",
-                  "en": ""
-                },
-                {
-                  "zh": "M04",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BISZ",
-                  "en": ""
-                },
-                {
-                  "zh": "PS",
-                  "en": ""
-                },
-                {
-                  "zh": "M01",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BISZ",
-                  "en": ""
-                },
-                {
-                  "zh": "MS",
-                  "en": ""
-                },
-                {
-                  "zh": "M02",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BISZ",
-                  "en": ""
-                },
-                {
-                  "zh": "HS",
-                  "en": ""
-                },
-                {
-                  "zh": "M03",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIGZ",
-                  "en": ""
-                },
-                {
-                  "zh": "School",
-                  "en": ""
-                },
-                {
-                  "zh": "313",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIGZ",
-                  "en": ""
-                },
-                {
-                  "zh": "ECE",
-                  "en": ""
-                },
-                {
-                  "zh": "316",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIGZ",
-                  "en": ""
-                },
-                {
-                  "zh": "PS",
-                  "en": ""
-                },
-                {
-                  "zh": "313",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIGZ",
-                  "en": ""
-                },
-                {
-                  "zh": "MS",
-                  "en": ""
-                },
-                {
-                  "zh": "315",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIGZ",
-                  "en": ""
-                },
-                {
-                  "zh": "HS",
-                  "en": ""
-                },
-                {
-                  "zh": "314",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIHZ",
-                  "en": ""
-                },
-                {
-                  "zh": "School",
-                  "en": ""
-                },
-                {
-                  "zh": "405",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIHZ",
-                  "en": ""
-                },
-                {
-                  "zh": "ECE",
-                  "en": ""
-                },
-                {
-                  "zh": "408",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIHZ",
-                  "en": ""
-                },
-                {
-                  "zh": "PS",
-                  "en": ""
-                },
-                {
-                  "zh": "405",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIHZ",
-                  "en": ""
-                },
-                {
-                  "zh": "MS",
-                  "en": ""
-                },
-                {
-                  "zh": "406",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIHZ",
-                  "en": ""
-                },
-                {
-                  "zh": "HS",
-                  "en": ""
-                },
-                {
-                  "zh": "407",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIPH",
-                  "en": ""
-                },
-                {
-                  "zh": "School",
-                  "en": ""
-                },
-                {
-                  "zh": "M06",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIPH",
-                  "en": ""
-                },
-                {
-                  "zh": "ECE",
-                  "en": ""
-                },
-                {
-                  "zh": "221",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIPH",
-                  "en": ""
-                },
-                {
-                  "zh": "PS",
-                  "en": ""
-                },
-                {
-                  "zh": "208",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIPH",
-                  "en": ""
-                },
-                {
-                  "zh": "MS",
-                  "en": ""
-                },
-                {
-                  "zh": "209",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIPH",
-                  "en": ""
-                },
-                {
-                  "zh": "HS",
-                  "en": ""
-                },
-                {
-                  "zh": "M06",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BINJ",
-                  "en": ""
-                },
-                {
-                  "zh": "School",
-                  "en": ""
-                },
-                {
-                  "zh": "402",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BINJ",
-                  "en": ""
-                },
-                {
-                  "zh": "ECE",
-                  "en": ""
-                },
-                {
-                  "zh": "403",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BINJ",
-                  "en": ""
-                },
-                {
-                  "zh": "PS",
-                  "en": ""
-                },
-                {
-                  "zh": "401",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BINJ",
-                  "en": ""
-                },
-                {
-                  "zh": "MS",
-                  "en": ""
-                },
-                {
-                  "zh": "402",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BINJ",
-                  "en": ""
-                },
-                {
-                  "zh": "HS",
-                  "en": ""
-                },
-                {
-                  "zh": "404",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BBSZ",
-                  "en": ""
-                },
-                {
-                  "zh": "School",
-                  "en": ""
-                },
-                {
-                  "zh": "113",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BBSZ",
-                  "en": ""
-                },
-                {
-                  "zh": "ECE",
-                  "en": ""
-                },
-                {
-                  "zh": "114",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BBSZ",
-                  "en": ""
-                },
-                {
-                  "zh": "PS",
-                  "en": ""
-                },
-                {
-                  "zh": "113",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BBSZ",
-                  "en": ""
-                },
-                {
-                  "zh": "MS",
-                  "en": ""
-                },
-                {
-                  "zh": "115",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BBSZ",
-                  "en": ""
-                },
-                {
-                  "zh": "HS",
-                  "en": ""
-                },
-                {
-                  "zh": "116",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIBCD",
-                  "en": ""
-                },
-                {
-                  "zh": "School",
-                  "en": ""
-                },
-                {
-                  "zh": "211",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIBCD",
-                  "en": ""
-                },
-                {
-                  "zh": "ECE",
-                  "en": ""
-                },
-                {
-                  "zh": "215",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIBCD",
-                  "en": ""
-                },
-                {
-                  "zh": "PS",
-                  "en": ""
-                },
-                {
-                  "zh": "211",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIBCD",
-                  "en": ""
-                },
-                {
-                  "zh": "MS",
-                  "en": ""
-                },
-                {
-                  "zh": "213",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIBCD",
-                  "en": ""
-                },
-                {
-                  "zh": "HS",
-                  "en": ""
-                },
-                {
-                  "zh": "214",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIBWH",
-                  "en": ""
-                },
-                {
-                  "zh": "School",
-                  "en": ""
-                },
-                {
-                  "zh": "210",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIBWH",
-                  "en": ""
-                },
-                {
-                  "zh": "ECE",
-                  "en": ""
-                },
-                {
-                  "zh": "217",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIBWH",
-                  "en": ""
-                },
-                {
-                  "zh": "PS",
-                  "en": ""
-                },
-                {
-                  "zh": "219",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BIBWH",
-                  "en": ""
-                },
-                {
-                  "zh": "MS/HS",
-                  "en": ""
-                },
-                {
-                  "zh": "210",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BBGM",
-                  "en": ""
-                },
-                {
-                  "zh": "School",
-                  "en": ""
-                },
-                {
-                  "zh": "312",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BBGM",
-                  "en": ""
-                },
-                {
-                  "zh": "ECE",
-                  "en": ""
-                },
-                {
-                  "zh": "308",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BBGM",
-                  "en": ""
-                },
-                {
-                  "zh": "PS",
-                  "en": ""
-                },
-                {
-                  "zh": "307",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BBGM",
-                  "en": ""
-                },
-                {
-                  "zh": "MS",
-                  "en": ""
-                },
-                {
-                  "zh": "312",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BBGM",
-                  "en": ""
-                },
-                {
-                  "zh": "HS",
-                  "en": ""
-                },
-                {
-                  "zh": "311",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BKNS",
-                  "en": ""
-                },
-                {
-                  "zh": "School",
-                  "en": ""
-                },
-                {
-                  "zh": "417",
-                  "en": ""
-                }
-              ],
-              [
-                {
-                  "zh": "BKFT",
-                  "en": ""
-                },
-                {
-                  "zh": "School",
-                  "en": ""
-                },
-                {
-                  "zh": "413",
-                  "en": ""
-                }
-              ]
-            ]
-          }
-        }
+        "groupTsvZh": "",
+        "groupTsvEn": ""
       },
       {
         "timeZh": "17:00:00",
@@ -1077,36 +405,12 @@
         "topicEn": "高层会议",
         "introZh": "中外方高层领导",
         "introEn": "中外方高层领导",
-        "locZh": "南贝幼校区大会议室708",
-        "locEn": "南贝幼校区大会议室708",
+        "locZh": "南贝幼校区\n大会议室708",
+        "locEn": "南贝幼校区\n大会议室708",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "08:30 - 12:00",
-            "en": "08:30 - 12:00"
-          },
-          "items": [
-            {
-              "zh": "高层会议",
-              "en": "高层会议"
-            }
-          ],
-          "audience": {
-            "zh": "中外方高层领导",
-            "en": "中外方高层领导"
-          },
-          "location": {
-            "zh": "南贝幼校区大会议室708",
-            "en": "南贝幼校区大会议室708"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "12:00 - 13:30",
@@ -1127,68 +431,28 @@
         "timeEn": "13:30 - 17:00",
         "topicZh": "高层会议",
         "topicEn": "高层会议",
-        "introZh": "",
-        "introEn": "",
-        "locZh": "南贝幼校区 大会议室708",
-        "locEn": "南贝幼校区 大会议室708",
+        "introZh": "中外方高层领导",
+        "introEn": "中外方高层领导",
+        "locZh": "南贝幼校区\n大会议室708",
+        "locEn": "南贝幼校区\n大会议室708",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "13:30 - 17:00",
-            "en": "13:30 - 17:00"
-          },
-          "items": [
-            {
-              "zh": "高层会议",
-              "en": "高层会议"
-            }
-          ],
-          "location": {
-            "zh": "南贝幼校区 大会议室708",
-            "en": "南贝幼校区 大会议室708"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
-        "timeZh": "18:00 - 20:00",
-        "timeEn": "18:00 - 20:00",
-        "topicZh": "高层晚宴",
-        "topicEn": "高层晚宴",
+        "timeZh": "17:30:00",
+        "timeEn": "17:30:00",
+        "topicZh": "晚餐",
+        "topicEn": "晚餐",
         "introZh": "",
         "introEn": "",
-        "locZh": "南山香格里拉酒店66楼 集·66 餐厅",
-        "locEn": "南山香格里拉酒店66楼 集·66 餐厅",
+        "locZh": "蛇口校区M层食堂",
+        "locEn": "蛇口校区M层食堂",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "18:00 - 20:00",
-            "en": "18:00 - 20:00"
-          },
-          "items": [
-            {
-              "zh": "高层晚宴",
-              "en": "高层晚宴"
-            }
-          ],
-          "location": {
-            "zh": "南山香格里拉酒店66楼 集·66 餐厅",
-            "en": "南山香格里拉酒店66楼 集·66 餐厅"
-          }
-        }
+        "groupTsvEn": ""
       }
     ],
     "v1:d4": [
@@ -1199,36 +463,12 @@
         "topicEn": "开场讲话",
         "introZh": "关总",
         "introEn": "关总",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "08:30 - 09:00",
-            "en": "08:30 - 09:00"
-          },
-          "items": [
-            {
-              "zh": "开场讲话",
-              "en": "开场讲话"
-            }
-          ],
-          "audience": {
-            "zh": "关总",
-            "en": "关总"
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "09:00 - 09:30",
@@ -1237,36 +477,12 @@
         "topicEn": "蛇口校区汇报分享",
         "introZh": "邱铁军",
         "introEn": "邱铁军",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "09:00 - 09:30",
-            "en": "09:00 - 09:30"
-          },
-          "items": [
-            {
-              "zh": "蛇口校区汇报分享",
-              "en": "蛇口校区汇报分享"
-            }
-          ],
-          "audience": {
-            "zh": "邱铁军",
-            "en": "邱铁军"
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "09:30 - 10:15",
@@ -1275,36 +491,12 @@
         "topicEn": "广州/武汉校区汇报分享",
         "introZh": "吴跃",
         "introEn": "吴跃",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "09:30 - 10:15",
-            "en": "09:30 - 10:15"
-          },
-          "items": [
-            {
-              "zh": "广州/武汉校区汇报分享",
-              "en": "广州/武汉校区汇报分享"
-            }
-          ],
-          "audience": {
-            "zh": "吴跃",
-            "en": "吴跃"
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "10:15 - 10:30",
@@ -1313,32 +505,12 @@
         "topicEn": "中场休息",
         "introZh": "",
         "introEn": "",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "10:15 - 10:30",
-            "en": "10:15 - 10:30"
-          },
-          "items": [
-            {
-              "zh": "中场休息",
-              "en": "中场休息"
-            }
-          ],
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "10:30 - 11:00",
@@ -1347,74 +519,26 @@
         "topicEn": "杭州校区汇报分享",
         "introZh": "吴莉",
         "introEn": "吴莉",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "10:30 - 11:00",
-            "en": "10:30 - 11:00"
-          },
-          "items": [
-            {
-              "zh": "杭州校区汇报分享",
-              "en": "杭州校区汇报分享"
-            }
-          ],
-          "audience": {
-            "zh": "吴莉",
-            "en": "吴莉"
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "11:00 - 11:30",
-        "timeEn": "11:05 - 11:35",
+        "timeEn": "11:00 - 11:30",
         "topicZh": "小径湾校区汇报分享",
         "topicEn": "小径湾校区汇报分享",
         "introZh": "周可",
         "introEn": "周可",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "11:00 - 11:30",
-            "en": "11:05 - 11:35"
-          },
-          "items": [
-            {
-              "zh": "小径湾校区汇报分享",
-              "en": "小径湾校区汇报分享"
-            }
-          ],
-          "audience": {
-            "zh": "周可",
-            "en": "周可"
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "11:30 - 12:15",
@@ -1423,40 +547,16 @@
         "topicEn": "南京/北京校区汇报分享",
         "introZh": "阎国华",
         "introEn": "阎国华",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "11:30 - 12:15",
-            "en": "11:30 - 12:15"
-          },
-          "items": [
-            {
-              "zh": "南京/北京校区汇报分享",
-              "en": "南京/北京校区汇报分享"
-            }
-          ],
-          "audience": {
-            "zh": "阎国华",
-            "en": "阎国华"
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
-        "timeZh": "12:30 -13:30",
-        "timeEn": "12:30 -13:30",
+        "timeZh": "12:15 -13:30",
+        "timeEn": "12:15 -13:30",
         "topicZh": "午餐",
         "topicEn": "午餐",
         "introZh": "",
@@ -1475,36 +575,12 @@
         "topicEn": "福田校区汇报分享",
         "introZh": "白一涵",
         "introEn": "白一涵",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "13:30 - 14:00",
-            "en": "13:30 - 14:00"
-          },
-          "items": [
-            {
-              "zh": "福田校区汇报分享",
-              "en": "福田校区汇报分享"
-            }
-          ],
-          "audience": {
-            "zh": "白一涵",
-            "en": "白一涵"
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "14:00 - 14:30",
@@ -1513,74 +589,26 @@
         "topicEn": "成都校区汇报分享",
         "introZh": "陈晓宁",
         "introEn": "陈晓宁",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "14:00 - 14:30",
-            "en": "14:00 - 14:30"
-          },
-          "items": [
-            {
-              "zh": "成都校区汇报分享",
-              "en": "成都校区汇报分享"
-            }
-          ],
-          "audience": {
-            "zh": "陈晓宁",
-            "en": "陈晓宁"
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "14:30 - 15:15",
         "timeEn": "14:30 - 15:15",
-        "topicZh": "南贝幼/福贝幼校区汇报分享",
-        "topicEn": "南贝幼/福贝幼校区汇报分享",
+        "topicZh": "南贝幼/福贝幼校区\n汇报分享",
+        "topicEn": "南贝幼/福贝幼校区\n汇报分享",
         "introZh": "任家林",
         "introEn": "任家林",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "14:30 - 15:15",
-            "en": "14:30 - 15:15"
-          },
-          "items": [
-            {
-              "zh": "南贝幼/福贝幼校区汇报分享",
-              "en": "南贝幼/福贝幼校区汇报分享"
-            }
-          ],
-          "audience": {
-            "zh": "任家林",
-            "en": "任家林"
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "15:15 - 15:30",
@@ -1594,23 +622,7 @@
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "15:15 - 15:30",
-            "en": "15:15 - 15:30"
-          },
-          "items": [
-            {
-              "zh": "中场休息",
-              "en": "中场休息"
-            }
-          ]
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "15:30 - 16:00",
@@ -1619,36 +631,12 @@
         "topicEn": "光明校区汇报分享",
         "introZh": "刘树泉",
         "introEn": "刘树泉",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "15:30 - 16:00",
-            "en": "15:30 - 16:00"
-          },
-          "items": [
-            {
-              "zh": "光明校区汇报分享",
-              "en": "光明校区汇报分享"
-            }
-          ],
-          "audience": {
-            "zh": "刘树泉",
-            "en": "刘树泉"
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "16:00 - 16:30",
@@ -1657,74 +645,26 @@
         "topicEn": "广州双语校区汇报分享",
         "introZh": "张莉兰",
         "introEn": "张莉兰",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "16:00 - 16:30",
-            "en": "16:00 - 16:30"
-          },
-          "items": [
-            {
-              "zh": "广州双语校区汇报分享",
-              "en": "广州双语校区汇报分享"
-            }
-          ],
-          "audience": {
-            "zh": "张莉兰",
-            "en": "张莉兰"
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
-        "timeZh": "16:40 - 17:00",
-        "timeEn": "16:40 - 17:00",
+        "timeZh": "16:30 - 17:00",
+        "timeEn": "16:30 - 17:00",
         "topicZh": "总结讲话",
         "topicEn": "总结讲话",
-        "introZh": "主讲人：关总",
-        "introEn": "",
-        "locZh": "蛇口校区3楼318大剧院",
-        "locEn": "蛇口校区3楼318大剧院",
+        "introZh": "关总",
+        "introEn": "关总",
+        "locZh": "蛇口校区\n3楼318大剧院",
+        "locEn": "蛇口校区\n3楼318大剧院",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
-        "groupTsvEn": "",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": false,
-          "showChevron": false,
-          "expanded": false,
-          "time": {
-            "zh": "16:40 - 17:00",
-            "en": "16:40 - 17:00"
-          },
-          "items": [
-            {
-              "zh": "总结讲话",
-              "en": "总结讲话"
-            }
-          ],
-          "audience": {
-            "zh": "主讲人：关总",
-            "en": ""
-          },
-          "location": {
-            "zh": "蛇口校区3楼318大剧院",
-            "en": "蛇口校区3楼318大剧院"
-          }
-        }
+        "groupTsvEn": ""
       },
       {
         "timeZh": "17:00 - 17:30",
@@ -1768,167 +708,17 @@
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "组别\t组员\t组长/副组长\t培训地点\n市场/品牌/科技组\t市场发展中心/品牌发展中心/科技开发中心\t白一涵\t501\n财务组\t各校区财务部/财务发展中心/审计事务中心\t陈麟/张军红\t502\n行政人事组\t各校区行政人事部/行政事务中心/人力资源中心/法律事务中心\t邱铁军/任家林\t503\n招生组\t各校区招生部\t霍嘉\t504\n学生事务组\t各校区学生事务部/爱问\t邓长峰/李守礼\t505\n后勤组\t各校区后勤部\t胡畔\t506/507（保安队长）/508（大厨）",
-        "groupTsvEn": "组别\t组员\t组长/副组长\t培训地点\n市场/品牌/科技组\t市场发展中心/品牌发展中心/科技开发中心\t白一涵\t501\n财务组\t各校区财务部/财务发展中心/审计事务中心\t陈麟/张军红\t502\n行政人事组\t各校区行政人事部/行政事务中心/人力资源中心/法律事务中心\t邱铁军/任家林\t503\n招生组\t各校区招生部\t霍嘉\t504\n学生事务组\t各校区学生事务部/爱问\t邓长峰/李守礼\t505\n后勤组\t各校区后勤部\t胡畔\t506/507（保安队长）/508（大厨）",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": true,
-          "showChevron": true,
-          "expanded": false,
-          "time": {
-            "zh": "08:30 - 12:30",
-            "en": "08:30 - 12:30"
-          },
-          "items": [
-            {
-              "zh": "行政分组培训",
-              "en": "行政分组培训"
-            }
-          ],
-          "audience": {
-            "zh": "查看分组安排",
-            "en": "查看分组安排"
-          },
-          "groupMatrix": {
-            "columns": [
-              {
-                "zh": "组别",
-                "en": "组别"
-              },
-              {
-                "zh": "组员",
-                "en": "组员"
-              },
-              {
-                "zh": "组长/副组长",
-                "en": "组长/副组长"
-              },
-              {
-                "zh": "培训地点",
-                "en": "培训地点"
-              }
-            ],
-            "rows": [
-              [
-                {
-                  "zh": "市场/品牌/科技组",
-                  "en": "市场/品牌/科技组"
-                },
-                {
-                  "zh": "市场发展中心/品牌发展中心/科技开发中心",
-                  "en": "市场发展中心/品牌发展中心/科技开发中心"
-                },
-                {
-                  "zh": "白一涵",
-                  "en": "白一涵"
-                },
-                {
-                  "zh": "501",
-                  "en": "501"
-                }
-              ],
-              [
-                {
-                  "zh": "财务组",
-                  "en": "财务组"
-                },
-                {
-                  "zh": "各校区财务部/财务发展中心/审计事务中心",
-                  "en": "各校区财务部/财务发展中心/审计事务中心"
-                },
-                {
-                  "zh": "陈麟/张军红",
-                  "en": "陈麟/张军红"
-                },
-                {
-                  "zh": "502",
-                  "en": "502"
-                }
-              ],
-              [
-                {
-                  "zh": "行政人事组",
-                  "en": "行政人事组"
-                },
-                {
-                  "zh": "各校区行政人事部/行政事务中心/人力资源中心/法律事务中心",
-                  "en": "各校区行政人事部/行政事务中心/人力资源中心/法律事务中心"
-                },
-                {
-                  "zh": "邱铁军/任家林",
-                  "en": "邱铁军/任家林"
-                },
-                {
-                  "zh": "503",
-                  "en": "503"
-                }
-              ],
-              [
-                {
-                  "zh": "招生组",
-                  "en": "招生组"
-                },
-                {
-                  "zh": "各校区招生部",
-                  "en": "各校区招生部"
-                },
-                {
-                  "zh": "霍嘉",
-                  "en": "霍嘉"
-                },
-                {
-                  "zh": "504",
-                  "en": "504"
-                }
-              ],
-              [
-                {
-                  "zh": "学生事务组",
-                  "en": "学生事务组"
-                },
-                {
-                  "zh": "各校区学生事务部/爱问",
-                  "en": "各校区学生事务部/爱问"
-                },
-                {
-                  "zh": "邓长峰/李守礼",
-                  "en": "邓长峰/李守礼"
-                },
-                {
-                  "zh": "505",
-                  "en": "505"
-                }
-              ],
-              [
-                {
-                  "zh": "后勤组",
-                  "en": "后勤组"
-                },
-                {
-                  "zh": "各校区后勤部",
-                  "en": "各校区后勤部"
-                },
-                {
-                  "zh": "胡畔",
-                  "en": "胡畔"
-                },
-                {
-                  "zh": "506/507（保安队长）/508（大厨）",
-                  "en": "506/507（保安队长）/508（大厨）"
-                }
-              ]
-            ]
-          }
-        }
+        "groupTsvEn": "组别\t组员\t组长/副组长\t培训地点\n市场/品牌/科技组\t市场发展中心/品牌发展中心/科技开发中心\t白一涵\t501\n财务组\t各校区财务部/财务发展中心/审计事务中心\t陈麟/张军红\t502\n行政人事组\t各校区行政人事部/行政事务中心/人力资源中心/法律事务中心\t邱铁军/任家林\t503\n招生组\t各校区招生部\t霍嘉\t504\n学生事务组\t各校区学生事务部/爱问\t邓长峰/李守礼\t505\n后勤组\t各校区后勤部\t胡畔\t506/507（保安队长）/508（大厨）"
       },
       {
         "timeZh": "12:30 - 13:30",
         "timeEn": "12:30 - 13:30",
-        "topicZh": "午餐",
-        "topicEn": "午餐",
+        "topicZh": "午餐（M层食堂）",
+        "topicEn": "午餐（M层食堂）",
         "introZh": "",
         "introEn": "",
-        "locZh": "M层食堂",
-        "locEn": "M层食堂",
+        "locZh": "",
+        "locEn": "",
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "",
@@ -1946,157 +736,7 @@
         "detailZh": "",
         "detailEn": "",
         "groupTsvZh": "组别\t组员\t组长/副组长\t培训地点\n市场/品牌/科技组\t市场发展中心/品牌发展中心/科技开发中心\t白一涵\t501\n财务组\t各校区财务部/财务发展中心/审计事务中心\t陈麟/张军红\t502\n行政人事组\t各校区行政人事部/行政事务中心/人力资源中心/法律事务中心\t邱铁军/任家林\t503\n招生组\t各校区招生部\t霍嘉\t504\n学生事务组\t各校区学生事务部/爱问\t邓长峰/李守礼\t505\n后勤组\t各校区后勤部\t胡畔\t506/507（保安队长）/508（大厨）",
-        "groupTsvEn": "组别\t组员\t组长/副组长\t培训地点\n市场/品牌/科技组\t市场发展中心/品牌发展中心/科技开发中心\t白一涵\t501\n财务组\t各校区财务部/财务发展中心/审计事务中心\t陈麟/张军红\t502\n行政人事组\t各校区行政人事部/行政事务中心/人力资源中心/法律事务中心\t邱铁军/任家林\t503\n招生组\t各校区招生部\t霍嘉\t504\n学生事务组\t各校区学生事务部/爱问\t邓长峰/李守礼\t505\n后勤组\t各校区后勤部\t胡畔\t506/507（保安队长）/508（大厨）",
-        "_sourceEv": {
-          "variant": "primary",
-          "expandable": true,
-          "showChevron": true,
-          "expanded": false,
-          "time": {
-            "zh": "13:30 - 17:00",
-            "en": "13:30 - 17:00"
-          },
-          "items": [
-            {
-              "zh": "行政分组培训",
-              "en": "行政分组培训"
-            }
-          ],
-          "audience": {
-            "zh": "查看分组安排",
-            "en": "查看分组安排"
-          },
-          "groupMatrix": {
-            "columns": [
-              {
-                "zh": "组别",
-                "en": "组别"
-              },
-              {
-                "zh": "组员",
-                "en": "组员"
-              },
-              {
-                "zh": "组长/副组长",
-                "en": "组长/副组长"
-              },
-              {
-                "zh": "培训地点",
-                "en": "培训地点"
-              }
-            ],
-            "rows": [
-              [
-                {
-                  "zh": "市场/品牌/科技组",
-                  "en": "市场/品牌/科技组"
-                },
-                {
-                  "zh": "市场发展中心/品牌发展中心/科技开发中心",
-                  "en": "市场发展中心/品牌发展中心/科技开发中心"
-                },
-                {
-                  "zh": "白一涵",
-                  "en": "白一涵"
-                },
-                {
-                  "zh": "501",
-                  "en": "501"
-                }
-              ],
-              [
-                {
-                  "zh": "财务组",
-                  "en": "财务组"
-                },
-                {
-                  "zh": "各校区财务部/财务发展中心/审计事务中心",
-                  "en": "各校区财务部/财务发展中心/审计事务中心"
-                },
-                {
-                  "zh": "陈麟/张军红",
-                  "en": "陈麟/张军红"
-                },
-                {
-                  "zh": "502",
-                  "en": "502"
-                }
-              ],
-              [
-                {
-                  "zh": "行政人事组",
-                  "en": "行政人事组"
-                },
-                {
-                  "zh": "各校区行政人事部/行政事务中心/人力资源中心/法律事务中心",
-                  "en": "各校区行政人事部/行政事务中心/人力资源中心/法律事务中心"
-                },
-                {
-                  "zh": "邱铁军/任家林",
-                  "en": "邱铁军/任家林"
-                },
-                {
-                  "zh": "503",
-                  "en": "503"
-                }
-              ],
-              [
-                {
-                  "zh": "招生组",
-                  "en": "招生组"
-                },
-                {
-                  "zh": "各校区招生部",
-                  "en": "各校区招生部"
-                },
-                {
-                  "zh": "霍嘉",
-                  "en": "霍嘉"
-                },
-                {
-                  "zh": "504",
-                  "en": "504"
-                }
-              ],
-              [
-                {
-                  "zh": "学生事务组",
-                  "en": "学生事务组"
-                },
-                {
-                  "zh": "各校区学生事务部/爱问",
-                  "en": "各校区学生事务部/爱问"
-                },
-                {
-                  "zh": "邓长峰/李守礼",
-                  "en": "邓长峰/李守礼"
-                },
-                {
-                  "zh": "505",
-                  "en": "505"
-                }
-              ],
-              [
-                {
-                  "zh": "后勤组",
-                  "en": "后勤组"
-                },
-                {
-                  "zh": "各校区后勤部",
-                  "en": "各校区后勤部"
-                },
-                {
-                  "zh": "胡畔",
-                  "en": "胡畔"
-                },
-                {
-                  "zh": "506/507（保安队长）/508（大厨）",
-                  "en": "506/507（保安队长）/508（大厨）"
-                }
-              ]
-            ]
-          }
-        }
+        "groupTsvEn": "组别\t组员\t组长/副组长\t培训地点\n市场/品牌/科技组\t市场发展中心/品牌发展中心/科技开发中心\t白一涵\t501\n财务组\t各校区财务部/财务发展中心/审计事务中心\t陈麟/张军红\t502\n行政人事组\t各校区行政人事部/行政事务中心/人力资源中心/法律事务中心\t邱铁军/任家林\t503\n招生组\t各校区招生部\t霍嘉\t504\n学生事务组\t各校区学生事务部/爱问\t邓长峰/李守礼\t505\n后勤组\t各校区后勤部\t胡畔\t506/507（保安队长）/508（大厨）"
       },
       {
         "timeZh": "17:00 - 17:30",
@@ -2113,10 +753,6 @@
         "groupTsvEn": ""
       }
     ],
-    "v3:d2": [],
-    "v3:d3": [],
-    "v3:d4": [],
-    "v3:d5": [],
     "v2:d1": [
       {
         "timeZh": "8:30-9:00",

@@ -158,8 +158,8 @@
       "detail.sectionHeading": "页面内容",
       "detail.placeholder":
         "此处为结构占位。不同参训范围将加载对应的日程、酒店、交通等内容（后续接入数据或 CMS）。",
-      "scopeChip.v1": "当前选择：8月5–7日 · 中方四级及以上高层等",
-      "scopeChip.v2": "当前选择：8月3–7日 · CEHOS / Senior CIO / HOS",
+      "scopeChip.v1": "参训范围：8月5–7日 · 中方四级及以上高层等",
+      "scopeChip.v2": "参训范围：8月3–7日 · CEHOS / Senior CIO / HOS",
       "schedule.menu": "菜单",
       "schedule.tablistAria": "按日期切换日程",
       "schedule.expand": "展开详细日程",
@@ -431,13 +431,13 @@
       "abbr.l32": "CAC: College Admissions Coordinator",
       "abbr.l33": "CCD: Course Curriculum Document",
       "abbr.l34": "COT: Course Outline Template",
-      "scope.v1.title": "August 5th–7th",
-      "scope.v1.i1": "Chinese-side Tier 4+ senior leadership",
+      "scope.v1.title": "8月5日–7日",
+      "scope.v1.i1": "中方四级及以上高层",
       "scope.v1.i2":
-        "Deputy Head of School Operations, Chengdu campus; Assistant Head of School Operations, Guangzhou Bilingual campus",
+        "成都校区副校务长、广州双语校区助理校务长",
       "scope.v1.i3":
-        "Executive Deputy General Manager, Nanbay / Youfu ECE; Deputy General Manager, Youfu ECE",
-      "scope.v2.title": "August 3rd–7th",
+        "南贝幼/福贝幼常务副总经理、福贝幼副总经理",
+      "scope.v2.title": "8月3日–7日",
       "scope.v2.i1": "CEHOS",
       "scope.v2.i2": "Senior CIO/CIO",
       "scope.v2.i3": "HOS",
@@ -514,8 +514,8 @@
       "detail.sectionHeading": "Page content",
       "detail.placeholder":
         "Structured placeholder. Schedule, hotel, transportation, and other modules will vary by the selected attendance scope (to be wired to data or CMS).",
-      "scopeChip.v1": "Selected: Aug 5–7 · Chinese-side senior leadership, etc.",
-      "scopeChip.v2": "Selected: Aug 3–7 · CEHOS / Senior CIO / HOS",
+      "scopeChip.v1": "Attendance: Aug 5–7 · 中方四级及以上高层等",
+      "scopeChip.v2": "Attendance: Aug 3–7 · CEHOS / Senior CIO / HOS",
       "schedule.menu": "Menu",
       "schedule.tablistAria": "Select schedule day",
       "schedule.expand": "Expand session details",
@@ -559,7 +559,7 @@
       "transport.panel1Label": "Accommodation:",
       "transport.panel1Name": "Andaz Hotel",
       "transport.panel2Label": "For Accommodation:",
-      "transport.panel2Name": "Shekou Apartment",
+      "transport.panel2Name": "BISZ Campus Apartment",
       "transport.panel3Label": "For Accommodation:",
       "transport.panel3Name": "Others",
       "transport.dinnerScope": "August 6 campus dinner only",
@@ -574,76 +574,76 @@
       "transport.scheduleColRoute": "Route",
       "transport.andazDate5": "August 5th (Wed)",
       "transport.andaz5t1": "7:20",
-      "transport.andaz5r1": "Hotel → Nanbei Kindergarten campus",
+      "transport.andaz5r1": "Hotel → BKNS Campus",
       "transport.andaz5t2": "17:30",
-      "transport.andaz5r2": "Nanbei Kindergarten campus → Dinner venue (Shangri-La Hotel, Nanshan)",
+      "transport.andaz5r2": "BKNS Campus → Shangri-La Nanshan (Senior Leadership Dinner)",
       "transport.andaz5t3": "20:30",
-      "transport.andaz5r3": "Dinner venue (Shangri-La Hotel, Nanshan) → Hotel",
+      "transport.andaz5r3": "Restaurant → Hotel",
       "transport.andazDate6": "August 6th (Thu)",
       "transport.andaz6t1": "7:40",
-      "transport.andaz6r1": "Hotel → Shekou campus",
+      "transport.andaz6r1": "Hotel → BISZ Campus",
       "transport.andaz6t2": "17:30",
-      "transport.andaz6r2": "Shekou campus → Each campus’s designated restaurant",
+      "transport.andaz6r2": "BISZ Campus → Restaurant",
       "transport.andaz6t3": "20:30",
-      "transport.andaz6r3": "Each campus’s designated restaurant → Hotel (return arranged by campus administration)",
+      "transport.andaz6r3": "Restaurant → Hotel (arranged by school admin)",
       "transport.andazDate7": "August 7th (Fri)",
       "transport.andaz7t1": "7:40",
-      "transport.andaz7r1": "Hotel → Shekou campus",
+      "transport.andaz7r1": "Hotel → BISZ Campus",
       "transport.andaz7t2": "17:30",
-      "transport.andaz7r2": "Shekou campus → Airport / return to school",
+      "transport.andaz7r2": "BISZ Campus → Airport/Home City",
       "transport.apartmentDate5": "August 5th (Wed)",
       "transport.apt5t1": "7:40",
-      "transport.apt5r1": "Shekou campus → Nanbei Kindergarten campus",
+      "transport.apt5r1": "BISZ Campus → BKNS Campus",
       "transport.apt5t2": "17:30",
-      "transport.apt5r2": "Nanbei Kindergarten campus → Dinner venue (Shangri-La Hotel, Nanshan)",
+      "transport.apt5r2": "BISZ Campus → Shangri-La Nanshan (Senior Leadership Dinner)",
       "transport.apt5t3": "20:30",
-      "transport.apt5r3": "Hotel → Shekou campus",
+      "transport.apt5r3": "Restaurant → BISZ Campus",
       "transport.apartmentDate6": "August 6th (Thu)",
       "transport.apt6t1": "17:30",
-      "transport.apt6r1": "Shekou campus → Each campus’s designated restaurant",
+      "transport.apt6r1": "BISZ Campus → Restaurant",
       "transport.apt6t2": "20:30",
-      "transport.apt6r2": "Each campus’s designated restaurant → Shekou campus (arranged by campus administration)",
+      "transport.apt6r2": "Restaurant → BISZ Campus (arranged by school admin)",
       "transport.leadersDate5": "August 5th (Wed)",
       "transport.lr5t1": "To be notified separately",
-      "transport.lr5r1": "Home → Nanbei Kindergarten campus",
+      "transport.lr5r1": "Home → BKNS Campus",
       "transport.lr5t2": "17:30",
-      "transport.lr5r2": "Nanbei Kindergarten campus → Dinner venue (Shangri-La Hotel, Nanshan)",
+      "transport.lr5r2": "BKNS Campus → Shangri-La Nanshan (Senior Leadership Dinner)",
       "transport.lr5t3": "20:30",
       "transport.lr5r3": "Hotel → Home",
       "transport.leadersDate6": "August 6th (Thu)",
       "transport.lr6t1": "Self-arranged",
-      "transport.lr6r1": "Home → Shekou campus",
+      "transport.lr6r1": "Home → BISZ Campus",
       "transport.lr6t2": "17:30",
-      "transport.lr6r2": "Shekou campus → Each campus’s designated restaurant",
+      "transport.lr6r2": "BISZ Campus → Restaurant",
       "transport.lr6t3": "20:30",
-      "transport.lr6r3": "Each campus’s designated restaurant → Home (arranged by campus administration)",
+      "transport.lr6r3": "Restaurant → Hotel (arranged by school admin)",
       "transport.leadersDate7": "August 7th (Fri)",
       "transport.lr7t1": "Self-arranged",
-      "transport.lr7r1": "Home ⇄ Shekou campus",
+      "transport.lr7r1": "Home ⇌ BISZ Campus",
       "transport.dinnerLead":
         "On the evening of August 6, dinner will be held at off-campus restaurants arranged by each campus. Please board the designated buses according to BUS ARRANGEMENT to travel to your respective dining locations. After dinner, return transportation to Andaz Hotel or your home will be coordinated by each campus's administrative team.",
       "transport.dinnerBusCaption": "August 6 campus dinner: personnel and vehicle numbers",
       "transport.dinnerBusColPersonnel": "Personnel",
-      "transport.dinnerBusColVehicle": "Vehicle no.",
-      "transport.dinnerBusR1p": "Shekou campus / Head Office / BOES",
+      "transport.dinnerBusColVehicle": "Bus Number",
+      "transport.dinnerBusR1p": "BISZ/CEHOS OFFICE/BOES",
       "transport.dinnerBusR1v": "1, 2, 3",
-      "transport.dinnerBusR2p": "Guangzhou campus / Wuhan campus",
+      "transport.dinnerBusR2p": "BIGZ/BIBWH",
       "transport.dinnerBusR2v": "4, 5, 6",
-      "transport.dinnerBusR3p": "Hangzhou campus",
+      "transport.dinnerBusR3p": "BIHZ",
       "transport.dinnerBusR3v": "7, 8",
-      "transport.dinnerBusR4p": "Xiaojing Bay campus",
+      "transport.dinnerBusR4p": "BIPH",
       "transport.dinnerBusR4v": "9",
-      "transport.dinnerBusR5p": "Nanjing campus / Beijing campus",
+      "transport.dinnerBusR5p": "BINJ/BBBJ",
       "transport.dinnerBusR5v": "10, 11, 12, 13",
-      "transport.dinnerBusR6p": "Futian campus",
+      "transport.dinnerBusR6p": "BBSZ",
       "transport.dinnerBusR6v": "A, B",
-      "transport.dinnerBusR7p": "Chengdu campus",
+      "transport.dinnerBusR7p": "BIBCD",
       "transport.dinnerBusR7v": "14",
-      "transport.dinnerBusR8p": "Nanbei Kindergarten campus / Futian Kindergarten campus",
+      "transport.dinnerBusR8p": "BKNS/BKTF",
       "transport.dinnerBusR8v": "15",
-      "transport.dinnerBusR9p": "Guangming campus",
+      "transport.dinnerBusR9p": "BBGM",
       "transport.dinnerBusR9v": "16",
-      "transport.dinnerBusR10p": "Guangzhou bilingual campus",
+      "transport.dinnerBusR10p": "BBGZ",
       "transport.dinnerBusR10v": "17, 18",
       "transport.reminderTitle": "Friendly reminder:",
       "transport.remTip1":
@@ -763,6 +763,22 @@
     return dict && dict[key] != null ? dict[key] : key;
   }
 
+  const SCOPE_CHIP_DATE_EN = {
+    v1: "Aug 5–7",
+    v2: "Aug 3–7",
+  };
+
+  /** Scope chip: localized prefix/date; group description always from zh. */
+  function tScopeChip(lang, scope) {
+    const zhLine = messages.zh["scopeChip." + scope];
+    if (!zhLine) return "";
+    if (lang === "zh") return zhLine;
+    const dot = zhLine.indexOf("·");
+    const groupPart = dot >= 0 ? zhLine.slice(dot + 1).trim() : "";
+    const dateEn = SCOPE_CHIP_DATE_EN[scope] || "";
+    return "Attendance: " + dateEn + " · " + groupPart;
+  }
+
   function getLang() {
     return document.documentElement.getAttribute("data-si-lang") || getStoredLang();
   }
@@ -834,13 +850,13 @@
     if (!el) return;
     const scope = getScope();
     const lang = getLang();
-    if (!scope || !messages[lang]["scopeChip." + scope]) {
+    if (!scope || !messages.zh["scopeChip." + scope]) {
       el.hidden = true;
       el.textContent = "";
       return;
     }
     el.hidden = false;
-    el.textContent = t(lang, "scopeChip." + scope);
+    el.textContent = tScopeChip(lang, scope);
   }
 
   function updateDetailPage() {
@@ -849,8 +865,7 @@
     const scope = getScope();
     const scopeEl = document.getElementById("detail-scope");
     if (scopeEl) {
-      scopeEl.textContent =
-        scope && messages[lang]["scopeChip." + scope] ? t(lang, "scopeChip." + scope) : "";
+      scopeEl.textContent = scope && messages.zh["scopeChip." + scope] ? tScopeChip(lang, scope) : "";
     }
     const ph = document.getElementById("detail-placeholder");
     if (ph) {
@@ -983,6 +998,7 @@
 
   window.SI_I18N = {
     t: (key) => t(getLang(), key),
+    tScopeChip: (scope) => tScopeChip(getLang(), scope),
     getLang,
   };
 

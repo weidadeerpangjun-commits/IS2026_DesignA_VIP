@@ -64,13 +64,8 @@ body.si.has-site-background {
 
 .si-footer {
   margin-top: auto;
-  margin-bottom: 0;
-  padding-top: 2rem;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-  /* border-top: 1px solid rgb(255 255 255 / 10%); */
-  color: var(--si-lavender);
-  font-size: 0.875rem;
-  line-height: 1.5;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
 }
 
 .si-footer__inner {
@@ -119,6 +114,8 @@ body.si.has-site-background {
   background: transparent;
   border-radius: 4px;
   box-shadow: none;
+  color: var(--si-fg);
+  transition: color 0.15s ease;
 }
 
 .si-footer__toolbar .si-home-abbrev-btn:hover,
@@ -126,6 +123,7 @@ body.si.has-site-background {
 .si-footer__toolbar .si-lang:hover,
 .si-footer__toolbar .si-lang:focus-visible {
   background: transparent;
+  color: var(--brand-color-gold);
 }
 
 .si-footer__copy,
@@ -350,8 +348,7 @@ body[data-page="menu"] .si-h1--zh {
 .si-h4,
 .si-menu-link__text,
 .si-sch-card__time,
-.si-card__title,
-.si-scope__title {
+.si-card__title {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.25;
@@ -372,6 +369,17 @@ body[data-page="menu"] .si-h1--zh {
 .si-card__title,
 .si-scope__title {
   margin: 0 0 0.75rem;
+}
+
+.si-scope__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  background: var(--si-gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .si-body {
@@ -516,7 +524,7 @@ body[data-page="menu"] .si-h1--zh {
   max-width: 354px;
   margin: 0;
   padding: 0.75rem;
-  border: 0;
+  border: 0.5px solid transparent;
   border-radius: var(--si-radius-card);
   text-align: left;
   cursor: pointer;
@@ -572,7 +580,7 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   line-height: 1.333;
 }
 
-/* Index scope cards: custom marker — icon/menu_scope.svg (white fills + --si-menu-tile strokes) */
+/* Index scope cards: custom marker — gold gradient fill + dark blue strokes */
 .si-scope__list {
   margin: 0;
   padding-left: 0;
@@ -596,9 +604,9 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.08em;
-  width: 1.75rem;
-  height: 1.75rem;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -606,7 +614,7 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 }
 
 .si-scope__list li::before {
-  background-color: var(--si-fg);
+  background: var(--si-gold-gradient);
   -webkit-mask-image: url("../icon/menu_scope-fill.svg");
   mask-image: url("../icon/menu_scope-fill.svg");
   -webkit-mask-size: contain;
@@ -618,7 +626,7 @@ body[data-page="home"] .si-panels__panel > .si-scope:focus-visible {
 }
 
 .si-scope__list li::after {
-  background-color: var(--si-menu-tile);
+  background-color: var(--si-gold-surface);
   -webkit-mask-image: url("../icon/menu_scope-stroke.svg");
   mask-image: url("../icon/menu_scope-stroke.svg");
   -webkit-mask-size: contain;
@@ -835,15 +843,14 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   gap: 1rem;
   min-height: 80px;
   padding: 1rem 1.5rem;
+  border: 0.5px solid transparent;
   border-radius: var(--si-radius-card);
   text-decoration: none;
   transition: color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 }
 
-.si-menu-link:hover {
-  background: none;
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
+.si-menu-link:hover,
+.si-menu-link:focus-visible {
   color: var(--si-fg);
 }
 
@@ -859,8 +866,16 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  color: var(--brand-color-gold);
+  color: var(--si-gold-end);
   transition: color 0.15s ease;
+}
+
+.si-menu-icon svg [fill="currentColor"] {
+  fill: url(#si-menu-gold-grad);
+}
+
+.si-menu-icon svg [stroke]:not([stroke="none"]) {
+  stroke: url(#si-menu-gold-grad);
 }
 
 .si-menu-link .si-card__arrow,
@@ -868,8 +883,14 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
   color: var(--brand-color-gold);
 }
 
-.si-menu-link:hover .si-menu-icon,
-.si-menu-link:focus-visible .si-menu-icon,
+.si-menu-link:hover .si-menu-icon svg [fill="currentColor"],
+.si-menu-link:focus-visible .si-menu-icon svg [fill="currentColor"],
+.si-menu-link:hover .si-menu-icon svg [stroke]:not([stroke="none"]),
+.si-menu-link:focus-visible .si-menu-icon svg [stroke]:not([stroke="none"]) {
+  fill: url(#si-menu-gold-grad);
+  stroke: url(#si-menu-gold-grad);
+}
+
 .si-menu-link:hover .si-card__arrow,
 .si-menu-link:hover .si-card__arrow svg,
 .si-menu-link:focus-visible .si-card__arrow,
@@ -2134,7 +2155,7 @@ body[data-section="hotel"] .si-loc-text {
   isolation: isolate;
   overflow: hidden;
   border-radius: var(--si-radius-card);
-  /* border: 1px solid var(--brand-color-gold); */
+  border: 0.5px solid transparent;
   background: var(--si-gold-surface);
   box-shadow: none;
   backdrop-filter: none;
@@ -2142,17 +2163,14 @@ body[data-section="hotel"] .si-loc-text {
 }
 
 :is(
-  .si-gold,
-  .si-card,
   .si-scope,
   a.si-card,
   button.si-card,
   .si-tab,
   .si-menu-link,
   .si-schedule-menu-pill,
-  .si-sch-card,
-  .si-inner-doc-tile,
-  .si-admin-note,
+  .si-sch-card[data-expandable="true"],
+  a.si-inner-doc-tile,
   .si-admin-cta,
   .si-schdb-toolbar__btn,
   .si-schdb-versions-list__btn,
@@ -2160,7 +2178,19 @@ body[data-section="hotel"] .si-loc-text {
   .si-schdb-form-actions__primary,
   .si-schdb-form-actions__ghost
 ):hover {
-  background: #1a3a94;
+  background: #163285;
+  border: 0.5px solid var(--brand-color-gold, #d3d3d3);
+  box-shadow: none;
+}
+
+:is(
+  .si-gold,
+  .si-card:not(a):not(button),
+  .si-admin-note,
+  .si-sch-card:not([data-expandable="true"])
+):hover {
+  background: var(--si-gold-surface);
+  border-color: transparent;
   box-shadow: none;
 }
 
@@ -2321,6 +2351,7 @@ body[data-section="transport"] .si-sch-extra .si-card.si-card--white.si-card--pr
   background: transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
+  color: var(--si-fg);
 }
 
 body[data-section="transport"] .si-sch-extra .si-card.si-card--white.si-card--prose::before,
@@ -2627,6 +2658,7 @@ body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
   gap: 1rem;
   min-height: 4.5rem;
   padding: 1rem 1.25rem;
+  border: 0.5px solid transparent;
   border-radius: var(--si-radius-card);
   color: var(--si-fg);
   font-size: 1.25rem;
@@ -2649,7 +2681,8 @@ body[data-section="transport-campus-dinner"] .si-transport-dinner-scope {
   z-index: 1;
 }
 
-.si-inner-doc-tile:hover {
+.si-inner-doc-tile:hover,
+.si-inner-doc-tile:focus-visible {
   color: var(--si-fg);
 }
 

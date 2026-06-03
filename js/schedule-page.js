@@ -825,8 +825,8 @@
     } catch {
       /* ignore */
     }
-    const label = scope ? window.SI_I18N.t("scopeChip." + scope) : "";
-    if (!scope || !label || label === "scopeChip." + scope) {
+    const label = scope && window.SI_I18N.tScopeChip ? window.SI_I18N.tScopeChip(scope) : "";
+    if (!scope || !label) {
       el.hidden = true;
       el.textContent = "";
       return;
