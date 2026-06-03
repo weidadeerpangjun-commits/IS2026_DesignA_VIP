@@ -311,12 +311,12 @@ body[data-page="menu"] .si-h1--zh {
   align-content: flex-start;
   gap: 16px;
   flex-wrap: wrap;
-  margin: 24px 0;
+  margin: 16px 0;
 }
 
 .si-hero-logo__img {
   display: block;
-  height: 56px;
+  height: 40px;
   width: auto;
   max-width: 100%;
 }
@@ -790,6 +790,19 @@ body[data-page="menu"] .si-menu-list > li:nth-child(7) {
 .si-menu-titles {
   flex: 1;
   min-width: 0;
+}
+
+body[data-page="menu"] .si-menu-titles .si-h3 {
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+body[data-page="menu"] .si-menu-titles .si-h5 {
+  font-size: 0.8rem;
+}
+
+body[data-page="menu"] .si-menu-titles .si-h1--zh {
+  font-size: 2rem;
 }
 
 .si-lang--menu {
